@@ -1,0 +1,43 @@
+# VoAPI2++ — Python dependencies
+# Tested with Python 3.12 (works on 3.10+). Versions pinned to a known-good environment.
+#
+# Quick start:
+#   python -m venv .venv && source .venv/bin/activate
+#   pip install -r requirements.txt
+#   playwright install chromium      # required only for the XSS Walker (browser confirmation)
+#
+# LLM access (payload_mode=llm/mix, dependency/repair features) needs env vars in .env:
+#   API_KEY, BASE_URL (optional), MODEL_NAME (optional)
+
+# ---- Core runtime (required to run main.py) ----
+tyro==1.0.11                 # CLI config parsing (VoAPIConfig)
+openai==2.14.0               # OpenAI-compatible LLM client
+instructor==1.13.0           # structured (Pydantic) LLM outputs
+pydantic==2.12.5             # data models for LLM I/O
+requests==2.32.5             # HTTP client
+requests-toolbelt==1.0.0     # multipart / request dump helpers
+urllib3==2.2.3               # HTTP internals / TLS
+python-dotenv==1.0.1         # load .env
+Faker==40.12.0               # random request value generation
+jsonref==1.1.0               # OpenAPI $ref de-referencing (APIDocLoader)
+lark==1.1.9                  # RESTler compile-dump grammar parser
+numpy==2.2.6                 # numeric helpers
+symspellpy==6.9.0            # fuzzy field-name matching (NameMatcher)
+tenacity==9.0.0              # LLM call retries
+tqdm==4.66.5                 # progress bars
+playwright==1.49.1           # headless browser for XSS Walker (needs: playwright install chromium)
+tree-sitter==0.24.0          # Java source parsing (Spring extractor)
+tree-sitter-java==0.23.5     # Java grammar for tree-sitter
+PyYAML==6.0.2                # YAML OpenAPI specs
+
+# ---- LLM providers (optional; only if you switch away from the default OpenAI-compatible provider) ----
+google-genai==1.56.0         # Gemini provider (utils/llm_client.py, LLM_PROVIDER=gemini)
+
+# ---- Dev / analysis tooling (optional) ----
+matplotlib==3.10.3           # plot_coverage.py coverage charts
+pytest==8.3.4                # test suite (tests/)
+
+# ---- Legacy tooling (optional; not on the main.py path, versions unpinned / not installed here) ----
+# Used by the older spec-conversion and HTTPS-verification utilities.
+json-ref-dict                # alternative $ref materializer (converter / spec tools)
+pyOpenSSL                    # VoAPIVerificationForHttps.py (legacy TLS cert checks)
