@@ -1,0 +1,1898 @@
+{
+ "chat2db": {
+  "app": "chat2db-3.4.1",
+  "picked": [
+   {
+    "stratum": "body",
+    "method": "POST",
+    "url": "/api/rdb/function/delete",
+    "extracted": {
+     "path": [],
+     "header": [
+      "Content-Type"
+     ],
+     "query": [],
+     "body": [
+      "dataSourceId",
+      "refresh",
+      "schemaName",
+      "databaseName",
+      "functionName",
+      "functionBody"
+     ]
+    }
+   },
+   {
+    "stratum": "body",
+    "method": "POST",
+    "url": "/api/admin/user/data_source/batch_create",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": [
+      "userId",
+      "dataSourceIdList"
+     ]
+    }
+   },
+   {
+    "stratum": "body",
+    "method": "POST",
+    "url": "/api/rdb/database/create_database_sql",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": [
+      "dataSourceId",
+      "refresh",
+      "schemaName",
+      "databaseName",
+      "name",
+      "charset",
+      "comment",
+      "collation"
+     ]
+    }
+   },
+   {
+    "stratum": "body",
+    "method": "POST",
+    "url": "/api/admin/data_source/access/batch_create",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": [
+      "dataSourceId",
+      "accessObjectList"
+     ]
+    }
+   },
+   {
+    "stratum": "body",
+    "method": "POST",
+    "url": "/api/system/set_update_type",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": [
+      "updateType"
+     ]
+    }
+   },
+   {
+    "stratum": "body",
+    "method": "POST",
+    "url": "/api/rdb/view/delete",
+    "extracted": {
+     "path": [],
+     "header": [
+      "Content-Type"
+     ],
+     "query": [],
+     "body": [
+      "dataSourceId",
+      "refresh",
+      "schemaName",
+      "databaseName",
+      "tableName"
+     ]
+    }
+   },
+   {
+    "stratum": "body",
+    "method": "POST",
+    "url": "/api/ai/embedding/datasource",
+    "extracted": {
+     "path": [],
+     "header": [
+      "Content-Type"
+     ],
+     "query": [],
+     "body": [
+      "pageNo",
+      "pageSize",
+      "dataSourceId",
+      "searchKey",
+      "databaseName",
+      "schemaName",
+      "refresh",
+      "apikey"
+     ]
+    }
+   },
+   {
+    "stratum": "body",
+    "method": "POST",
+    "url": "/api/connection/ssh/pre_connect",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": [
+      "use",
+      "port",
+      "localPort",
+      "password",
+      "hostName",
+      "userName",
+      "authenticationType",
+      "keyFile",
+      "passphrase"
+     ]
+    }
+   },
+   {
+    "stratum": "body",
+    "method": "POST",
+    "url": "/api/pin/table/add",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": [
+      "dataSourceId",
+      "databaseName",
+      "tableName",
+      "schemaName"
+     ]
+    }
+   },
+   {
+    "stratum": "body",
+    "method": "POST",
+    "url": "/api/export/export_doc",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": [
+      "dataSourceId",
+      "refresh",
+      "schemaName",
+      "databaseName",
+      "originalSql",
+      "pageSize",
+      "exportSize",
+      "pageNo",
+      "sql",
+      "exportType"
+     ]
+    }
+   },
+   {
+    "stratum": "body",
+    "method": "POST",
+    "url": "/api/rdb/database/export_data",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": [
+      "dataSourceId",
+      "refresh",
+      "schemaName",
+      "databaseName",
+      "exportType",
+      "tableNames",
+      "sqyType",
+      "containsHeader"
+     ]
+    }
+   },
+   {
+    "stratum": "body",
+    "method": "POST",
+    "url": "/api/rdb/ddl/delete",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": [
+      "dataSourceId",
+      "refresh",
+      "schemaName",
+      "databaseName",
+      "tableName"
+     ]
+    }
+   },
+   {
+    "stratum": "body",
+    "method": "POST",
+    "url": "/api/redis/key/create",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": [
+      "dataSourceId",
+      "refresh",
+      "schemaName",
+      "databaseName",
+      "name",
+      "value",
+      "ttl"
+     ]
+    }
+   },
+   {
+    "stratum": "body",
+    "method": "POST",
+    "url": "/api/chart/update",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": [
+      "name",
+      "schema",
+      "dataSourceId",
+      "schemaName",
+      "ddl",
+      "id",
+      "type",
+      "databaseName"
+     ]
+    }
+   },
+   {
+    "stratum": "body",
+    "method": "POST",
+    "url": "/api/rdb/procedure/delete",
+    "extracted": {
+     "path": [],
+     "header": [
+      "Content-Type"
+     ],
+     "query": [],
+     "body": [
+      "dataSourceId",
+      "refresh",
+      "schemaName",
+      "databaseName",
+      "procedureName",
+      "procedureBody"
+     ]
+    }
+   },
+   {
+    "stratum": "body",
+    "method": "POST",
+    "url": "/api/rdb/dml/get_order_by_sql",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": [
+      "dataSourceId",
+      "refresh",
+      "schemaName",
+      "databaseName",
+      "originSql",
+      "orderByList"
+     ]
+    }
+   },
+   {
+    "stratum": "body",
+    "method": "POST",
+    "url": "/api/rdb/schema/delete_schema",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": [
+      "dataSourceId",
+      "refresh",
+      "schemaName",
+      "databaseName"
+     ]
+    }
+   },
+   {
+    "stratum": "body",
+    "method": "PUT",
+    "url": "/api/rdb/dml/execute_ddl",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": [
+      "dataSourceId",
+      "refresh",
+      "schemaName",
+      "databaseName",
+      "pageSize",
+      "consoleId",
+      "sql",
+      "pageSizeAll",
+      "pageNo"
+     ]
+    }
+   },
+   {
+    "stratum": "none",
+    "method": "GET",
+    "url": "/",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "none",
+    "method": "POST",
+    "url": "/api/oauth/logout_a",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "none",
+    "method": "GET",
+    "url": "/api/ai/config/remaininguses",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "none",
+    "method": "GET",
+    "url": "/connections",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "path",
+    "method": "DELETE",
+    "url": "/api/admin/team/{id}",
+    "extracted": {
+     "path": [
+      "id"
+     ],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "path",
+    "method": "GET",
+    "url": "/api/rdb/database/export_data_status/{taskId}",
+    "extracted": {
+     "path": [
+      "taskId"
+     ],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "path",
+    "method": "DELETE",
+    "url": "/api/connection/datasource/{id}",
+    "extracted": {
+     "path": [
+      "id"
+     ],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "path",
+    "method": "DELETE",
+    "url": "/api/dashboard/{id}",
+    "extracted": {
+     "path": [
+      "id"
+     ],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "GET",
+    "url": "/api/rdb/ddl/list",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [
+      "pageNo",
+      "pageSize",
+      "dataSourceId",
+      "searchKey",
+      "databaseName",
+      "schemaName",
+      "refresh"
+     ],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "POST",
+    "url": "/api/converter/datagrip/upload",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [
+      "text"
+     ],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "GET",
+    "url": "/api/operation/saved/list",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [
+      "pageNo",
+      "pageSize",
+      "dataSourceId",
+      "status",
+      "orderByCreateDesc",
+      "databaseName",
+      "searchKey",
+      "tabOpened",
+      "orderByDesc",
+      "operationType"
+     ],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "GET",
+    "url": "/api/rdb/table/index_list",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [
+      "dataSourceId",
+      "refresh",
+      "schemaName",
+      "databaseName",
+      "tableName"
+     ],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "GET",
+    "url": "/api/connection/datasource/connect",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [
+      "id"
+     ],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "GET",
+    "url": "/api/rdb/table/query",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [
+      "dataSourceId",
+      "refresh",
+      "schemaName",
+      "databaseName",
+      "tableName"
+     ],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "GET",
+    "url": "/api/redis/key/list",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [
+      "dataSourceId",
+      "refresh",
+      "schemaName",
+      "databaseName",
+      "keyName",
+      "searchKey"
+     ],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "GET",
+    "url": "/api/rdb/ddl/index_list",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [
+      "dataSourceId",
+      "refresh",
+      "schemaName",
+      "databaseName",
+      "tableName"
+     ],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "GET",
+    "url": "/api/rdb/table/table_list",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [
+      "pageNo",
+      "pageSize",
+      "dataSourceId",
+      "searchKey",
+      "databaseName",
+      "schemaName",
+      "refresh"
+     ],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "GET",
+    "url": "/api/rdb/view/list",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [
+      "pageNo",
+      "pageSize",
+      "dataSourceId",
+      "searchKey",
+      "databaseName",
+      "schemaName",
+      "refresh"
+     ],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "GET",
+    "url": "/api/admin/common/user/list",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [
+      "searchKey"
+     ],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "GET",
+    "url": "/api/rdb/table/create/example",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [
+      "dbType"
+     ],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "GET",
+    "url": "/api/rdb/function/detail",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [
+      "functionName",
+      "databaseName",
+      "refresh",
+      "dataSourceId",
+      "schemaName"
+     ],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "GET",
+    "url": "/api/ai/config/getLoginStatus",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [
+      "token"
+     ],
+     "body": []
+    }
+   }
+  ]
+ },
+ "halo": {
+  "app": "halo-1.6.1",
+  "picked": [
+   {
+    "stratum": "body",
+    "method": "POST",
+    "url": "/api/admin/links",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": [
+      "id",
+      "url",
+      "description",
+      "logo",
+      "name",
+      "team",
+      "priority"
+     ]
+    }
+   },
+   {
+    "stratum": "body",
+    "method": "PUT",
+    "url": "/api/admin/photos/{photoId}",
+    "extracted": {
+     "path": [
+      "photoId"
+     ],
+     "header": [],
+     "query": [],
+     "body": [
+      "id",
+      "takeTime",
+      "thumbnail",
+      "description",
+      "location",
+      "name",
+      "url",
+      "team"
+     ]
+    }
+   },
+   {
+    "stratum": "body",
+    "method": "POST",
+    "url": "/api/admin/sheets",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [
+      "autoSave"
+     ],
+     "body": [
+      "title",
+      "slug",
+      "editorType",
+      "originalContent",
+      "thumbnail",
+      "template",
+      "createTime",
+      "keepRaw",
+      "status",
+      "password",
+      "content",
+      "summary",
+      "disallowComment",
+      "topPriority",
+      "metaKeywords",
+      "metaDescription",
+      "metas"
+     ]
+    }
+   },
+   {
+    "stratum": "body",
+    "method": "PUT",
+    "url": "/api/admin/statics/files",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": [
+      "path",
+      "content"
+     ]
+    }
+   },
+   {
+    "stratum": "body",
+    "method": "POST",
+    "url": "/api/admin/attachments/uploads",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": [
+      "files"
+     ]
+    }
+   },
+   {
+    "stratum": "body",
+    "method": "POST",
+    "url": "/api/admin/options",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": [
+      "key",
+      "type",
+      "value"
+     ]
+    }
+   },
+   {
+    "stratum": "body",
+    "method": "POST",
+    "url": "/api/content/posts/comments",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": [
+      "author",
+      "content",
+      "parentId",
+      "postId",
+      "authorUrl",
+      "email",
+      "allowNotification"
+     ]
+    }
+   },
+   {
+    "stratum": "body",
+    "method": "POST",
+    "url": "/api/admin/mails/test",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": [
+      "to",
+      "content",
+      "subject"
+     ]
+    }
+   },
+   {
+    "stratum": "body",
+    "method": "POST",
+    "url": "/api/admin/login",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": [
+      "username",
+      "authcode",
+      "password"
+     ]
+    }
+   },
+   {
+    "stratum": "body",
+    "method": "PUT",
+    "url": "/api/admin/posts/comments/status/{status}",
+    "extracted": {
+     "path": [
+      "status"
+     ],
+     "header": [],
+     "query": [],
+     "body": [
+      "ids"
+     ]
+    }
+   },
+   {
+    "stratum": "none",
+    "method": "GET",
+    "url": "/api/admin/links/teams",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "none",
+    "method": "GET",
+    "url": "/${halo.admin-path}",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "none",
+    "method": "GET",
+    "url": "/robots.txt",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "none",
+    "method": "GET",
+    "url": "/api/content/options/list_view",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "none",
+    "method": "GET",
+    "url": "/api/admin/test/disableOnCondition/yes",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "none",
+    "method": "GET",
+    "url": "/api/content/options/comment",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "none",
+    "method": "GET",
+    "url": "/api/admin/backups/work-dir",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "none",
+    "method": "GET",
+    "url": "/install",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "path",
+    "method": "DELETE",
+    "url": "/api/admin/categories/{categoryId}",
+    "extracted": {
+     "path": [
+      "categoryId"
+     ],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "path",
+    "method": "GET",
+    "url": "/api/admin/themes/{themeId}/settings",
+    "extracted": {
+     "path": [
+      "themeId"
+     ],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "path",
+    "method": "GET",
+    "url": "/api/admin/backups/markdown/export/{fileName}",
+    "extracted": {
+     "path": [
+      "fileName"
+     ],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "path",
+    "method": "PUT",
+    "url": "/api/admin/sheets/{sheetId}/{status}",
+    "extracted": {
+     "path": [
+      "sheetId",
+      "status"
+     ],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "path",
+    "method": "GET",
+    "url": "/api/admin/attachments/{id}",
+    "extracted": {
+     "path": [
+      "id"
+     ],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "path",
+    "method": "GET",
+    "url": "/api/content/posts/{postId}/next",
+    "extracted": {
+     "path": [
+      "postId"
+     ],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "path",
+    "method": "POST",
+    "url": "/api/admin/themes/{themeId}/activation",
+    "extracted": {
+     "path": [
+      "themeId"
+     ],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "path",
+    "method": "GET",
+    "url": "/api/content/themes/{themeId}",
+    "extracted": {
+     "path": [
+      "themeId"
+     ],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "path",
+    "method": "GET",
+    "url": "/api/admin/sheets/comments/{commentId}",
+    "extracted": {
+     "path": [
+      "commentId"
+     ],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "GET",
+    "url": "/api/content/links/team_view",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [
+      "sort"
+     ],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "GET",
+    "url": "/",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [
+      "p",
+      "token"
+     ],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "GET",
+    "url": "/api/content/categories/{slug}/posts",
+    "extracted": {
+     "path": [
+      "slug"
+     ],
+     "header": [],
+     "query": [
+      "password",
+      "page",
+      "size",
+      "sort"
+     ],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "GET",
+    "url": "/api/content/menus/tree_view",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [
+      "sort"
+     ],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "GET",
+    "url": "/api/admin/journals/latest",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [
+      "top"
+     ],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "GET",
+    "url": "/api/admin/themes/{themeId}/files/content",
+    "extracted": {
+     "path": [
+      "themeId"
+     ],
+     "header": [],
+     "query": [
+      "path"
+     ],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "GET",
+    "url": "/{year}/{month}/{slug}",
+    "extracted": {
+     "path": [
+      "year",
+      "slug",
+      "month"
+     ],
+     "header": [],
+     "query": [
+      "token"
+     ],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "GET",
+    "url": "/api/admin/backups/work-dir/fetch",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [
+      "filename"
+     ],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "GET",
+    "url": "/api/admin/attachments",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [
+      "page",
+      "size",
+      "sort",
+      "keyword",
+      "attachmentType",
+      "mediaType"
+     ],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "GET",
+    "url": "/api/content/journals/{journalId}/comments/list_view",
+    "extracted": {
+     "path": [
+      "journalId"
+     ],
+     "header": [],
+     "query": [
+      "sort",
+      "page"
+     ],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "GET",
+    "url": "/api/admin/backups/data/fetch",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [
+      "filename"
+     ],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "GET",
+    "url": "/api/admin/sheets/comments/{sheetId}/list_view",
+    "extracted": {
+     "path": [
+      "sheetId"
+     ],
+     "header": [],
+     "query": [
+      "sort",
+      "page"
+     ],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "GET",
+    "url": "/api/admin/menus/tree_view",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [
+      "sort"
+     ],
+     "body": []
+    }
+   }
+  ]
+ },
+ "novelplus": {
+  "app": "novel-plus-5.2.0",
+  "picked": [
+   {
+    "stratum": "body",
+    "method": "POST",
+    "url": "/novel/bookComment/save",
+    "extracted": {
+     "path": [],
+     "header": [
+      "Content-Type"
+     ],
+     "query": [],
+     "body": [
+      "replyCount",
+      "bookId",
+      "id",
+      "createTime",
+      "createUserId",
+      "userName",
+      "bookName",
+      "commentContent",
+      "auditStatus"
+     ]
+    }
+   },
+   {
+    "stratum": "body",
+    "method": "POST",
+    "url": "/novel/bookSetting/save",
+    "extracted": {
+     "path": [],
+     "header": [
+      "Content-Type"
+     ],
+     "query": [],
+     "body": [
+      "sort",
+      "bookId",
+      "id",
+      "createTime",
+      "createUserId",
+      "updateTime",
+      "updateUserId",
+      "bookName",
+      "type"
+     ]
+    }
+   },
+   {
+    "stratum": "body",
+    "method": "POST",
+    "url": "/sys/user/updatePeronal",
+    "extracted": {
+     "path": [],
+     "header": [
+      "Content-Type"
+     ],
+     "query": [],
+     "body": [
+      "liveAddress",
+      "gmtModified",
+      "picId",
+      "supDeptIds",
+      "userIdCreate",
+      "gmtCreate",
+      "district",
+      "deptName",
+      "name",
+      "status",
+      "dataPerms",
+      "city",
+      "username",
+      "roleIds",
+      "birth",
+      "deptId",
+      "sex",
+      "province",
+      "userId",
+      "password",
+      "mobile",
+      "hobby",
+      "email"
+     ]
+    }
+   },
+   {
+    "stratum": "body",
+    "method": "POST",
+    "url": "/crawl/addCrawlSingleTask",
+    "extracted": {
+     "path": [],
+     "header": [
+      "Content-Type"
+     ],
+     "query": [],
+     "body": [
+      "id",
+      "catId",
+      "sourceName",
+      "authorName",
+      "excCount",
+      "createTime",
+      "sourceId",
+      "sourceBookId",
+      "bookName",
+      "taskStatus",
+      "crawlChapters"
+     ]
+    }
+   },
+   {
+    "stratum": "body",
+    "method": "POST",
+    "url": "/novel/friendLink/save",
+    "extracted": {
+     "path": [],
+     "header": [
+      "Content-Type"
+     ],
+     "query": [],
+     "body": [
+      "id",
+      "linkUrl",
+      "isOpen",
+      "createUserId",
+      "createTime",
+      "updateUserId",
+      "linkName",
+      "sort",
+      "updateTime"
+     ]
+    }
+   },
+   {
+    "stratum": "none",
+    "method": "GET",
+    "url": "/sys/role",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "none",
+    "method": "GET",
+    "url": "/novel/authorCode/add",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "none",
+    "method": "GET",
+    "url": "/novel/book/add",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "none",
+    "method": "GET",
+    "url": "/common/dict/add",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "none",
+    "method": "GET",
+    "url": "/sys/online/list",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "none",
+    "method": "GET",
+    "url": "/file/getVerify",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "none",
+    "method": "GET",
+    "url": "/system/sysDept/list",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "none",
+    "method": "GET",
+    "url": "/index",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "none",
+    "method": "GET",
+    "url": "/novel/stat/countSta",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "none",
+    "method": "GET",
+    "url": "/",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "path",
+    "method": "GET",
+    "url": "/novel/author/edit/{id}",
+    "extracted": {
+     "path": [
+      "id"
+     ],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "path",
+    "method": "GET",
+    "url": "/novel/authorCode/edit/{id}",
+    "extracted": {
+     "path": [
+      "id"
+     ],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "path",
+    "method": "GET",
+    "url": "/author/queryIndexContent/{indexId}",
+    "extracted": {
+     "path": [
+      "indexId"
+     ],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "path",
+    "method": "GET",
+    "url": "/system/sysDept/add/{pId}",
+    "extracted": {
+     "path": [
+      "pId"
+     ],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "path",
+    "method": "GET",
+    "url": "/common/dict/list/{type}",
+    "extracted": {
+     "path": [
+      "type"
+     ],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "path",
+    "method": "GET",
+    "url": "/novel/bookContent/edit/{id}",
+    "extracted": {
+     "path": [
+      "id"
+     ],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "path",
+    "method": "GET",
+    "url": "/common/dict/edit/{id}",
+    "extracted": {
+     "path": [
+      "id"
+     ],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "path",
+    "method": "DELETE",
+    "url": "/user/removeFromBookShelf/{bookId}",
+    "extracted": {
+     "path": [
+      "bookId"
+     ],
+     "header": [],
+     "query": [],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "GET",
+    "url": "/book/queryBookIndexAbout",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [
+      "bookId",
+      "lastBookIndexId"
+     ],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "POST",
+    "url": "/system/sysDept/batchRemove",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [
+      "ids[]"
+     ],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "GET",
+    "url": "/system/sysDept/update",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [
+      "name",
+      "deptId",
+      "orderNum",
+      "parentId",
+      "delFlag"
+     ],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "GET",
+    "url": "/common/generator/batchDownload",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [
+      "tables"
+     ],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "POST",
+    "url": "/novel/friendLink/remove",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [
+      "id"
+     ],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "POST",
+    "url": "/novel/bookIndex/batchRemove",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [
+      "ids[]"
+     ],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "GET",
+    "url": "/book/listCommentReplyByPage",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [
+      "commentId",
+      "limit",
+      "curr"
+     ],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "GET",
+    "url": "/novel/authorCode/list",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [
+      "id",
+      "limit",
+      "inviteCode",
+      "sort",
+      "offset",
+      "trim",
+      "order",
+      "isUse",
+      "createTime",
+      "validityTime",
+      "createUserId",
+      "page"
+     ],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "GET",
+    "url": "/novel/bookSetting/update",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [
+      "sort",
+      "bookId",
+      "id",
+      "createTime",
+      "createUserId",
+      "updateTime",
+      "updateUserId",
+      "bookName",
+      "type"
+     ],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "GET",
+    "url": "/system/dataPerm/update",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [
+      "id",
+      "name",
+      "crlAttrName",
+      "permCode",
+      "gmtCreate",
+      "moduleName",
+      "tableName",
+      "crlColumnName",
+      "orderNum",
+      "gmtModified"
+     ],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "GET",
+    "url": "/novel/bookComment/update",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [
+      "replyCount",
+      "bookId",
+      "id",
+      "createTime",
+      "createUserId",
+      "userName",
+      "bookName",
+      "commentContent",
+      "auditStatus"
+     ],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "GET",
+    "url": "/novel/bookComment/list",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [
+      "id",
+      "limit",
+      "createUserId",
+      "sort",
+      "offset",
+      "trim",
+      "order",
+      "bookId",
+      "createTime",
+      "commentContent",
+      "auditStatus",
+      "replyCount",
+      "page"
+     ],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "GET",
+    "url": "/novel/book/update",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [
+      "workDirection",
+      "bookDesc",
+      "picUrl",
+      "authorName",
+      "updateTime",
+      "crawlLastTime",
+      "catName",
+      "id",
+      "authorId",
+      "bookStatus",
+      "status",
+      "crawlBookId",
+      "crawlIsStop",
+      "score",
+      "yesterdayBuy",
+      "lastIndexName",
+      "bookName",
+      "wordCount",
+      "commentCount",
+      "lastIndexId",
+      "visitCount",
+      "crawlSourceId",
+      "isVip",
+      "createTime",
+      "catId",
+      "lastIndexUpdateTime"
+     ],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "GET",
+    "url": "/common/generator/genColumns",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [
+      "tableName"
+     ],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "POST",
+    "url": "/common/dict/remove",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [
+      "id"
+     ],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "POST",
+    "url": "/system/roleDataPerm/remove",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [
+      "id"
+     ],
+     "body": []
+    }
+   },
+   {
+    "stratum": "query",
+    "method": "POST",
+    "url": "/author/ai/continue",
+    "extracted": {
+     "path": [],
+     "header": [],
+     "query": [
+      "text",
+      "length"
+     ],
+     "body": []
+    }
+   }
+  ]
+ }
+}

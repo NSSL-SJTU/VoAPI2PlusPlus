@@ -1,0 +1,905 @@
+{
+ "n": 100,
+ "cases": [
+  {
+   "id": "C001",
+   "app": "Appwrite",
+   "target": "POST /functions/{functionId}/executions",
+   "failed_api": "POST /functions/{functionId}/executions",
+   "status": "404",
+   "request_payload": "{\"path\": {\"functionId\": \"6abbc3e5f3e8d\"}, \"header\": {\"X-Appwrite-Project\": \"6abbc218d2e94\", \"X-Appwrite-Mode\": \"admin\", \"Cookie\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {\"data\": \"{\\\"source\\\": \\\"test-execution\\\"}\"}, \"files\": null}",
+   "response_text": "{\"message\":\"Tag not found. Deploy tag before trying to execute a function\",\"code\":404,\"version\":\"0.9.3\"}"
+  },
+  {
+   "id": "C002",
+   "app": "Chat2DB",
+   "target": "GET /web/",
+   "failed_api": "GET /web/",
+   "status": "200",
+   "request_payload": "{\"path\": {}, \"header\": {\"Cookie\": \"[REDACTED-CREDENTIAL]\", \"CHAT2DB\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "<!DOCTYPE html><html><head>\n<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0\">\n<meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n<link rel=\"shortcut icon\" href=\"logo.ico\">\n<title>Chat2DB</title>\n<link rel=\"icon\" type=\"image/ico\" sizes=\"32x32\" href=\"/static/front/logo.ico\">\n<script>window.dataLayer = window.dataLayer || [];\n    function gtag() {\n      window.dataLayer.push(arguments);\n    }\n    gtag('js', new Date());\n    gtag('config', 'G-V8M4E5SF61', {\n      platform: 'WEB',\n      version: '3.4.1'\n    });</script>\n<script async=\"\" src=\"https://www.googletagmanager.com/gtag/js?id=G-V8M4E5SF61\"></script>\n</head>\n<body>\n<div id=\"root\"></div>\n<script src=\"./static/front/umi.049264fb.js\"></script>\n\n</body></html>"
+  },
+  {
+   "id": "C003",
+   "app": "Chat2DB",
+   "target": "GET /login.html",
+   "failed_api": "GET /login.html",
+   "status": "500",
+   "request_payload": "{\"path\": {}, \"header\": {\"Cookie\": \"[REDACTED-CREDENTIAL]\", \"CHAT2DB\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"timestamp\":1790654134750,\"status\":500,\"error\":\"Internal Server Error\",\"path\":\"/login.html\"}"
+  },
+  {
+   "id": "C004",
+   "app": "Chat2DB",
+   "target": "GET /register.html",
+   "failed_api": "GET /register.html",
+   "status": "500",
+   "request_payload": "{\"path\": {}, \"header\": {\"Cookie\": \"[REDACTED-CREDENTIAL]\", \"CHAT2DB\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"timestamp\":1790654208569,\"status\":500,\"error\":\"Internal Server Error\",\"path\":\"/register.html\"}"
+  },
+  {
+   "id": "C005",
+   "app": "Chat2DB",
+   "target": "DELETE /api/chart/{id}",
+   "failed_api": "DELETE /api/chart/{id}",
+   "status": "200",
+   "request_payload": "{\"path\": {\"id\": 1}, \"header\": {\"Cookie\": \"[REDACTED-CREDENTIAL]\", \"CHAT2DB\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"success\":false,\"errorCode\":\"common.systemError\",\"errorMessage\":\"An exception occurs, you can view the exception details in the log in the help menu.\",\"errorDetail\":\"java.lang.NullPointerException: Cannot invoke \\\"ai.chat2db.server.domain.repository.entity.ChartDO.getDeleted()\\\" because \\\"chartDO\\\" is null\\n\\tat ai.chat2db.server.domain.core.impl.ChartServiceImpl.find(ChartServiceImpl.java:84)\\n\\tat ai.chat2db.server.domain.core.impl.ChartServiceImpl.queryExistent(ChartServiceImpl.java:110)\\n\\tat ai.chat2db.server.domain.core.impl.ChartServiceImpl.deleteWithPermission(ChartServiceImpl.java:132)\\n\\tat ai.chat2db.server.web.api.controller.dashboard.ChartController.delete(ChartController.java:107)\\n\\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\\n\\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\\n\\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\\n\\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)\\n\\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)\\n\\tat org.springframework.web.servlet.Dispatche\n...<truncated>"
+  },
+  {
+   "id": "C006",
+   "app": "Chat2DB",
+   "target": "POST /api/export/export_data",
+   "failed_api": "POST /api/export/export_data",
+   "status": "200",
+   "request_payload": "{\"path\": {}, \"header\": {\"Cookie\": \"[REDACTED-CREDENTIAL]\", \"CHAT2DB\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {\"dataSourceId\": 3, \"databaseName\": \"main\", \"sql\": \"SELECT 1\", \"exportType\": \"CSV\", \"exportSize\": \"ALL\"}, \"files\": null}",
+   "response_text": "{\"success\":false,\"errorCode\":\"common.paramError\",\"errorMessage\":\"dataSource.sqlEmpty\",\"errorDetail\":\"java.lang.IllegalArgumentException: dataSource.sqlEmpty\\n\\tat cn.hutool.core.lang.Assert.lambda$notBlank$5(Assert.java:340)\\n\\tat cn.hutool.core.lang.Assert.notBlank(Assert.java:319)\\n\\tat cn.hutool.core.lang.Assert.notBlank(Assert.java:340)\\n\\tat ai.chat2db.server.web.api.controller.task.biz.TaskBizService.exportResultData(TaskBizService.java:91)\\n\\tat ai.chat2db.server.web.api.controller.task.ExportController.export(ExportController.java:33)\\n\\tat jdk.internal.reflect.GeneratedMethodAccessor120.invoke(Unknown Source)\\n\\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\\n\\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\\n\\tat org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)\\n\\tat org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)\\n\\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\\n\\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)\\n\\tat org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)\\n\\tat ai.chat2db.server.web.api.aspect.ConnectionInfoHandler.connectionInfoHandler(ConnectionInfoHandler.java:62)\\n\\tat jdk.internal.reflect.GeneratedMethodAccessor108.invoke(Unknown Source)\\n\\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\\n\\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\\n\\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:637)\\n\\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:627)\\n\\tat org.springframework.aop.as\n...<truncated>"
+  },
+  {
+   "id": "C007",
+   "app": "Chat2DB",
+   "target": "POST /api/export/export_doc",
+   "failed_api": "POST /api/export/export_doc",
+   "status": "500",
+   "request_payload": "{\"path\": {}, \"header\": {\"Cookie\": \"[REDACTED-CREDENTIAL]\", \"CHAT2DB\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {\"dataSourceId\": 3, \"databaseName\": \"chat2db\"}, \"body\": {\"dataSourceId\": 3, \"databaseName\": \"chat2db\", \"exportType\": \"MARKDOWN\", \"exportSize\": \"ALL\", \"sql\": \"SELECT 1;\", \"originalSql\": \"SELECT 1;\"}, \"files\": null}",
+   "response_text": "{\"timestamp\":1790654842550,\"status\":500,\"error\":\"Internal Server Error\",\"path\":\"/api/export/export_doc\"}"
+  },
+  {
+   "id": "C008",
+   "app": "Chat2DB",
+   "target": "POST /api/ai/knowledge/embeddings",
+   "failed_api": "POST /api/ai/knowledge/embeddings",
+   "status": "200",
+   "request_payload": "{\"path\": {}, \"header\": {\"Cookie\": \"[REDACTED-CREDENTIAL]\", \"CHAT2DB\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"success\":false,\"errorCode\":\"common.systemError\",\"errorMessage\":\"An exception occurs, you can view the exception details in the log in the help menu.\",\"errorDetail\":\"java.lang.NullPointerException: Cannot invoke \\\"org.springframework.web.multipart.MultipartFile.getInputStream()\\\" because \\\"file\\\" is null\\n\\tat ai.chat2db.server.web.api.controller.ai.KnowledgeController.embeddings(KnowledgeController.java:65)\\n\\tat jdk.internal.reflect.GeneratedMethodAccessor164.invoke(Unknown Source)\\n\\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\\n\\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\\n\\tat org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)\\n\\tat org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)\\n\\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\\n\\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)\\n\\tat org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)\\n\\tat ai.chat2db.server.web.api.aspect.ConnectionInfoHandler.connectionInfoHandler(ConnectionInfoHandler.java:62)\\n\\tat jdk.internal.reflect.GeneratedMethodAccessor108.invoke(Unknown Source)\\n\\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\\n\\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\\n\\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:637)\\n\\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:627)\\n\\tat org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71)\\n\\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed\n...<truncated>"
+  },
+  {
+   "id": "C009",
+   "app": "Chat2DB",
+   "target": "POST /api/ai/custom/stream/chat",
+   "failed_api": "POST /api/ai/custom/stream/chat",
+   "status": "200",
+   "request_payload": "{\"path\": {}, \"header\": {\"Cookie\": \"[REDACTED-CREDENTIAL]\", \"CHAT2DB\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {\"prompt\": \"Environment bank still him.\"}, \"files\": null}",
+   "response_text": "event:message\ndata:Event 0\n\nevent:message\ndata:Event 1\n\nevent:message\ndata:Event 2\n\nevent:message\ndata:Event 3\n\nevent:message\ndata:Event 4\n\nevent:message\ndata:Event 5\n\nevent:message\ndata:Event 6\n\nevent:message\ndata:Event 7\n\nevent:message\ndata:Event 8\n\nevent:message\ndata:Event 9"
+  },
+  {
+   "id": "C010",
+   "app": "Chat2DB",
+   "target": "POST /api/rdb/dml/get_group_by_sql",
+   "failed_api": "POST /api/rdb/dml/get_group_by_sql",
+   "status": "200",
+   "request_payload": "{\"path\": {}, \"header\": {\"Cookie\": \"[REDACTED-CREDENTIAL]\", \"CHAT2DB\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {\"dataSourceId\": null, \"databaseName\": null, \"originSql\": \"SELECT * FROM users\", \"groupByList\": [\"id\"]}, \"files\": null}",
+   "response_text": "{\"success\":false,\"errorCode\":\"common.paramDetailError\",\"errorMessage\":\"The parameter: dataSourceId is incorrect\",\"errorDetail\":\"BusinessException(super=ai.chat2db.server.tools.common.exception.ParamBusinessException: common.paramDetailError, code=common.paramDetailError, args=[dataSourceId])\\n\\tat ai.chat2db.server.web.api.aspect.ConnectionInfoHandler.toInfo(ConnectionInfoHandler.java:72)\\n\\tat ai.chat2db.server.web.api.aspect.ConnectionInfoHandler.connectionInfoHandler(ConnectionInfoHandler.java:49)\\n\\tat jdk.internal.reflect.GeneratedMethodAccessor108.invoke(Unknown Source)\\n\\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\\n\\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\\n\\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:637)\\n\\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:627)\\n\\tat org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71)\\n\\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)\\n\\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)\\n\\tat org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)\\n\\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)\\n\\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)\\n\\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:702)\\n\\tat ai.chat2db.server.web.api.controller.rdb.RdbDmlController$$SpringCGLIB$$0.getGroupBySql(<generated>)\\n\\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\\n\\tat java.base/jdk.internal.reflect.NativeMethodAcc\n...<truncated>"
+  },
+  {
+   "id": "C011",
+   "app": "Chat2DB",
+   "target": "GET /api/rdb/ddl/schema_list",
+   "failed_api": "GET /api/rdb/ddl/schema_list",
+   "status": "200",
+   "request_payload": "{\"path\": {}, \"header\": {\"Cookie\": \"[REDACTED-CREDENTIAL]\", \"CHAT2DB\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {\"dataSourceId\": 1}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"success\":false,\"errorCode\":\"common.paramDetailError\",\"errorMessage\":\"The parameter: dataSourceId is incorrect\",\"errorDetail\":\"BusinessException(super=ai.chat2db.server.tools.common.exception.ParamBusinessException: common.paramDetailError, code=common.paramDetailError, args=[dataSourceId])\\n\\tat ai.chat2db.server.web.api.aspect.ConnectionInfoHandler.toInfo(ConnectionInfoHandler.java:72)\\n\\tat ai.chat2db.server.web.api.aspect.ConnectionInfoHandler.connectionInfoHandler(ConnectionInfoHandler.java:49)\\n\\tat jdk.internal.reflect.GeneratedMethodAccessor108.invoke(Unknown Source)\\n\\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\\n\\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\\n\\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:637)\\n\\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:627)\\n\\tat org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71)\\n\\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)\\n\\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)\\n\\tat org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)\\n\\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)\\n\\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)\\n\\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:702)\\n\\tat ai.chat2db.server.web.api.controller.rdb.RdbDdlController$$SpringCGLIB$$0.schemaList(<generated>)\\n\\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\\n\\tat java.base/jdk.internal.reflect.NativeMethodAccess\n...<truncated>"
+  },
+  {
+   "id": "C012",
+   "app": "Chat2DB",
+   "target": "GET /api/rdb/ddl/create/example",
+   "failed_api": "GET /api/rdb/ddl/create/example",
+   "status": "200",
+   "request_payload": "{\"path\": {}, \"header\": {\"Cookie\": \"[REDACTED-CREDENTIAL]\", \"CHAT2DB\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {\"dbType\": \"MYSQL\"}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"success\":false,\"errorCode\":\"common.systemError\",\"errorMessage\":\"An exception occurs, you can view the exception details in the log in the help menu.\",\"errorDetail\":\"java.lang.NullPointerException: Cannot invoke \\\"ai.chat2db.spi.sql.ConnectInfo.getDbType()\\\" because the return value of \\\"ai.chat2db.spi.sql.Chat2DBContext.getConnectInfo()\\\" is null\\n\\tat ai.chat2db.spi.sql.Chat2DBContext.getDBConfig(Chat2DBContext.java:74)\\n\\tat ai.chat2db.server.domain.core.impl.TableServiceImpl.createTableExample(TableServiceImpl.java:97)\\n\\tat ai.chat2db.server.web.api.controller.rdb.RdbDdlController.createExample(RdbDdlController.java:183)\\n\\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\\n\\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\\n\\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\\n\\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\\n\\tat org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)\\n\\tat org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)\\n\\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\\n\\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)\\n\\tat org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)\\n\\tat ai.chat2db.server.web.api.aspect.ConnectionInfoHandler.connectionInfoHandler(ConnectionInfoHandler.java:62)\\n\\tat jdk.internal.reflect.GeneratedMethodAccessor108.invoke(Unknown Source)\\n\\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\\n\\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\\n\\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdvi\n...<truncated>"
+  },
+  {
+   "id": "C013",
+   "app": "Chat2DB",
+   "target": "GET /api/rdb/ddl/update/example",
+   "failed_api": "GET /api/rdb/ddl/update/example",
+   "status": "200",
+   "request_payload": "{\"path\": {}, \"header\": {\"Cookie\": \"[REDACTED-CREDENTIAL]\", \"CHAT2DB\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {\"dbType\": \"MYSQL\"}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"success\":false,\"errorCode\":\"common.systemError\",\"errorMessage\":\"An exception occurs, you can view the exception details in the log in the help menu.\",\"errorDetail\":\"java.lang.NullPointerException: Cannot invoke \\\"ai.chat2db.spi.sql.ConnectInfo.getDbType()\\\" because the return value of \\\"ai.chat2db.spi.sql.Chat2DBContext.getConnectInfo()\\\" is null\\n\\tat ai.chat2db.spi.sql.Chat2DBContext.getDBConfig(Chat2DBContext.java:74)\\n\\tat ai.chat2db.server.domain.core.impl.TableServiceImpl.alterTableExample(TableServiceImpl.java:103)\\n\\tat ai.chat2db.server.web.api.controller.rdb.RdbDdlController.updateExample(RdbDdlController.java:194)\\n\\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\\n\\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\\n\\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\\n\\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\\n\\tat org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)\\n\\tat org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)\\n\\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\\n\\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)\\n\\tat org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)\\n\\tat ai.chat2db.server.web.api.aspect.ConnectionInfoHandler.connectionInfoHandler(ConnectionInfoHandler.java:62)\\n\\tat jdk.internal.reflect.GeneratedMethodAccessor108.invoke(Unknown Source)\\n\\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\\n\\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\\n\\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdvi\n...<truncated>"
+  },
+  {
+   "id": "C014",
+   "app": "Chat2DB",
+   "target": "GET /api/rdb/table/type_list",
+   "failed_api": "GET /api/rdb/table/type_list",
+   "status": "200",
+   "request_payload": "{\"path\": {}, \"header\": {\"Cookie\": \"[REDACTED-CREDENTIAL]\", \"CHAT2DB\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {\"dataSourceId\": 3}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"success\":false,\"errorCode\":\"connection.ssh.error\",\"errorMessage\":\"SSH connection failed, please check the connection information\",\"errorDetail\":\"BusinessException(super=ai.chat2db.server.tools.common.exception.ConnectionException: connection.ssh.error, code=connection.ssh.error, args=null)\\n\\tat ai.chat2db.spi.jdbc.DefaultDBManage.getConnection(DefaultDBManage.java:69)\\n\\tat ai.chat2db.spi.sql.ConnectionPool.getConnection(ConnectionPool.java:97)\\n\\tat ai.chat2db.spi.sql.Chat2DBContext.getConnection(Chat2DBContext.java:109)\\n\\tat ai.chat2db.server.domain.core.impl.TableServiceImpl.queryTypes(TableServiceImpl.java:557)\\n\\tat ai.chat2db.server.web.api.controller.rdb.TableController.types(TableController.java:235)\\n\\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\\n\\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\\n\\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\\n\\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\\n\\tat org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)\\n\\tat org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)\\n\\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\\n\\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)\\n\\tat org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)\\n\\tat ai.chat2db.server.web.api.aspect.ConnectionInfoHandler.connectionInfoHandler(ConnectionInfoHandler.java:62)\\n\\tat jdk.internal.reflect.GeneratedMethodAccessor108.invoke(Unknown Source)\\n\\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\\n\\tat java.base/java.lang.reflect.Method.invoke(\n...<truncated>"
+  },
+  {
+   "id": "C015",
+   "app": "Chat2DB",
+   "target": "GET /api/rdb/database/list",
+   "failed_api": "GET /api/rdb/database/list",
+   "status": "200",
+   "request_payload": "{\"path\": {}, \"header\": {\"Cookie\": \"[REDACTED-CREDENTIAL]\", \"CHAT2DB\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {\"dataSourceId\": 3, \"refresh\": false}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"success\":false,\"errorCode\":\"connection.ssh.error\",\"errorMessage\":\"SSH connection failed, please check the connection information\",\"errorDetail\":\"BusinessException(super=ai.chat2db.server.tools.common.exception.ConnectionException: connection.ssh.error, code=connection.ssh.error, args=null)\\n\\tat ai.chat2db.spi.jdbc.DefaultDBManage.getConnection(DefaultDBManage.java:69)\\n\\tat ai.chat2db.spi.sql.ConnectionPool.getConnection(ConnectionPool.java:97)\\n\\tat ai.chat2db.spi.sql.Chat2DBContext.getConnection(Chat2DBContext.java:109)\\n\\tat ai.chat2db.server.domain.core.impl.DatabaseServiceImpl.lambda$queryAll$1(DatabaseServiceImpl.java:49)\\n\\tat ai.chat2db.server.domain.core.cache.CacheManage.getList(CacheManage.java:79)\\n\\tat ai.chat2db.server.domain.core.impl.DatabaseServiceImpl.queryAll(DatabaseServiceImpl.java:47)\\n\\tat ai.chat2db.server.web.api.controller.rdb.DatabaseController.databaseList(DatabaseController.java:79)\\n\\tat jdk.internal.reflect.GeneratedMethodAccessor300.invoke(Unknown Source)\\n\\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\\n\\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\\n\\tat org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)\\n\\tat org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)\\n\\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\\n\\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)\\n\\tat org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)\\n\\tat ai.chat2db.server.web.api.aspect.ConnectionInfoHandler.connectionInfoHandler(ConnectionInfoHandler.java:62)\\n\\tat jdk.internal.reflect.GeneratedMethodAccessor108.invoke(Unknown Source)\\n\\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImp\n...<truncated>"
+  },
+  {
+   "id": "C016",
+   "app": "Chat2DB",
+   "target": "POST /api/rdb/database/delete_database",
+   "failed_api": "POST /api/rdb/database/delete_database",
+   "status": "200",
+   "request_payload": "{\"path\": {}, \"header\": {\"Cookie\": \"[REDACTED-CREDENTIAL]\", \"CHAT2DB\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {\"dataSourceId\": 1, \"databaseName\": \"test_db\", \"refresh\": false}, \"files\": null}",
+   "response_text": "{\"success\":false,\"errorCode\":\"common.paramDetailError\",\"errorMessage\":\"The parameter: dataSourceId is incorrect\",\"errorDetail\":\"BusinessException(super=ai.chat2db.server.tools.common.exception.ParamBusinessException: common.paramDetailError, code=common.paramDetailError, args=[dataSourceId])\\n\\tat ai.chat2db.server.web.api.aspect.ConnectionInfoHandler.toInfo(ConnectionInfoHandler.java:72)\\n\\tat ai.chat2db.server.web.api.aspect.ConnectionInfoHandler.connectionInfoHandler(ConnectionInfoHandler.java:49)\\n\\tat jdk.internal.reflect.GeneratedMethodAccessor108.invoke(Unknown Source)\\n\\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\\n\\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\\n\\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:637)\\n\\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:627)\\n\\tat org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71)\\n\\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)\\n\\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)\\n\\tat org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)\\n\\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)\\n\\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)\\n\\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:702)\\n\\tat ai.chat2db.server.web.api.controller.rdb.DatabaseController$$SpringCGLIB$$0.deleteDatabase(<generated>)\\n\\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\\n\\tat java.base/jdk.internal.reflect.NativeMethod\n...<truncated>"
+  },
+  {
+   "id": "C017",
+   "app": "Chat2DB",
+   "target": "GET /api/redis/key/list",
+   "failed_api": "GET /api/redis/key/list",
+   "status": "200",
+   "request_payload": "{\"path\": {}, \"header\": {\"Cookie\": \"[REDACTED-CREDENTIAL]\", \"CHAT2DB\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {\"dataSourceId\": 1, \"databaseName\": \"0\", \"searchKey\": \"*\", \"keyName\": \"\"}, \"body\": {}, \"files\": null}",
+   "response_text": ""
+  },
+  {
+   "id": "C018",
+   "app": "Chat2DB",
+   "target": "DELETE /api/operation/saved/{id}",
+   "failed_api": "DELETE /api/operation/saved/{id}",
+   "status": "200",
+   "request_payload": "{\"path\": {\"id\": 3}, \"header\": {\"Cookie\": \"[REDACTED-CREDENTIAL]\", \"CHAT2DB\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"success\":false,\"errorCode\":\"common.systemError\",\"errorMessage\":\"An exception occurs, you can view the exception details in the log in the help menu.\",\"errorDetail\":\"java.lang.NullPointerException: Cannot invoke \\\"ai.chat2db.server.domain.repository.entity.OperationSavedDO.getDataSourceId()\\\" because \\\"operationSavedDO\\\" is null\\n\\tat ai.chat2db.server.domain.core.impl.OperationServiceImpl.find(OperationServiceImpl.java:84)\\n\\tat ai.chat2db.server.domain.core.impl.OperationServiceImpl.queryExistent(OperationServiceImpl.java:94)\\n\\tat ai.chat2db.server.domain.core.impl.OperationServiceImpl.deleteWithPermission(OperationServiceImpl.java:115)\\n\\tat ai.chat2db.server.web.api.controller.operation.saved.OperationSavedController.delete(OperationSavedController.java:132)\\n\\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\\n\\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\\n\\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\\n\\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)\\n\\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(Dispat\n...<truncated>"
+  },
+  {
+   "id": "C019",
+   "app": "Chat2DB",
+   "target": "GET /api/connection/datasource/connect",
+   "failed_api": "GET /api/connection/datasource/connect",
+   "status": "200",
+   "request_payload": "{\"path\": {}, \"header\": {\"Cookie\": \"[REDACTED-CREDENTIAL]\", \"CHAT2DB\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {\"id\": 1}, \"body\": {\"dataSourceId\": 1}, \"files\": null}",
+   "response_text": "{\"success\":false,\"errorCode\":\"common.paramDetailError\",\"errorMessage\":\"The parameter: dataSourceId is incorrect\",\"errorDetail\":\"BusinessException(super=ai.chat2db.server.tools.common.exception.ParamBusinessException: common.paramDetailError, code=common.paramDetailError, args=[dataSourceId])\\n\\tat ai.chat2db.server.web.api.aspect.ConnectionInfoHandler.toInfo(ConnectionInfoHandler.java:72)\\n\\tat ai.chat2db.server.web.api.aspect.ConnectionInfoHandler.toInfo(ConnectionInfoHandler.java:106)\\n\\tat ai.chat2db.server.web.api.aspect.ConnectionInfoHandler.connectionInfoHandler(ConnectionInfoHandler.java:58)\\n\\tat jdk.internal.reflect.GeneratedMethodAccessor108.invoke(Unknown Source)\\n\\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\\n\\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\\n\\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:637)\\n\\tat org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:627)\\n\\tat org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71)\\n\\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)\\n\\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)\\n\\tat org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)\\n\\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)\\n\\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)\\n\\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:702)\\n\\tat ai.chat2db.server.web.api.controller.data.source.DataSourceController$$SpringCGLIB$$0.attach(<generated>)\\n\\tat jdk.internal.reflect.Gener\n...<truncated>"
+  },
+  {
+   "id": "C020",
+   "app": "GitLab",
+   "target": "GET /v3/projects/{id}/issues/{issue_id}/award_emoji/{award_id}",
+   "failed_api": "GET /v3/projects/{id}/issues/{issue_id}/award_emoji/{award_id}",
+   "status": "404",
+   "request_payload": "{\"path\": {\"id\": 1, \"issue_id\": 1, \"award_id\": 1}, \"header\": {\"PRIVATE-TOKEN\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"message\":\"404 Not found\"}"
+  },
+  {
+   "id": "C021",
+   "app": "GitLab",
+   "target": "GET /v3/projects/{id}/merge_requests/{merge_request_id}/award_emoji/{award_id}",
+   "failed_api": "GET /v3/projects/{id}/merge_requests/{merge_request_id}/award_emoji/{award_id}",
+   "status": "404",
+   "request_payload": "{\"path\": {\"id\": 1, \"merge_request_id\": 2, \"award_id\": 1}, \"header\": {\"PRIVATE-TOKEN\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"message\":\"404 Not found\"}"
+  },
+  {
+   "id": "C022",
+   "app": "GitLab",
+   "target": "DELETE /v3/projects/{id}/merge_requests/{merge_request_id}/award_emoji/{award_id}",
+   "failed_api": "DELETE /v3/projects/{id}/merge_requests/{merge_request_id}/award_emoji/{award_id}",
+   "status": "404",
+   "request_payload": "{\"path\": {\"id\": 1, \"merge_request_id\": 2, \"award_id\": 1}, \"header\": {\"PRIVATE-TOKEN\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"message\":\"404 Not found\"}"
+  },
+  {
+   "id": "C023",
+   "app": "GitLab",
+   "target": "GET /v3/projects/{id}/merge_requests/{merge_request_id}/notes/{note_id}/award_emoji/{award_id}",
+   "failed_api": "GET /v3/projects/{id}/merge_requests/{merge_request_id}/notes/{note_id}/award_emoji/{award_id}",
+   "status": "404",
+   "request_payload": "{\"path\": {\"id\": 1, \"merge_request_id\": 2, \"note_id\": 1, \"award_id\": 1}, \"header\": {\"PRIVATE-TOKEN\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"message\":\"404 Not found\"}"
+  },
+  {
+   "id": "C024",
+   "app": "GitLab",
+   "target": "POST /v3/users/{id}/keys",
+   "failed_api": "POST /v3/users/{id}/keys",
+   "status": "401",
+   "request_payload": "{\"path\": {\"id\": 1}, \"header\": {\"PRIVATE-TOKEN\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {\"key\": \"ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINwedj+EaKZJTsOrb9tSyE8jNTC78SlBmDf+Yp+e9w1r\", \"title\": \"Green.\"}, \"files\": null}",
+   "response_text": "{\"message\":\"401 Unauthorized\"}"
+  },
+  {
+   "id": "C025",
+   "app": "GitLab",
+   "target": "GET /v3/licenses/{name}",
+   "failed_api": "GET /v3/licenses/{name}",
+   "status": "404",
+   "request_payload": "{\"path\": {\"name\": \"The Unlicense\"}, \"header\": {\"PRIVATE-TOKEN\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"error\":\"404 Not Found\"}"
+  },
+  {
+   "id": "C026",
+   "app": "GitLab",
+   "target": "POST /v3/user/emails",
+   "failed_api": "POST /v3/user/emails",
+   "status": "401",
+   "request_payload": "{\"path\": {}, \"header\": {\"PRIVATE-TOKEN\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {\"email\": \"admin@example.com\"}, \"files\": null}",
+   "response_text": "{\"message\":\"401 Unauthorized\"}"
+  },
+  {
+   "id": "C027",
+   "app": "GitLab",
+   "target": "POST /v3/projects/{id}/issues/{issue_id}/todo",
+   "failed_api": "POST /v3/projects/{id}/issues/{issue_id}/todo",
+   "status": "404",
+   "request_payload": "{\"path\": {\"id\": 172, \"issue_id\": 34}, \"header\": {\"PRIVATE-TOKEN\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"message\":\"404 Not found\"}"
+  },
+  {
+   "id": "C028",
+   "app": "GitLab",
+   "target": "DELETE /v3/projects/{id}/keys/{key_id}/disable",
+   "failed_api": "DELETE /v3/projects/{id}/keys/{key_id}/disable",
+   "status": "500",
+   "request_payload": "{\"path\": {\"id\": 4, \"key_id\": 4}, \"header\": {\"PRIVATE-TOKEN\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"message\":\"500 Internal Server Error\"}"
+  },
+  {
+   "id": "C029",
+   "app": "GitLab",
+   "target": "POST /v3/projects/{id}/merge_request/{merge_request_id}/comments",
+   "failed_api": "POST /v3/projects/{id}/merge_request/{merge_request_id}/comments",
+   "status": "404",
+   "request_payload": "{\"path\": {\"id\": 225, \"merge_request_id\": 30}, \"header\": {\"PRIVATE-TOKEN\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {\"note\": \"Author evening impact recently strategy voice hospital point.\"}, \"files\": null}",
+   "response_text": "{\"message\":\"404 Not found\"}"
+  },
+  {
+   "id": "C030",
+   "app": "GitLab",
+   "target": "GET /v3/projects/{id}/merge_request/{merge_request_id}/commits",
+   "failed_api": "GET /v3/projects/{id}/merge_request/{merge_request_id}/commits",
+   "status": "404",
+   "request_payload": "{\"path\": {\"id\": 229, \"merge_request_id\": 32}, \"header\": {\"PRIVATE-TOKEN\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"message\":\"404 Not found\"}"
+  },
+  {
+   "id": "C031",
+   "app": "GitLab",
+   "target": "GET /v3/projects/{id}/merge_requests/{merge_request_id}/changes",
+   "failed_api": "GET /v3/projects/{id}/merge_requests/{merge_request_id}/changes",
+   "status": "404",
+   "request_payload": "{\"path\": {\"id\": 267, \"merge_request_id\": 51}, \"header\": {\"PRIVATE-TOKEN\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"message\":\"404 Not found\"}"
+  },
+  {
+   "id": "C032",
+   "app": "GitLab",
+   "target": "POST /v3/projects/{id}/merge_requests/{merge_request_id}/todo",
+   "failed_api": "POST /v3/projects/{id}/merge_requests/{merge_request_id}/todo",
+   "status": "404",
+   "request_payload": "{\"path\": {\"id\": 299, \"merge_request_id\": 67}, \"header\": {\"PRIVATE-TOKEN\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"message\":\"404 Not found\"}"
+  },
+  {
+   "id": "C033",
+   "app": "GitLab",
+   "target": "DELETE /v3/projects/{id}/merge_requests/{noteable_id}/notes/{note_id}",
+   "failed_api": "DELETE /v3/projects/{id}/merge_requests/{noteable_id}/notes/{note_id}",
+   "status": "404",
+   "request_payload": "{\"path\": {\"id\": 316, \"noteable_id\": 76, \"note_id\": 43}, \"header\": {\"PRIVATE-TOKEN\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"message\":\"404 Not found\"}"
+  },
+  {
+   "id": "C034",
+   "app": "GitLab",
+   "target": "DELETE /v3/projects/{id}/snippets/{noteable_id}/notes/{note_id}",
+   "failed_api": "DELETE /v3/projects/{id}/snippets/{noteable_id}/notes/{note_id}",
+   "status": "404",
+   "request_payload": "{\"path\": {\"id\": 1, \"noteable_id\": 1, \"note_id\": 43}, \"header\": {\"PRIVATE-TOKEN\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"message\":\"404 Project Not Found\"}"
+  },
+  {
+   "id": "C035",
+   "app": "GitLab",
+   "target": "POST /v3/projects/{id}/issues/{noteable_id}/notes",
+   "failed_api": "POST /v3/projects/{id}/issues/{noteable_id}/notes",
+   "status": "404",
+   "request_payload": "{\"path\": {\"id\": 532, \"noteable_id\": 54}, \"header\": {\"PRIVATE-TOKEN\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {\"body\": \"Mention time yet. Poor because although instead movie. Much seem young line.\", \"created_at\": \"<timestamp>\"}, \"files\": null}",
+   "response_text": "{\"message\":\"404 Not found\"}"
+  },
+  {
+   "id": "C036",
+   "app": "GitLab",
+   "target": "POST /v3/projects/{id}/labels/{subscribable_id}/subscription",
+   "failed_api": "POST /v3/projects/{id}/labels/{subscribable_id}/subscription",
+   "status": "404",
+   "request_payload": "{\"path\": {\"id\": 541, \"subscribable_id\": 19}, \"header\": {\"PRIVATE-TOKEN\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"message\":\"404 Label Not Found\"}"
+  },
+  {
+   "id": "C037",
+   "app": "GitLab",
+   "target": "PUT /v3/projects/{id}/milestones/{milestone_id}",
+   "failed_api": "PUT /v3/projects/{id}/milestones/{milestone_id}",
+   "status": "404",
+   "request_payload": "{\"path\": {\"id\": 576, \"milestone_id\": 63}, \"header\": {\"PRIVATE-TOKEN\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {\"title\": \"test35\", \"description\": \"test23\", \"start_date\": \"2026-02-14\", \"due_date\": \"2026-03-11\"}, \"files\": null}",
+   "response_text": "{\"message\":\"404 Not found\"}"
+  },
+  {
+   "id": "C038",
+   "app": "GitLab",
+   "target": "DELETE /v3/projects/{id}/variables/{key}",
+   "failed_api": "DELETE /v3/projects/{id}/variables/{key}",
+   "status": "404",
+   "request_payload": "{\"path\": {\"id\": 639, \"key\": \"test36\"}, \"header\": {\"PRIVATE-TOKEN\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"message\":\"404 Variable Not Found\"}"
+  },
+  {
+   "id": "C039",
+   "app": "Gitea",
+   "target": "GET /notifications/threads/{id}",
+   "failed_api": "GET /notifications/threads/{id}",
+   "status": "404",
+   "request_payload": "{\"path\": {\"id\": \"1\"}, \"header\": {\"Authorization\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"message\":\"record does not exist [id: 1]\",\"url\":\"http://localhost/api/swagger\"}"
+  },
+  {
+   "id": "C040",
+   "app": "Gitea",
+   "target": "GET /repos/{owner}/{repo}/branch_protections/{name}",
+   "failed_api": "GET /repos/{owner}/{repo}/branch_protections/{name}",
+   "status": "404",
+   "request_payload": "{\"path\": {\"owner\": \"root\", \"repo\": 1069, \"name\": \"voapi-fixture\"}, \"header\": {\"Authorization\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"documentation_url\":\"http://localhost/api/swagger\",\"errors\":null,\"message\":\"Not Found\"}"
+  },
+  {
+   "id": "C041",
+   "app": "Gitea",
+   "target": "GET /repos/{owner}/{repo}/git/commits/{sha}.{diffType}",
+   "failed_api": "GET /repos/{owner}/{repo}/git/commits/{sha}.{diffType}",
+   "status": "404",
+   "request_payload": "{\"path\": {\"owner\": \"root\", \"repo\": \"1070\", \"sha\": \"3ba6b9efde6450ed3c444fae20cd9ab8ae461144\", \"diffType\": \"diff\"}, \"header\": {\"Authorization\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"documentation_url\":\"http://localhost/api/swagger\",\"errors\":null,\"message\":\"Not Found\"}"
+  },
+  {
+   "id": "C042",
+   "app": "Gitea",
+   "target": "GET /repos/{owner}/{repo}/milestones/{id}",
+   "failed_api": "GET /repos/{owner}/{repo}/milestones/{id}",
+   "status": "404",
+   "request_payload": "{\"path\": {\"owner\": \"root\", \"repo\": \"1069\", \"id\": \"1\"}, \"header\": {\"Authorization\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"documentation_url\":\"http://localhost/api/swagger\",\"errors\":null,\"message\":\"Not Found\"}"
+  },
+  {
+   "id": "C043",
+   "app": "Gitea",
+   "target": "POST /repos/{owner}/{repo}/pulls/{index}/merge",
+   "failed_api": "POST /repos/{owner}/{repo}/pulls/{index}/merge",
+   "status": "404",
+   "request_payload": "{\"path\": {\"owner\": \"root\", \"repo\": \"1106\", \"index\": 1}, \"header\": {\"Authorization\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {\"Do\": \"merge\", \"delete_branch_after_merge\": false, \"force_merge\": false}, \"files\": null}",
+   "response_text": "{\"documentation_url\":\"http://localhost/api/swagger\",\"errors\":null,\"message\":\"Not Found\"}"
+  },
+  {
+   "id": "C044",
+   "app": "Gitea",
+   "target": "POST /repos/{owner}/{repo}/pulls/{index}/requested_reviewers",
+   "failed_api": "POST /repos/{owner}/{repo}/pulls/{index}/requested_reviewers",
+   "status": "404",
+   "request_payload": "{\"path\": {\"owner\": \"root\", \"repo\": \"voapi-fixture\", \"index\": 1}, \"header\": {\"Authorization\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {\"reviewers\": [\"root\"], \"team_reviewers\": []}, \"files\": null}",
+   "response_text": "{\"documentation_url\":\"http://localhost/api/swagger\",\"errors\":[\"pull request does not exist [id: 0, issue_id: 0, head_repo_id: 0, base_repo_id: 1069, head_branch: , base_branch: ]\"],\"message\":\"GetPullRequestByIndex\"}"
+  },
+  {
+   "id": "C045",
+   "app": "Gitea",
+   "target": "POST /repos/{template_owner}/{template_repo}/generate",
+   "failed_api": "POST /repos/{template_owner}/{template_repo}/generate",
+   "status": "404",
+   "request_payload": "{\"path\": {\"template_owner\": \"root\", \"template_repo\": \"template-repo\"}, \"header\": {\"Authorization\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {\"owner\": \"root\", \"name\": \"generated-repo-9499fe\", \"description\": \"Including against national cold minute.\", \"git_content\": true, \"labels\": true, \"topics\": true, \"private\": false, \"avatar\": false, \"webhooks\": false, \"git_hooks\": false}, \"files\": null}",
+   "response_text": "{\"documentation_url\":\"http://localhost/api/swagger\",\"errors\":null,\"message\":\"Not Found\"}"
+  },
+  {
+   "id": "C046",
+   "app": "Gitea",
+   "target": "POST /users/{username}/tokens",
+   "failed_api": "POST /users/{username}/tokens",
+   "status": "401",
+   "request_payload": "{\"path\": {\"username\": \"root\"}, \"header\": {\"Authorization\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {\"name\": \"token-dsi8cH5F\"}, \"files\": null}",
+   "response_text": "{\"message\":\"basic auth required\",\"url\":\"http://localhost/api/swagger\"}"
+  },
+  {
+   "id": "C047",
+   "app": "Gitea",
+   "target": "PATCH /repos/{owner}/{repo}/hooks/{id}",
+   "failed_api": "PATCH /repos/{owner}/{repo}/hooks/{id}",
+   "status": "404",
+   "request_payload": "{\"path\": {\"owner\": \"root\", \"repo\": \"1069\", \"id\": 6}, \"header\": {\"Authorization\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {\"active\": false, \"config\": {\"url\": \"https://lynch.net/\", \"content_type\": \"json\"}, \"events\": [\"push\"]}, \"files\": null}",
+   "response_text": "{\"documentation_url\":\"http://localhost/api/swagger\",\"errors\":null,\"message\":\"Not Found\"}"
+  },
+  {
+   "id": "C048",
+   "app": "Gitea",
+   "target": "DELETE /admin/unadopted/{owner}/{repo}",
+   "failed_api": "DELETE /admin/unadopted/{owner}/{repo}",
+   "status": "404",
+   "request_payload": "{\"path\": {\"owner\": \"root\", \"repo\": \"stop\"}, \"header\": {\"Authorization\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"documentation_url\":\"http://localhost/api/swagger\",\"errors\":null,\"message\":\"Not Found\"}"
+  },
+  {
+   "id": "C049",
+   "app": "Gitea",
+   "target": "DELETE /repos/{owner}/{repo}/branches/{branch}",
+   "failed_api": "DELETE /repos/{owner}/{repo}/branches/{branch}",
+   "status": "500",
+   "request_payload": "{\"path\": {\"owner\": \"root\", \"repo\": \"voapi-fixture\", \"branch\": \"patch-1\"}, \"header\": {\"Authorization\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"message\":\"object does not exist [id: refs/heads/patch-1, rel_path: ]\",\"url\":\"http://localhost/api/swagger\"}"
+  },
+  {
+   "id": "C050",
+   "app": "Gitea",
+   "target": "DELETE /repos/{owner}/{repo}/hooks/git/{id}",
+   "failed_api": "DELETE /repos/{owner}/{repo}/hooks/git/{id}",
+   "status": "404",
+   "request_payload": "{\"path\": {\"owner\": \"root\", \"repo\": \"1069\", \"id\": \"post-receive\"}, \"header\": {\"Authorization\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"documentation_url\":\"http://localhost/api/swagger\",\"errors\":null,\"message\":\"Not Found\"}"
+  },
+  {
+   "id": "C051",
+   "app": "Halo",
+   "target": "GET /{year}/{month}/{day}/{slug}",
+   "failed_api": "GET /{year}/{month}/{day}/{slug}",
+   "status": "404",
+   "request_payload": "{\"path\": {\"year\": 1981, \"month\": 3, \"day\": 8, \"slug\": \"learn\"}, \"header\": {\"ADMIN-Authorization\": \"[REDACTED-CREDENTIAL]\", \"admin_token\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"status\":404,\"message\":\"Not Found\",\"devMessage\":null,\"data\":{\"timestamp\":1790685864727,\"status\":404,\"error\":\"Not Found\",\"message\":\"无法定位到该路径：/1981/3/8/learn\",\"path\":\"/1981/3/8/learn\"}}"
+  },
+  {
+   "id": "C052",
+   "app": "Halo",
+   "target": "DELETE /api/admin/sheets/comments",
+   "failed_api": "DELETE /api/admin/sheets/comments",
+   "status": "404",
+   "request_payload": "{\"path\": {}, \"header\": {\"ADMIN-Authorization\": \"[REDACTED-CREDENTIAL]\", \"admin_token\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": [1], \"files\": null}",
+   "response_text": "{\"status\":404,\"message\":\"查询不到该评论的信息\",\"devMessage\":null,\"data\":1}"
+  },
+  {
+   "id": "C053",
+   "app": "Halo",
+   "target": "POST /api/admin/themes/fetching",
+   "failed_api": "POST /api/admin/themes/fetching",
+   "status": "500",
+   "request_payload": "{\"path\": {}, \"header\": {\"ADMIN-Authorization\": \"[REDACTED-CREDENTIAL]\", \"admin_token\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {\"uri\": \"https://github.com/halo-dev/halo-theme-higan\"}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"status\":500,\"message\":\"Internal Server Error\",\"devMessage\":null,\"data\":null}"
+  },
+  {
+   "id": "C054",
+   "app": "Halo",
+   "target": "POST /api/admin/login/precheck",
+   "failed_api": "POST /api/admin/login/precheck",
+   "status": "400",
+   "request_payload": "{\"path\": {}, \"header\": {\"ADMIN-Authorization\": \"[REDACTED-CREDENTIAL]\", \"admin_token\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {\"username\": \"fmatthews\", \"password\": \"oijOl89XMvNEHbfhYQFQ\"}, \"files\": null}",
+   "response_text": "{\"status\":400,\"message\":\"访问过于频繁，请稍后再试！\",\"devMessage\":null,\"data\":\"cache_lock_login_precheck\"}"
+  },
+  {
+   "id": "C055",
+   "app": "Halo",
+   "target": "PUT /api/admin/password/reset",
+   "failed_api": "PUT /api/admin/password/reset",
+   "status": "400",
+   "request_payload": "{\"path\": {}, \"header\": {\"ADMIN-Authorization\": \"[REDACTED-CREDENTIAL]\", \"admin_token\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {\"username\": \"root\", \"email\": \"hi@halo.run\", \"code\": \"123456\", \"password\": \"P5ZXstsRci\"}, \"files\": null}",
+   "response_text": "{\"status\":400,\"message\":\"访问过于频繁，请稍后再试！\",\"devMessage\":null,\"data\":\"cache_lock_public void run.halo.app.controller.admin.api.AdminController.resetPassword(run.halo.app.model.params.ResetPasswordParam)\"}"
+  },
+  {
+   "id": "C056",
+   "app": "Halo",
+   "target": "POST /api/admin/backups/markdown/import",
+   "failed_api": "POST /api/admin/backups/markdown/import",
+   "status": "599",
+   "request_payload": "<unserializable payload>",
+   "response_text": "Object of type BytesIO is not JSON serializable"
+  },
+  {
+   "id": "C057",
+   "app": "Halo",
+   "target": "DELETE /api/admin/backups/data",
+   "failed_api": "DELETE /api/admin/backups/data",
+   "status": "404",
+   "request_payload": "{\"path\": {}, \"header\": {\"ADMIN-Authorization\": \"[REDACTED-CREDENTIAL]\", \"admin_token\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {\"filename\": \"backup.zip\"}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"status\":404,\"message\":\"The file backup.zip was not found\",\"devMessage\":null,\"data\":null}"
+  },
+  {
+   "id": "C058",
+   "app": "Halo",
+   "target": "GET /api/content/categories",
+   "failed_api": "GET /api/content/categories",
+   "status": "403",
+   "request_payload": "{\"path\": {}, \"header\": {\"ADMIN-Authorization\": \"[REDACTED-CREDENTIAL]\", \"admin_token\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {\"more\": \"false\", \"sort\": \"updateTime,desc\"}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"status\":403,\"message\":\"API has been disabled by blogger currently\",\"devMessage\":null,\"data\":null}"
+  },
+  {
+   "id": "C059",
+   "app": "Halo",
+   "target": "POST /api/admin/statics/upload",
+   "failed_api": "POST /api/admin/statics/upload",
+   "status": "500",
+   "request_payload": "{\"path\": {}, \"header\": {\"ADMIN-Authorization\": \"[REDACTED-CREDENTIAL]\", \"admin_token\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {\"basePath\": \"/root/.halo/static/VoAPITestString\"}, \"body\": {\"file\": \"PeXMxjAwxMnyGyDFNssX\"}, \"files\": null}",
+   "response_text": "{\"status\":500,\"message\":\"Internal Server Error\",\"devMessage\":null,\"data\":null}"
+  },
+  {
+   "id": "C060",
+   "app": "Halo",
+   "target": "GET /api/admin/themes/{themeId}/groups/{group}/settings",
+   "failed_api": "GET /api/admin/themes/{themeId}/groups/{group}/settings",
+   "status": "404",
+   "request_payload": "{\"path\": {\"themeId\": \"caicai_anatole\", \"group\": \"general\"}, \"header\": {\"ADMIN-Authorization\": \"[REDACTED-CREDENTIAL]\", \"admin_token\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"status\":404,\"message\":\"caicai_anatole 主题不存在或已删除！\",\"devMessage\":null,\"data\":\"caicai_anatole\"}"
+  },
+  {
+   "id": "C061",
+   "app": "Jellyfin",
+   "target": "HEAD /Audio/{itemId}/master.m3u8",
+   "failed_api": "HEAD /Audio/{itemId}/master.m3u8",
+   "status": "400",
+   "request_payload": "{\"path\": {\"itemId\": \"67ece113ba672270b12d746af18d3bc0\"}, \"header\": {\"X-Emby-Authorization\": \"[REDACTED-CREDENTIAL]\", \"Cookie\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": ""
+  },
+  {
+   "id": "C062",
+   "app": "Jellyfin",
+   "target": "GET /Audio/{itemId}/hls/{segmentId}/stream.mp3",
+   "failed_api": "GET /Audio/{itemId}/hls/{segmentId}/stream.mp3",
+   "status": "404",
+   "request_payload": "{\"path\": {\"itemId\": \"bc7ddd36-52c9-4cc9-9a56-26902ae34d94\", \"segmentId\": \"0\"}, \"header\": {\"X-Emby-Authorization\": \"[REDACTED-CREDENTIAL]\", \"Cookie\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "Error processing request."
+  },
+  {
+   "id": "C063",
+   "app": "Jellyfin",
+   "target": "GET /Items",
+   "failed_api": "GET /Items",
+   "status": "500",
+   "request_payload": "{\"path\": {}, \"header\": {\"X-Emby-Authorization\": \"[REDACTED-CREDENTIAL]\", \"Cookie\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {\"recursive\": true, \"limit\": 10, \"startIndex\": 0, \"enableTotalRecordCount\": true}, \"body\": {}, \"files\": null}",
+   "response_text": "Error processing request."
+  },
+  {
+   "id": "C064",
+   "app": "Jellyfin",
+   "target": "POST /LiveTv/ChannelMappings",
+   "failed_api": "POST /LiveTv/ChannelMappings",
+   "status": "500",
+   "request_payload": "{\"path\": {}, \"header\": {\"X-Emby-Authorization\": \"[REDACTED-CREDENTIAL]\", \"Cookie\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {\"ProviderId\": \"xmltv_provider\", \"TunerChannelId\": \"tuner_ch_001\", \"ProviderChannelId\": \"guide_ch_001\"}, \"files\": null}",
+   "response_text": "Error processing request."
+  },
+  {
+   "id": "C065",
+   "app": "Jellyfin",
+   "target": "GET /LiveTv/LiveStreamFiles/{streamId}/stream.{container}",
+   "failed_api": "GET /LiveTv/LiveStreamFiles/{streamId}/stream.{container}",
+   "status": "404",
+   "request_payload": "{\"path\": {\"streamId\": \"00000000000000000000000000000000\", \"container\": \"ts\"}, \"header\": {\"X-Emby-Authorization\": \"[REDACTED-CREDENTIAL]\", \"Cookie\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.4\",\"title\":\"Not Found\",\"status\":404,\"traceId\":\"00-95d4704141fba946870feecb8a2af82a-dc09e52338052540-00\"}"
+  },
+  {
+   "id": "C066",
+   "app": "Jellyfin",
+   "target": "POST /SyncPlay/Leave",
+   "failed_api": "POST /SyncPlay/Leave",
+   "status": "403",
+   "request_payload": "{\"path\": {}, \"header\": {\"X-Emby-Authorization\": \"[REDACTED-CREDENTIAL]\", \"Cookie\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": ""
+  },
+  {
+   "id": "C067",
+   "app": "Jellyfin",
+   "target": "GET /Audio/{itemId}/universal",
+   "failed_api": "GET /Audio/{itemId}/universal",
+   "status": "400",
+   "request_payload": "{\"path\": {\"itemId\": \"566048da-ed19-4cd3-8e0a-b7e0e1ec4d25\"}, \"header\": {\"X-Emby-Authorization\": \"[REDACTED-CREDENTIAL]\", \"Cookie\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {\"userId\": \"566048da-ed19-4cd3-8e0a-b7e0e1ec4d42\", \"deviceId\": \"qa-tester-device\", \"audioCodec\": \"mp3\", \"enableRedirection\": true}, \"body\": {}, \"files\": null}",
+   "response_text": "Error processing request."
+  },
+  {
+   "id": "C068",
+   "app": "Jellyfin",
+   "target": "GET /Videos/{itemId}/{stream}.{container}",
+   "failed_api": "GET /Videos/{itemId}/{stream}.{container}",
+   "status": "500",
+   "request_payload": "{\"path\": {\"itemId\": \"566048da-ed19-4cd3-8e0a-b7e0e1ec4d39\", \"stream\": \"stream\", \"container\": \"mp4\"}, \"header\": {\"X-Emby-Authorization\": \"[REDACTED-CREDENTIAL]\", \"Cookie\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "Error processing request."
+  },
+  {
+   "id": "C069",
+   "app": "Jellyfin",
+   "target": "POST /LiveTv/SeriesTimers/{timerId}",
+   "failed_api": "POST /LiveTv/SeriesTimers/{timerId}",
+   "status": "500",
+   "request_payload": "{\"path\": {\"timerId\": \"5299862b-d142-4088-8231-8fb0012a070e\"}, \"header\": {\"X-Emby-Authorization\": \"[REDACTED-CREDENTIAL]\", \"Cookie\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {\"Id\": \"5299862b-d142-4088-8231-8fb0012a070e\", \"Type\": \"SeriesTimer\", \"ChannelId\": \"f8479d20-b0a7-4b8d-893f-34a40585fd26\", \"Name\": \"Receive name cell.\", \"Priority\": 1, \"PrePaddingSeconds\": 0, \"PostPaddingSeconds\": 0, \"IsPrePaddingRequired\": false, \"IsPostPaddingRequired\": false, \"KeepUntil\": \"UntilDeleted\", \"RecordAnyTime\": true, \"SkipEpisodesInLibrary\": false, \"RecordAnyChannel\": true, \"KeepUpTo\": 0, \"RecordNewOnly\": false, \"Days\": [\"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\"], \"DayPattern\": \"Daily\"}, \"files\": null}",
+   "response_text": "Error processing request."
+  },
+  {
+   "id": "C070",
+   "app": "Jellyfin",
+   "target": "POST /Sessions/{sessionId}/Message",
+   "failed_api": "POST /Sessions/{sessionId}/Message",
+   "status": "400",
+   "request_payload": "{\"path\": {\"sessionId\": \"00000000000000000000000000000000\"}, \"header\": {\"X-Emby-Authorization\": \"[REDACTED-CREDENTIAL]\", \"Cookie\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\"title\":\"One or more validation errors occurred.\",\"status\":400,\"traceId\":\"00-938e61a7f81d9c409fd72e5b9f51344f-24becf6fe214d34a-00\",\"errors\":{\"text\":[\"The text field is required.\"]}}"
+  },
+  {
+   "id": "C071",
+   "app": "Jellyfin",
+   "target": "POST /Sessions/{sessionId}/Command/{command}",
+   "failed_api": "POST /Sessions/{sessionId}/Command/{command}",
+   "status": "404",
+   "request_payload": "{\"path\": {\"sessionId\": \"00000000000000000000000000000000\", \"command\": \"Back\"}, \"header\": {\"X-Emby-Authorization\": \"[REDACTED-CREDENTIAL]\", \"Cookie\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "Error processing request."
+  },
+  {
+   "id": "C072",
+   "app": "Jellyfin",
+   "target": "POST /Users/{userId}",
+   "failed_api": "POST /Users/{userId}",
+   "status": "400",
+   "request_payload": "{\"path\": {\"userId\": \"92be43d24ae84e3cb4fa69244e5f2a2f\"}, \"header\": {\"X-Emby-Authorization\": \"[REDACTED-CREDENTIAL]\", \"Cookie\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {\"Name\": \"zaZswmJkhAIkIw7f8zFjSlvbv78Ua61Vlgz2JToGRZYo2nXIlKG7ck8ZjoHjudSe95WVwQVDdMuLA7mVRIek7okrHGaaElLXfFzX7zp2buylQGpzQueCmMmi3usHQPXqAwGJNexRcUQyBqTDqbv5PM5bLlylv3S0esWclfYoAahFXvtcgjmJw8r1fGIOzGWjGKWkzbP1vYObDctXhJdg7fk6tnfEdnnUkKo9953I5NjT0amWVIhqo8nwQPIO14gb44wyQAgpsJkT8xJNXNGSb63RmMbynIpfXpIbIWWuhLtrnyQyOTYJ9FHO8R4jARTZqtzyfyNToMUjajQ4ytMtcpLCvyiVxQJ3XiBaUo8nFEZK2tglcRQUWhdOauKOM68ttbhBNogQPFimq05c64Xo7YicxJb7PGEgUTbYv5vnmuekDIIibj3iQIL6pRGwymg5NkXlPKXz7SBhqiGXUNArXPPIXKqxts3SMBEgDKvF94e6XYXmiNZga64qZs0aLnNbOgBexjuDONG0ziQw5yav7DZwLemgyuIOoqbhx3lzaKAuyqzlS54waVCHOYGAickj6JbtzZzHqueWETJfqtWv7XQGQvg1C7TJAQpvtY6gbvQBV8PPiKMmbQ9Om1tvYX52aoKo0TU6R7CiG6MtgihSuA8uOvxABhNIg89rvWFJVUqEY21XObwRpdKV9TBbQ3GIftKXuZKImRiA216m4Dk368wn5S5T9TY5A5z7HNavratpgp1nR9aSilt42fWfw92gJAP1I53kdmFR0TOLOyPZ1SPeuCtmxZq6aASUaheJfyrgxBJveuRaGb1mHfHX4W3aXd19SLTf1foqQyxFU00rdfhUfUaQpNVOebx4CqDYmh4ABtp1XpS4z8fZ0prqiYRWNqfqWbHtruKkj0UwpK5WBNwRGbP2Ejsl0TsshB8U6e54Yh18TFv2LufbRsitC0DhZPH3zydRM6azBzcYcNtAZmFqLHPfNPe80XWF4jU8dO8iI3qnSX6OdYrIS8IiFIUlId9bHkrypqtE7mkc4WZjBPGTm3KLKBakDfKlQzOqhPZnc1UVXz6YU64JdKEbtYM5UlSc1s8cUg1YFInwjyiNEwv768wfk1vj7nIzixWH1agANzrY0OiTLTTIxZ56snlQ7oBHzIwK8V7AjmoVnI5Ao38e\n...<truncated>",
+   "response_text": "{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\"title\":\"One or more validation errors occurred.\",\"status\":400,\"traceId\":\"00-ed108379695fa2449a4242f1745fb646-7736b2cde4079447-00\",\"errors\":{\"updateUser\":[\"The updateUser field is required.\"],\"$.Policy.AccessSchedules\":[\"The JSON value could not be converted to Jellyfin.Data.Entities.AccessSchedule[]. Path: $.Policy.AccessSchedules | LineNumber: 0 | BytePositionInLine: 10580.\"]}}"
+  },
+  {
+   "id": "C073",
+   "app": "Jellyfin",
+   "target": "POST /Users/New",
+   "failed_api": "POST /Users/New",
+   "status": "400",
+   "request_payload": "{\"path\": {}, \"header\": {\"X-Emby-Authorization\": \"[REDACTED-CREDENTIAL]\", \"Cookie\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {\"Name\": \"zaZswmJkhAIkIw7f8zFjSlvbv78Ua61Vlgz2JToGRZYo2nXIlKG7ck8ZjoHjudSe95WVwQVDdMuLA7mVRIek7okrHGaaElLXfFzX7zp2buylQGpzQueCmMmi3usHQPXqAwGJNexRcUQyBqTDqbv5PM5bLlylv3S0esWclfYoAahFXvtcgjmJw8r1fGIOzGWjGKWkzbP1vYObDctXhJdg7fk6tnfEdnnUkKo9953I5NjT0amWVIhqo8nwQPIO14gb44wyQAgpsJkT8xJNXNGSb63RmMbynIpfXpIbIWWuhLtrnyQyOTYJ9FHO8R4jARTZqtzyfyNToMUjajQ4ytMtcpLCvyiVxQJ3XiBaUo8nFEZK2tglcRQUWhdOauKOM68ttbhBNogQPFimq05c64Xo7YicxJb7PGEgUTbYv5vnmuekDIIibj3iQIL6pRGwymg5NkXlPKXz7SBhqiGXUNArXPPIXKqxts3SMBEgDKvF94e6XYXmiNZga64qZs0aLnNbOgBexjuDONG0ziQw5yav7DZwLemgyuIOoqbhx3lzaKAuyqzlS54waVCHOYGAickj6JbtzZzHqueWETJfqtWv7XQGQvg1C7TJAQpvtY6gbvQBV8PPiKMmbQ9Om1tvYX52aoKo0TU6R7CiG6MtgihSuA8uOvxABhNIg89rvWFJVUqEY21XObwRpdKV9TBbQ3GIftKXuZKImRiA216m4Dk368wn5S5T9TY5A5z7HNavratpgp1nR9aSilt42fWfw92gJAP1I53kdmFR0TOLOyPZ1SPeuCtmxZq6aASUaheJfyrgxBJveuRaGb1mHfHX4W3aXd19SLTf1foqQyxFU00rdfhUfUaQpNVOebx4CqDYmh4ABtp1XpS4z8fZ0prqiYRWNqfqWbHtruKkj0UwpK5WBNwRGbP2Ejsl0TsshB8U6e54Yh18TFv2LufbRsitC0DhZPH3zydRM6azBzcYcNtAZmFqLHPfNPe80XWF4jU8dO8iI3qnSX6OdYrIS8IiFIUlId9bHkrypqtE7mkc4WZjBPGTm3KLKBakDfKlQzOqhPZnc1UVXz6YU64JdKEbtYM5UlSc1s8cUg1YFInwjyiNEwv768wfk1vj7nIzixWH1agANzrY0OiTLTTIxZ56snlQ7oBHzIwK8V7AjmoVnI5Ao38eZ8swlnVBtw49tqqW4lguZ06AccYxkrg4AFmGp61SITfw\n...<truncated>",
+   "response_text": "Error processing request."
+  },
+  {
+   "id": "C074",
+   "app": "Jellyfin",
+   "target": "POST /Playlists/{playlistId}/Items/{itemId}/Move/{newIndex}",
+   "failed_api": "POST /Playlists/{playlistId}/Items/{itemId}/Move/{newIndex}",
+   "status": "400",
+   "request_payload": "{\"path\": {\"playlistId\": \"fa17933d-88db-464d-9d9d-07734f45b917\", \"itemId\": \"a9a2ae30-0a1c-4229-9157-089e0b4edc0b\", \"newIndex\": 0}, \"header\": {\"X-Emby-Authorization\": \"[REDACTED-CREDENTIAL]\", \"Cookie\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "Error processing request."
+  },
+  {
+   "id": "C075",
+   "app": "Jellyfin",
+   "target": "GET /LiveTv/Recordings/Groups/{groupId}",
+   "failed_api": "GET /LiveTv/Recordings/Groups/{groupId}",
+   "status": "404",
+   "request_payload": "{\"path\": {\"groupId\": \"15328050-850e-4a0b-8795-37e4a933f2d8\"}, \"header\": {\"X-Emby-Authorization\": \"[REDACTED-CREDENTIAL]\", \"Cookie\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.4\",\"title\":\"Not Found\",\"status\":404,\"traceId\":\"00-696d9ce5cd5a57418f9954f366308eee-7ae8986c6aeae043-00\"}"
+  },
+  {
+   "id": "C076",
+   "app": "Jellyfin",
+   "target": "GET /Studios/{name}/Images/{imageType}",
+   "failed_api": "GET /Studios/{name}/Images/{imageType}",
+   "status": "400",
+   "request_payload": "{\"path\": {\"name\": \"VoAPITestString26\", \"imageType\": \"Studio\"}, \"header\": {\"X-Emby-Authorization\": \"[REDACTED-CREDENTIAL]\", \"Cookie\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {\"quality\": 90, \"format\": \"Jpg\"}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\"title\":\"One or more validation errors occurred.\",\"status\":400,\"traceId\":\"00-f1186826652eb044aa22df295b921eee-a676731128313147-00\",\"errors\":{\"imageType\":[\"The value \\u0027Studio\\u0027 is not valid.\"]}}"
+  },
+  {
+   "id": "C077",
+   "app": "Jellyfin",
+   "target": "DELETE /Users/{userId}/FavoriteItems/{itemId}",
+   "failed_api": "DELETE /Users/{userId}/FavoriteItems/{itemId}",
+   "status": "500",
+   "request_payload": "{\"path\": {\"userId\": \"92be43d24ae84e3cb4fa69244e5f2a2f\", \"itemId\": \"92be43d24ae84e3cb4fa69244e5f2a2f\"}, \"header\": {\"X-Emby-Authorization\": \"[REDACTED-CREDENTIAL]\", \"Cookie\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "Error processing request."
+  },
+  {
+   "id": "C078",
+   "app": "Jellyfin",
+   "target": "POST /Users/{userId}/Images/{imageType}/{index}",
+   "failed_api": "POST /Users/{userId}/Images/{imageType}/{index}",
+   "status": "500",
+   "request_payload": "{\"path\": {\"userId\": \"92be43d24ae84e3cb4fa69244e5f2a2f\", \"imageType\": \"Primary\", \"index\": 0}, \"header\": {\"X-Emby-Authorization\": \"[REDACTED-CREDENTIAL]\", \"Cookie\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "Error processing request."
+  },
+  {
+   "id": "C079",
+   "app": "Jellyfin",
+   "target": "POST /Users/{userId}/Policy",
+   "failed_api": "POST /Users/{userId}/Policy",
+   "status": "400",
+   "request_payload": "{\"path\": {\"userId\": \"92be43d24ae84e3cb4fa69244e5f2a2f\"}, \"header\": {\"X-Emby-Authorization\": \"[REDACTED-CREDENTIAL]\", \"Cookie\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {\"IsAdministrator\": false, \"IsHidden\": true, \"IsDisabled\": false, \"MaxParentalRating\": null, \"BlockedTags\": [], \"EnableUserPreferenceAccess\": true, \"AccessSchedules\": {\"Id\": \"92be43d24ae84e3cb4fa69244e5f2a2f\", \"UserId\": \"92be43d24ae84e3cb4fa69244e5f2a2f\", \"DayOfWeek\": \"Sunday\"}, \"BlockUnratedItems\": [], \"EnableRemoteControlOfOtherUsers\": false, \"EnableSharedDeviceControl\": true, \"EnableRemoteAccess\": true, \"EnableLiveTvManagement\": true, \"EnableLiveTvAccess\": true, \"EnableMediaPlayback\": true, \"EnableAudioPlaybackTranscoding\": true, \"EnableVideoPlaybackTranscoding\": true, \"EnablePlaybackRemuxing\": true, \"ForceRemoteSourceTranscoding\": false, \"EnableContentDeletion\": false, \"EnableContentDeletionFromFolders\": [], \"EnableContentDownloading\": true, \"EnableSyncTranscoding\": true, \"EnableMediaConversion\": true, \"EnabledDevices\": [], \"EnableAllDevices\": true, \"EnabledChannels\": [], \"EnableAllChannels\": true, \"EnabledFolders\": [], \"EnableAllFolders\": true, \"InvalidLoginAttemptCount\": 0, \"LoginAttemptsBeforeLockout\": -1, \"MaxActiveSessions\": 0, \"EnablePublicSharing\": true, \"BlockedMediaFolders\": [], \"BlockedChannels\": [], \"RemoteClientBitrateLimit\": 0, \"AuthenticationProvider\n...<truncated>",
+   "response_text": "{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\"title\":\"One or more validation errors occurred.\",\"status\":400,\"traceId\":\"00-8b0553e793b1364dac025eb383a7c7aa-f2ef1c66008ab949-00\",\"errors\":{\"newPolicy\":[\"The newPolicy field is required.\"],\"$.AccessSchedules\":[\"The JSON value could not be converted to Jellyfin.Data.Entities.AccessSchedule[]. Path: $.AccessSchedules | LineNumber: 0 | BytePositionInLine: 168.\"]}}"
+  },
+  {
+   "id": "C080",
+   "app": "Jellyfin",
+   "target": "POST /Users/{userId}/Authenticate",
+   "failed_api": "POST /Users/{userId}/Authenticate",
+   "status": "401",
+   "request_payload": "{\"path\": {\"userId\": \"92be43d24ae84e3cb4fa69244e5f2a2f\"}, \"header\": {\"X-Emby-Authorization\": \"[REDACTED-CREDENTIAL]\", \"Cookie\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {\"pw\": \"password123\"}, \"body\": {}, \"files\": null}",
+   "response_text": "Error processing request."
+  },
+  {
+   "id": "C081",
+   "app": "Jellyfin",
+   "target": "DELETE /Users/{userId}/Images/{imageType}/{index}",
+   "failed_api": "DELETE /Users/{userId}/Images/{imageType}/{index}",
+   "status": "500",
+   "request_payload": "{\"path\": {\"userId\": \"92be43d24ae84e3cb4fa69244e5f2a2f\", \"imageType\": \"Primary\", \"index\": 0}, \"header\": {\"X-Emby-Authorization\": \"[REDACTED-CREDENTIAL]\", \"Cookie\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "Error processing request."
+  },
+  {
+   "id": "C082",
+   "app": "Jellyfin",
+   "target": "DELETE /Users/{userId}/Images/{imageType}",
+   "failed_api": "DELETE /Users/{userId}/Images/{imageType}",
+   "status": "500",
+   "request_payload": "{\"path\": {\"userId\": \"92be43d24ae84e3cb4fa69244e5f2a2f\", \"imageType\": \"Primary\"}, \"header\": {\"X-Emby-Authorization\": \"[REDACTED-CREDENTIAL]\", \"Cookie\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "Error processing request."
+  },
+  {
+   "id": "C083",
+   "app": "Jellyfin",
+   "target": "GET /Users/{userId}/Items/Resume",
+   "failed_api": "GET /Users/{userId}/Items/Resume",
+   "status": "500",
+   "request_payload": "{\"path\": {\"userId\": \"1071671e7bffa0532e930debee501d2e\"}, \"header\": {\"X-Emby-Authorization\": \"[REDACTED-CREDENTIAL]\", \"Cookie\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {\"parentId\": \"1071671e7bffa0532e930debee501d2e\"}, \"body\": {}, \"files\": null}",
+   "response_text": "Error processing request."
+  },
+  {
+   "id": "C084",
+   "app": "Microcks",
+   "target": "GET /services/search",
+   "failed_api": "GET /services/search",
+   "status": "500",
+   "request_payload": "{\"path\": {}, \"header\": {}, \"query\": {\"queryMap\": \"{\\\"name\\\": \\\"affect\\\"}\"}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"timestamp\":1790642921034,\"status\":500,\"error\":\"Internal Server Error\",\"path\":\"/api/services/search\"}"
+  },
+  {
+   "id": "C085",
+   "app": "Novel-Plus",
+   "target": "POST /user/register",
+   "failed_api": "POST /user/register",
+   "status": "200",
+   "request_payload": "{\"path\": {}, \"header\": {\"Authorization\": \"[REDACTED-CREDENTIAL]\", \"Cookie\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {\"username\": \"18053575095\", \"password\": \"JuHT1wJboZhs\", \"velCode\": \"wWeV\"}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"code\":1002,\"msg\":\"验证码错误！\",\"data\":null,\"ok\":false}"
+  },
+  {
+   "id": "C086",
+   "app": "Novel-Plus",
+   "target": "POST /novel/user/remove",
+   "failed_api": "POST /novel/user/remove",
+   "status": "200",
+   "request_payload": "{\"path\": {}, \"header\": {\"Cookie\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {\"id\": 1}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"msg\":\"操作失败\",\"code\":1}"
+  },
+  {
+   "id": "C087",
+   "app": "Novel-Plus",
+   "target": "POST /novel/bookContent/batchRemove",
+   "failed_api": "POST /novel/bookContent/batchRemove",
+   "status": "200",
+   "request_payload": "{\"path\": {}, \"header\": {\"Cookie\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {\"ids[]\": [1345, 2262]}, \"files\": null}",
+   "response_text": "<!DOCTYPE html>\n<html>\n\n<head>\n\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\n\n    <title>500错误</title>\n    <meta name=\"keywords\" content=\"\">\n    <meta name=\"description\" content=\"\">\n\n    <link rel=\"shortcut icon\" href=\"/favicon.ico\"> <link href=\"/css/bootstrap.min.css?v=3.3.6\" rel=\"stylesheet\">\n    <link href=\"/css/font-awesome.css?v=4.4.0\" rel=\"stylesheet\">\n\n    <link href=\"/css/animate.css\" rel=\"stylesheet\">\n    <link href=\"/css/style.css?v=4.1.0\" rel=\"stylesheet\">\n\n</head>\n\n<body class=\"gray-bg\">\n\n\n    <div class=\"middle-box text-center animated fadeInDown\">\n        <h1>500</h1>\n        <h3 class=\"font-bold\">服务器内部错误</h3>\n\n        <div class=\"error-desc\">\n            服务器好像出错了...\n            <br/>您可以返回主页看看\n            <br/><a href=\"/\" class=\"btn btn-primary m-t\">主页</a>\n        </div>\n    </div>\n\n    <!-- 全局js -->\n    <script src=\"/js/jquery.min.js?v=2.1.4\"></script>\n    <script src=\"/js/bootstrap.min.js?v=3.3.6\"></script>\n\n  \n</body>\n\n</html>"
+  },
+  {
+   "id": "C088",
+   "app": "Novel-Plus",
+   "target": "POST /novel/friendLink/remove",
+   "failed_api": "POST /novel/friendLink/remove",
+   "status": "200",
+   "request_payload": "{\"path\": {}, \"header\": {\"Cookie\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {\"id\": 662}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"msg\":\"操作失败\",\"code\":1}"
+  },
+  {
+   "id": "C089",
+   "app": "Novel-Plus",
+   "target": "POST /novel/book/batchRemove",
+   "failed_api": "POST /novel/book/batchRemove",
+   "status": "200",
+   "request_payload": "{\"path\": {}, \"header\": {\"Cookie\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {\"ids[]\": [927]}, \"body\": {}, \"files\": null}",
+   "response_text": "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>403 页面</title>\n<meta name=\"keywords\" content=\"\">\n<meta name=\"description\" content=\"\">\n<link rel=\"shortcut icon\" href=\"/favicon.ico\">\n<link href=\"/css/bootstrap.min.css?v=3.3.6\" rel=\"stylesheet\">\n<link href=\"/css/font-awesome.css?v=4.4.0\" rel=\"stylesheet\">\n<link href=\"/css/animate.css\" rel=\"stylesheet\">\n<link href=\"/css/style.css?v=4.1.0\" rel=\"stylesheet\">\n</head>\n<body class=\"gray-bg\">\n\t<div class=\"middle-box text-center animated fadeInDown\">\n\t\t<h1>403</h1>\n\t\t<h3 class=\"font-bold\">您没有访问权限！</h3>\n\t\t<div class=\"error-desc\">\n\t\t\t抱歉，请联系管理员哦~\n\t\t\t<form class=\"form-inline m-t\" role=\"form\">\n\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t<input type=\"email\" class=\"form-control\"\n\t\t\t\t\t\tplaceholder=\"请输入您需要查找的内容 …\">\n\t\t\t\t</div>\n\t\t\t\t<button type=\"submit\" class=\"btn btn-primary\">搜索</button>\n\t\t\t</form>\n\t\t</div>\n\t</div>\n\t<!-- 全局js -->\n\t<script src=\"/js/jquery.min.js?v=2.1.4\"></script>\n\t<script src=\"/js/bootstrap.min.js?v=3.3.6\"></script>\n</body>\n</html>"
+  },
+  {
+   "id": "C090",
+   "app": "Novel-Plus",
+   "target": "POST /common/generator/genCode",
+   "failed_api": "POST /common/generator/genCode",
+   "status": "200",
+   "request_payload": "{\"path\": {}, \"header\": {\"Cookie\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {\"tableName\": \"sys_user\"}, \"body\": {}, \"files\": null}",
+   "response_text": "<!DOCTYPE html>\n<html>\n\n<head>\n\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\n\n    <title>500错误</title>\n    <meta name=\"keywords\" content=\"\">\n    <meta name=\"description\" content=\"\">\n\n    <link rel=\"shortcut icon\" href=\"/favicon.ico\"> <link href=\"/css/bootstrap.min.css?v=3.3.6\" rel=\"stylesheet\">\n    <link href=\"/css/font-awesome.css?v=4.4.0\" rel=\"stylesheet\">\n\n    <link href=\"/css/animate.css\" rel=\"stylesheet\">\n    <link href=\"/css/style.css?v=4.1.0\" rel=\"stylesheet\">\n\n</head>\n\n<body class=\"gray-bg\">\n\n\n    <div class=\"middle-box text-center animated fadeInDown\">\n        <h1>500</h1>\n        <h3 class=\"font-bold\">服务器内部错误</h3>\n\n        <div class=\"error-desc\">\n            服务器好像出错了...\n            <br/>您可以返回主页看看\n            <br/><a href=\"/\" class=\"btn btn-primary m-t\">主页</a>\n        </div>\n    </div>\n\n    <!-- 全局js -->\n    <script src=\"/js/jquery.min.js?v=2.1.4\"></script>\n    <script src=\"/js/bootstrap.min.js?v=3.3.6\"></script>\n\n  \n</body>\n\n</html>"
+  },
+  {
+   "id": "C091",
+   "app": "Novel-Plus",
+   "target": "POST /common/generator/genColumns/save",
+   "failed_api": "POST /common/generator/genColumns/save",
+   "status": "200",
+   "request_payload": "{\"path\": {}, \"header\": {\"Cookie\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": [{\"id\": null, \"tableName\": \"sys_user\", \"columnName\": \"id\", \"columnType\": \"bigint\", \"javaType\": \"Long\", \"columnComment\": \"Primary Key\", \"columnSort\": 1, \"columnLabel\": \"ID\", \"pageType\": 1, \"isRequired\": 1, \"dictType\": \"\", \"attrName\": \"Id\", \"attrname\": \"id\", \"extra\": \"\"}], \"files\": null}",
+   "response_text": "<!DOCTYPE html>\n<html>\n\n<head>\n\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\n\n    <title>500错误</title>\n    <meta name=\"keywords\" content=\"\">\n    <meta name=\"description\" content=\"\">\n\n    <link rel=\"shortcut icon\" href=\"/favicon.ico\"> <link href=\"/css/bootstrap.min.css?v=3.3.6\" rel=\"stylesheet\">\n    <link href=\"/css/font-awesome.css?v=4.4.0\" rel=\"stylesheet\">\n\n    <link href=\"/css/animate.css\" rel=\"stylesheet\">\n    <link href=\"/css/style.css?v=4.1.0\" rel=\"stylesheet\">\n\n</head>\n\n<body class=\"gray-bg\">\n\n\n    <div class=\"middle-box text-center animated fadeInDown\">\n        <h1>500</h1>\n        <h3 class=\"font-bold\">服务器内部错误</h3>\n\n        <div class=\"error-desc\">\n            服务器好像出错了...\n            <br/>您可以返回主页看看\n            <br/><a href=\"/\" class=\"btn btn-primary m-t\">主页</a>\n        </div>\n    </div>\n\n    <!-- 全局js -->\n    <script src=\"/js/jquery.min.js?v=2.1.4\"></script>\n    <script src=\"/js/bootstrap.min.js?v=3.3.6\"></script>\n\n  \n</body>\n\n</html>"
+  },
+  {
+   "id": "C092",
+   "app": "Novel-Plus",
+   "target": "POST /sys/user/uploadImg",
+   "failed_api": "POST /sys/user/uploadImg",
+   "status": "200",
+   "request_payload": "{\"path\": {}, \"header\": {\"Cookie\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {\"avatar_data\": \"{\\\"x\\\":0,\\\"y\\\":0,\\\"width\\\":1,\\\"height\\\":1}\"}, \"body\": {\"avatar_file\": \"Bv1cPbwETjbeTi2uXt9d\"}, \"files\": null}",
+   "response_text": "<!DOCTYPE html>\n<html>\n\n<head>\n\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\n\n    <title>500错误</title>\n    <meta name=\"keywords\" content=\"\">\n    <meta name=\"description\" content=\"\">\n\n    <link rel=\"shortcut icon\" href=\"/favicon.ico\"> <link href=\"/css/bootstrap.min.css?v=3.3.6\" rel=\"stylesheet\">\n    <link href=\"/css/font-awesome.css?v=4.4.0\" rel=\"stylesheet\">\n\n    <link href=\"/css/animate.css\" rel=\"stylesheet\">\n    <link href=\"/css/style.css?v=4.1.0\" rel=\"stylesheet\">\n\n</head>\n\n<body class=\"gray-bg\">\n\n\n    <div class=\"middle-box text-center animated fadeInDown\">\n        <h1>500</h1>\n        <h3 class=\"font-bold\">服务器内部错误</h3>\n\n        <div class=\"error-desc\">\n            服务器好像出错了...\n            <br/>您可以返回主页看看\n            <br/><a href=\"/\" class=\"btn btn-primary m-t\">主页</a>\n        </div>\n    </div>\n\n    <!-- 全局js -->\n    <script src=\"/js/jquery.min.js?v=2.1.4\"></script>\n    <script src=\"/js/bootstrap.min.js?v=3.3.6\"></script>\n\n  \n</body>\n\n</html>"
+  },
+  {
+   "id": "C093",
+   "app": "Novel-Plus",
+   "target": "GET /novel/bookContent/edit/{id}",
+   "failed_api": "GET /novel/bookContent/edit/{id}",
+   "status": "200",
+   "request_payload": "{\"path\": {\"id\": 1}, \"header\": {\"Cookie\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"msg\":\"服务器错误\",\"code\":500}"
+  },
+  {
+   "id": "C094",
+   "app": "Novel-Plus",
+   "target": "GET /novel/pay/detail/{id}",
+   "failed_api": "GET /novel/pay/detail/{id}",
+   "status": "200",
+   "request_payload": "{\"path\": {\"id\": 2013}, \"header\": {\"Cookie\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"msg\":\"服务器错误\",\"code\":500}"
+  },
+  {
+   "id": "C095",
+   "app": "Novel-Plus",
+   "target": "GET /novel/bookIndex/edit/{id}",
+   "failed_api": "GET /novel/bookIndex/edit/{id}",
+   "status": "200",
+   "request_payload": "{\"path\": {\"id\": 1}, \"header\": {\"Cookie\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"msg\":\"服务器错误\",\"code\":500}"
+  },
+  {
+   "id": "C096",
+   "app": "Novel-Plus",
+   "target": "GET /novel/category/edit/{id}",
+   "failed_api": "GET /novel/category/edit/{id}",
+   "status": "200",
+   "request_payload": "{\"path\": {\"id\": 1}, \"header\": {\"Cookie\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"msg\":\"服务器错误\",\"code\":500}"
+  },
+  {
+   "id": "C097",
+   "app": "Novel-Plus",
+   "target": "GET /novel/news/detail/{id}",
+   "failed_api": "GET /novel/news/detail/{id}",
+   "status": "200",
+   "request_payload": "{\"path\": {\"id\": 1}, \"header\": {\"Cookie\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"msg\":\"服务器错误\",\"code\":500}"
+  },
+  {
+   "id": "C098",
+   "app": "Novel-Plus",
+   "target": "GET /novel/authorCode/detail/{id}",
+   "failed_api": "GET /novel/authorCode/detail/{id}",
+   "status": "200",
+   "request_payload": "{\"path\": {\"id\": 74}, \"header\": {\"Cookie\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {}, \"body\": {}, \"files\": null}",
+   "response_text": "{\"msg\":\"服务器错误\",\"code\":500}"
+  },
+  {
+   "id": "C099",
+   "app": "Novel-Plus",
+   "target": "GET /common/sysFile/download",
+   "failed_api": "GET /common/sysFile/download",
+   "status": "200",
+   "request_payload": "{\"path\": {}, \"header\": {\"Cookie\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {\"filePath\": \"test.txt\", \"fileName\": \"download.txt\"}, \"body\": {}, \"files\": null}",
+   "response_text": "<!DOCTYPE html>\n<html>\n\n<head>\n\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\n\n    <title>500错误</title>\n    <meta name=\"keywords\" content=\"\">\n    <meta name=\"description\" content=\"\">\n\n    <link rel=\"shortcut icon\" href=\"/favicon.ico\"> <link href=\"/css/bootstrap.min.css?v=3.3.6\" rel=\"stylesheet\">\n    <link href=\"/css/font-awesome.css?v=4.4.0\" rel=\"stylesheet\">\n\n    <link href=\"/css/animate.css\" rel=\"stylesheet\">\n    <link href=\"/css/style.css?v=4.1.0\" rel=\"stylesheet\">\n\n</head>\n\n<body class=\"gray-bg\">\n\n\n    <div class=\"middle-box text-center animated fadeInDown\">\n        <h1>500</h1>\n        <h3 class=\"font-bold\">服务器内部错误</h3>\n\n        <div class=\"error-desc\">\n            服务器好像出错了...\n            <br/>您可以返回主页看看\n            <br/><a href=\"/\" class=\"btn btn-primary m-t\">主页</a>\n        </div>\n    </div>\n\n    <!-- 全局js -->\n    <script src=\"/js/jquery.min.js?v=2.1.4\"></script>\n    <script src=\"/js/bootstrap.min.js?v=3.3.6\"></script>\n\n  \n</body>\n\n</html>"
+  },
+  {
+   "id": "C100",
+   "app": "Novel-Plus",
+   "target": "GET /sys/menu/tree",
+   "failed_api": "GET /sys/menu/tree",
+   "status": "200",
+   "request_payload": "{\"path\": {}, \"header\": {\"Cookie\": \"[REDACTED-CREDENTIAL]\"}, \"query\": {\"parentId\": 0}, \"body\": {}, \"files\": null}",
+   "response_text": "<!DOCTYPE html>\n<html>\n\n<head>\n\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\n\n    <title>500错误</title>\n    <meta name=\"keywords\" content=\"\">\n    <meta name=\"description\" content=\"\">\n\n    <link rel=\"shortcut icon\" href=\"/favicon.ico\"> <link href=\"/css/bootstrap.min.css?v=3.3.6\" rel=\"stylesheet\">\n    <link href=\"/css/font-awesome.css?v=4.4.0\" rel=\"stylesheet\">\n\n    <link href=\"/css/animate.css\" rel=\"stylesheet\">\n    <link href=\"/css/style.css?v=4.1.0\" rel=\"stylesheet\">\n\n</head>\n\n<body class=\"gray-bg\">\n\n\n    <div class=\"middle-box text-center animated fadeInDown\">\n        <h1>500</h1>\n        <h3 class=\"font-bold\">服务器内部错误</h3>\n\n        <div class=\"error-desc\">\n            服务器好像出错了...\n            <br/>您可以返回主页看看\n            <br/><a href=\"/\" class=\"btn btn-primary m-t\">主页</a>\n        </div>\n    </div>\n\n    <!-- 全局js -->\n    <script src=\"/js/jquery.min.js?v=2.1.4\"></script>\n    <script src=\"/js/bootstrap.min.js?v=3.3.6\"></script>\n\n  \n</body>\n\n</html>"
+  }
+ ]
+}

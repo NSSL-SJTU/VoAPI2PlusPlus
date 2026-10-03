@@ -1,0 +1,502 @@
+{
+ "C001": {
+  "predicted": "dependency_error",
+  "reason": "The function execution failed because no deployment tag was found for the function. A deployment (tag) must be created and active before a function can be executed.",
+  "missing_fields": "tag"
+ },
+ "C002": {
+  "predicted": "unknown",
+  "reason": "The API returned a 200 OK status, which indicates success in serving the requested HTML document. There is no failure to classify.",
+  "missing_fields": ""
+ },
+ "C003": {
+  "predicted": "unknown",
+  "reason": "The API returned a 500 Internal Server Error, which indicates an unhandled exception on the server side. Without logs or specific stack trace information, it is impossible to determine if the cause is a dependency, a parameter issue, or an application logic error.",
+  "missing_fields": ""
+ },
+ "C004": {
+  "predicted": "unknown",
+  "reason": "The API returned a generic 500 Internal Server Error for a simple GET request to /register.html. There are no input parameters (query, path, or body) provided in the request that could be validated for errors, and the response body provides no specific information or stack trace to determine the underlying cause of the server-side failure.",
+  "missing_fields": ""
+ },
+ "C005": {
+  "predicted": "dependency_error",
+  "reason": "The API failed with a java.lang.NullPointerException because the Chart record (chartDO) for the provided ID '1' was null. This indicates that the identifier provided in the path does not exist in the database, which is a dependency error regarding missing resources that should have been created by a prior operation.",
+  "missing_fields": ""
+ },
+ "C006": {
+  "predicted": "parameter_error",
+  "reason": "The server returned a 'common.paramError' with the message 'dataSource.sqlEmpty', indicating that the 'sql' parameter, despite being present in the JSON body as 'SELECT 1', was likely interpreted as blank or empty by the server-side validation logic.",
+  "missing_fields": "sql"
+ },
+ "C007": {
+  "predicted": "parameter_error",
+  "reason": "The request payload contains an empty object for the 'path' field, which is likely expected to contain specific parameters or IDs required for the document export process, leading to a server-side error.",
+  "missing_fields": "path"
+ },
+ "C008": {
+  "predicted": "parameter_error",
+  "reason": "The API expects a multipart file upload as indicated by the NullPointerException when attempting to access 'file' in the KnowledgeController. The request payload provided shows 'files': null, indicating the mandatory file parameter is missing.",
+  "missing_fields": "files"
+ },
+ "C009": {
+  "predicted": "unknown",
+  "reason": "The API returned a HTTP 200 status code but provided generic placeholder data ('Event 0' through 'Event 9') instead of a real AI-generated response. While this indicates the system is likely in a mock or unconfigured state, the lack of an explicit error message makes it impossible to distinguish between a missing parameter or a missing backend AI configuration (dependency).",
+  "missing_fields": ""
+ },
+ "C010": {
+  "predicted": "dependency_error",
+  "reason": "The 'dataSourceId' parameter is null. This field is a required identifier that refers to a resource (a data source) that must be created or obtained from another API call before being used here.",
+  "missing_fields": "dataSourceId"
+ },
+ "C011": {
+  "predicted": "parameter_error",
+  "reason": "The API returned a 'common.paramDetailError' specifically indicating that the provided 'dataSourceId' is incorrect, which falls under input validation/parameter constraints.",
+  "missing_fields": "dataSourceId"
+ },
+ "C012": {
+  "predicted": "dependency_error",
+  "reason": "The API failed with a NullPointerException because 'Chat2DBContext.getConnectInfo()' returned null. This indicates that the request lacks a necessary identifier (such as 'dataSourceId') required to establish the database connection context, which is a dependency that should be provided based on previously created data source resources.",
+  "missing_fields": "dataSourceId"
+ },
+ "C013": {
+  "predicted": "dependency_error",
+  "reason": "The system encountered a NullPointerException because 'Chat2DBContext.getConnectInfo()' returned null. This indicates that the required database connection context or connection ID was not established or provided, which is a dependency for performing DDL operations.",
+  "missing_fields": "connectionId"
+ },
+ "C014": {
+  "predicted": "dependency_error",
+  "reason": "The API failed because it could not establish a connection to the data source (SSH connection failed), which indicates that the underlying dependency (the configured data source with ID 3) is unreachable or misconfigured.",
+  "missing_fields": "dataSourceId"
+ },
+ "C015": {
+  "predicted": "dependency_error",
+  "reason": "The API call failed because it could not establish an SSH connection to the underlying resource identified by 'dataSourceId: 3'. This indicates a dependency on a correctly configured and accessible data source/SSH configuration that was likely defined in a previous step.",
+  "missing_fields": ""
+ },
+ "C016": {
+  "predicted": "parameter_error",
+  "reason": "The API returned a 'common.paramDetailError' specifically indicating that the 'dataSourceId' parameter is incorrect. This points to a validation failure where the provided identifier is either invalid, missing in the system state, or improperly formatted for the current context.",
+  "missing_fields": "dataSourceId"
+ },
+ "C017": {
+  "predicted": "dependency_error",
+  "reason": "The API returned an empty response with a 200 status code, which indicates that while the request was syntactically correct, the system could not retrieve the data. This is typically caused by a missing or invalid 'dataSourceId' (1) that should have been created and initialized by a preceding data source configuration API. Without a valid, connected data source, the API cannot list Redis keys.",
+  "missing_fields": ""
+ },
+ "C018": {
+  "predicted": "dependency_error",
+  "reason": "The API failed with a NullPointerException because the resource with ID '3' does not exist in the database. The stack trace indicates that 'operationSavedDO' is null when the service tries to call 'getDataSourceId()', meaning the identifier provided in the path lacks a corresponding record that should have been created or managed by other operations.",
+  "missing_fields": "id"
+ },
+ "C019": {
+  "predicted": "parameter_error",
+  "reason": "The server returned a 'common.paramDetailError' specifically indicating that 'dataSourceId' is incorrect. The request body contains 'dataSourceId' which failed validation in the ConnectionInfoHandler, implying the value provided does not meet the expected constraints or is invalid for the current operation.",
+  "missing_fields": "dataSourceId"
+ },
+ "C020": {
+  "predicted": "dependency_error",
+  "reason": "The 404 Not Found response indicates that one of the parent or target resources (project id: 1, issue id: 1, or award emoji id: 1) does not exist in the system, which is a failure to meet data dependencies.",
+  "missing_fields": ""
+ },
+ "C021": {
+  "predicted": "dependency_error",
+  "reason": "The 404 Not Found response indicates that one of the required resource identifiers (project ID, merge request ID, or award emoji ID) does not exist in the system's database.",
+  "missing_fields": "id, merge_request_id, award_id"
+ },
+ "C022": {
+  "predicted": "dependency_error",
+  "reason": "The resource identified by the project ID, merge request ID, or award ID was not found in the system, indicating that the required entity dependencies for this deletion do not exist.",
+  "missing_fields": ""
+ },
+ "C023": {
+  "predicted": "dependency_error",
+  "reason": "The 404 Not Found error indicates that the specific award emoji or one of its parent resources (project, merge request, or note) identified by the path parameters does not exist in the database.",
+  "missing_fields": "id, merge_request_id, note_id, award_id"
+ },
+ "C024": {
+  "predicted": "dependency_error",
+  "reason": "The API returned a 401 Unauthorized status, indicating that the provided PRIVATE-TOKEN is invalid or expired. Since the authentication token is a dependency that must be provided by an authorization service or a previous login step, this is classified as a dependency error.",
+  "missing_fields": ""
+ },
+ "C025": {
+  "predicted": "dependency_error",
+  "reason": "The resource identified by the name 'The Unlicense' was not found in the system, indicating a dependency on a resource that does not exist or has not been created.",
+  "missing_fields": ""
+ },
+ "C026": {
+  "predicted": "dependency_error",
+  "reason": "The 401 Unauthorized status indicates that the PRIVATE-TOKEN provided in the header is invalid or expired. Since the token is a value that should be produced by the authentication system or obtained via login, this constitutes a dependency error.",
+  "missing_fields": ""
+ },
+ "C027": {
+  "predicted": "dependency_error",
+  "reason": "The resource identified by project ID 172 or issue ID 34 was not found, suggesting that these dependencies must be created or exist before this request can succeed.",
+  "missing_fields": ""
+ },
+ "C028": {
+  "predicted": "unknown",
+  "reason": "The server returned a generic 500 Internal Server Error without specific details, which prevents determining whether the issue stems from missing dependencies (e.g., project or key existence) or invalid parameter constraints.",
+  "missing_fields": ""
+ },
+ "C029": {
+  "predicted": "dependency_error",
+  "reason": "The API returned a 404 Not Found status, which indicates that the project identifier (id: 225) or the merge request identifier (merge_request_id: 30) specified in the URL path does not exist in the system. These identifiers are dependencies that should have been created by prior API operations.",
+  "missing_fields": ""
+ },
+ "C030": {
+  "predicted": "dependency_error",
+  "reason": "The 404 Not Found error indicates that the project with id 229 or the merge_request with id 32 does not exist. These are foreign identifiers that must exist in the system before this endpoint can return data, making it a dependency error.",
+  "missing_fields": "id, merge_request_id"
+ },
+ "C031": {
+  "predicted": "dependency_error",
+  "reason": "The 404 Not Found response indicates that the project with ID 267 or the merge request with ID 51 does not exist in the system, suggesting a failure in providing valid identifiers for existing resources.",
+  "missing_fields": ""
+ },
+ "C032": {
+  "predicted": "dependency_error",
+  "reason": "The resource identified by the project ID 299 or the merge request ID 67 could not be found, which indicates that the required parent resources do not exist in the system state.",
+  "missing_fields": ""
+ },
+ "C033": {
+  "predicted": "dependency_error",
+  "reason": "The 404 Not Found response indicates that the specific resource identified by the project ID (316), merge request ID (76), or note ID (43) does not exist in the system, implying a failure in the dependency of these resources being pre-created.",
+  "missing_fields": ""
+ },
+ "C034": {
+  "predicted": "dependency_error",
+  "reason": "The response message '404 Project Not Found' indicates that the project resource with ID 1, which this API call depends on, does not exist.",
+  "missing_fields": "id"
+ },
+ "C035": {
+  "predicted": "dependency_error",
+  "reason": "The 404 Not Found response indicates that the specified project resource (id: 532) or the issue resource (noteable_id: 54) does not exist. Since these identifiers represent foreign dependencies required for the operation, it is classified as a dependency error.",
+  "missing_fields": ""
+ },
+ "C036": {
+  "predicted": "dependency_error",
+  "reason": "The resource identified by 'subscribable_id' (19) was not found in the context of project 541, indicating the identifier refers to a non-existent label.",
+  "missing_fields": "subscribable_id"
+ },
+ "C037": {
+  "predicted": "dependency_error",
+  "reason": "The 404 Not Found response indicates that the project resource (ID 576) or the milestone resource (ID 63) referenced in the path parameters does not exist in the system.",
+  "missing_fields": ""
+ },
+ "C038": {
+  "predicted": "dependency_error",
+  "reason": "The DELETE request failed with a 404 error because the specified variable 'test36' for project '639' does not exist in the system. This indicates a missing dependency on the existence of the resource.",
+  "missing_fields": ""
+ },
+ "C039": {
+  "predicted": "dependency_error",
+  "reason": "The API returned a 404 Not Found status with the message 'record does not exist', indicating that the requested notification thread ID '1' does not exist in the database, which is a dependency issue related to the existence of the requested resource.",
+  "missing_fields": "id"
+ },
+ "C040": {
+  "predicted": "dependency_error",
+  "reason": "The API returned a 404 Not Found error. Given the path parameters, it is likely that the specified repository or the branch protection rule does not exist, indicating an issue with the provided identifiers (foreign keys) rather than the request parameters format.",
+  "missing_fields": "owner, repo, name"
+ },
+ "C041": {
+  "predicted": "dependency_error",
+  "reason": "The API returned a 404 Not Found error for a specific git commit SHA within a repository. This typically indicates that while the parameters are syntactically valid (correct types/formats), the specific resource (commit SHA) does not exist in the referenced repository context.",
+  "missing_fields": "sha"
+ },
+ "C042": {
+  "predicted": "dependency_error",
+  "reason": "The 404 Not Found response indicates that the resource identified by the provided parameters (owner, repo, or milestone id) does not exist in the system. Since the parameters are formatted correctly, the error is likely due to the non-existence of these specific entities, which is a dependency error.",
+  "missing_fields": "id"
+ },
+ "C043": {
+  "predicted": "dependency_error",
+  "reason": "The 404 Not Found response indicates that the target resource (the specific pull request identified by owner 'root', repository '1106', and index 1) does not exist in the system. This is a dependency error as the test relies on these resources being created by previous operations.",
+  "missing_fields": "owner, repo, index"
+ },
+ "C044": {
+  "predicted": "dependency_error",
+  "reason": "The pull request with index 1 does not exist in the specified repository. The API failed because it could not find the dependency resource (the pull request) required to perform the action of adding requested reviewers.",
+  "missing_fields": "index"
+ },
+ "C045": {
+  "predicted": "dependency_error",
+  "reason": "The 404 Not Found status indicates that the template repository identified by 'template_owner' (root) and 'template_repo' (template-repo) does not exist in the system, which is a required dependency for the generation process.",
+  "missing_fields": "template_owner, template_repo"
+ },
+ "C046": {
+  "predicted": "parameter_error",
+  "reason": "The API returned a 401 status with the message 'basic auth required'. This indicates that the provided Authorization header (which used a 'token' scheme) was invalid or insufficient for this endpoint, as the server specifically expects Basic Authentication for creating new tokens.",
+  "missing_fields": ""
+ },
+ "C047": {
+  "predicted": "dependency_error",
+  "reason": "The 404 Not Found error indicates that the resource specified by the path parameters (owner, repo, or hook id) does not exist, which is a failure to provide valid identifiers for dependent resources.",
+  "missing_fields": "owner, repo, id"
+ },
+ "C048": {
+  "predicted": "dependency_error",
+  "reason": "The 404 Not Found response indicates that the specific unadopted repository resource ('root/stop') targeted for deletion does not exist in the system, suggesting a missing dependency.",
+  "missing_fields": ""
+ },
+ "C049": {
+  "predicted": "dependency_error",
+  "reason": "The API returned a 500 error because the resource to be deleted ('patch-1' branch) does not exist ('object does not exist [id: refs/heads/patch-1]'). A valid branch identifier is a dependency for this DELETE operation, and the failure indicates the identifier points to a non-existent object.",
+  "missing_fields": ""
+ },
+ "C050": {
+  "predicted": "dependency_error",
+  "reason": "The API returned a 404 Not Found response, indicating that the git hook identifier 'post-receive' for repository '1069' does not exist in the system. This suggests a missing dependency where the hook should have been created or a different ID should have been used.",
+  "missing_fields": "id"
+ },
+ "C051": {
+  "predicted": "dependency_error",
+  "reason": "The server returned a 404 Not Found error indicating that the resource at the specified path (/1981/3/8/learn) does not exist in the database, suggesting a failure to locate a valid entity or dependency.",
+  "missing_fields": ""
+ },
+ "C052": {
+  "predicted": "dependency_error",
+  "reason": "The server returned a 404 Not Found status with the message '查询不到该评论的信息' (Cannot find the comment information). This indicates that the identifier provided in the request body (1) does not exist in the system, implying a dependency failure where the requested resource identifier is invalid or missing from the database.",
+  "missing_fields": "comment_id"
+ },
+ "C053": {
+  "predicted": "unknown",
+  "reason": "The server returned a 500 Internal Server Error with a null devMessage and no specific error details. While the request provides a URI in the query string and an empty body, there is insufficient information to determine if the failure was caused by invalid input validation (parameter_error) or a failure in the external fetching process (dependency_error).",
+  "missing_fields": ""
+ },
+ "C054": {
+  "predicted": "parameter_error",
+  "reason": "The API returned a 400 status with a message indicating rate limiting ('访问过于频繁，请稍后再试！') and a lock key ('cache_lock_login_precheck'), which suggests the request was rejected due to hitting threshold constraints.",
+  "missing_fields": ""
+ },
+ "C055": {
+  "predicted": "dependency_error",
+  "reason": "The API response indicates that access is too frequent ('访问过于频繁，请稍后再试！') and references a 'cache_lock'. This suggests the request is being blocked by a server-side state or rate-limiting mechanism. In the context of a password reset, this often occurs when the 'code' parameter (123456) is incorrect or when the request does not follow the required sequence/timing of a previous API dependency (like the one that generates the reset code).",
+  "missing_fields": ""
+ },
+ "C056": {
+  "predicted": "parameter_error",
+  "reason": "The API response indicates that a 'BytesIO' object was encountered during JSON serialization. This suggests that the request payload or its processing involved a data type (binary stream) that was incompatible with the expected JSON parameter format, leading to a serialization failure.",
+  "missing_fields": ""
+ },
+ "C057": {
+  "predicted": "dependency_error",
+  "reason": "The request failed with a 404 status code because the target resource 'backup.zip' does not exist in the system. This indicates a dependency on a file that should have been previously created or identified.",
+  "missing_fields": ""
+ },
+ "C058": {
+  "predicted": "dependency_error",
+  "reason": "The API call failed with a 403 status because the 'Content API' is disabled in the application settings (blogger configuration). This indicates a dependency on the system's internal state or configuration which must be enabled via another administrative action or API.",
+  "missing_fields": ""
+ },
+ "C059": {
+  "predicted": "parameter_error",
+  "reason": "The 'files' field is null for a file upload request, and the file data is provided as a string in the 'body' instead of a multipart file part, which likely caused a server-side crash (500 Internal Server Error).",
+  "missing_fields": "files"
+ },
+ "C060": {
+  "predicted": "dependency_error",
+  "reason": "The themeId 'caicai_anatole' provided in the path does not exist in the system, as indicated by the 404 error message 'caicai_anatole 主题不存在或已删除！'. This represents a missing dependency resource.",
+  "missing_fields": "themeId"
+ },
+ "C061": {
+  "predicted": "parameter_error",
+  "reason": "The API returned a 400 Bad Request for the HLS master playlist endpoint. This usually indicates that mandatory query parameters (such as 'UserId' or 'DeviceId') are missing from the request, or the 'itemId' provided does not meet the server's validation constraints for this specific path.",
+  "missing_fields": ""
+ },
+ "C062": {
+  "predicted": "dependency_error",
+  "reason": "The GET request failed with a 404 Not Found status code, indicating that the resource identified by 'itemId' (bc7ddd36-52c9-4cc9-9a56-26902ae34d94) and/or 'segmentId' (0) does not exist in the system. These identifiers are dependencies that should be provided or created by other upstream API calls.",
+  "missing_fields": "itemId, segmentId"
+ },
+ "C063": {
+  "predicted": "unknown",
+  "reason": "The API returned a 500 Internal Server Error with a generic 'Error processing request' response. Since the request parameters (recursive, limit, startIndex, enableTotalRecordCount) are correctly formatted and the authentication header is present, the failure indicates an unhandled server-side exception. Without more specific error details or logs, it cannot be determined if the cause is a code bug, a specific parameter value, or a missing backend dependency.",
+  "missing_fields": ""
+ },
+ "C064": {
+  "predicted": "unknown",
+  "reason": "The server returned a 500 Internal Server Error with a generic 'Error processing request' message. While the request payload contains several identifier fields (ProviderId, TunerChannelId, ProviderChannelId) which are likely foreign keys, the response does not provide enough detail to determine if the failure is due to these dependencies being missing, invalid parameters, or an internal server-side logic error.",
+  "missing_fields": ""
+ },
+ "C065": {
+  "predicted": "dependency_error",
+  "reason": "The streamId '00000000000000000000000000000000' appears to be an invalid or non-existent identifier, resulting in a 404 Not Found error. This ID is likely a placeholder or a value that should have been generated by a previous live stream initiation API.",
+  "missing_fields": ""
+ },
+ "C066": {
+  "predicted": "dependency_error",
+  "reason": "The API returned a 403 Forbidden status, suggesting that the authorization token ('X-Emby-Authorization') is either invalid, expired, or the user is not currently in a state (e.g., not joined to a SyncPlay group) that allows them to perform the 'Leave' action. This represents a dependency on a valid session and specific resource state produced by preceding API calls.",
+  "missing_fields": ""
+ },
+ "C067": {
+  "predicted": "dependency_error",
+  "reason": "The request failed with a 400 error while providing syntactically valid UUIDs for 'itemId' and 'userId'. This suggests that the identifiers provided do not exist in the server's database, making this a failure of required dependencies (pre-existing resources).",
+  "missing_fields": ""
+ },
+ "C068": {
+  "predicted": "dependency_error",
+  "reason": "The 500 Internal Server Error suggests an unhandled server-side exception occurred when processing the provided itemId. Since the itemId is a unique identifier (UUID) that should correspond to an existing resource in the system, this error indicates a failure to resolve or access a required dependency.",
+  "missing_fields": ""
+ },
+ "C069": {
+  "predicted": "dependency_error",
+  "reason": "The server returned a 500 Internal Server Error, which often occurs in API testing when a required resource identifier (like 'timerId' in the path or 'ChannelId' in the body) does not exist in the system's current state, causing an unhandled exception on the backend.",
+  "missing_fields": ""
+ },
+ "C070": {
+  "predicted": "parameter_error",
+  "reason": "The request failed because the required 'text' field was missing from the request body, as indicated by the validation error in the API response.",
+  "missing_fields": "text"
+ },
+ "C071": {
+  "predicted": "dependency_error",
+  "reason": "The request failed with a 404 status code, which indicates that the resource identified by the 'sessionId' (00000000000000000000000000000000) could not be found. This specific session ID appears to be a placeholder or uninitialized value that does not correspond to a valid active session created by a prior dependency (e.g., a login or session creation API).",
+  "missing_fields": "sessionId"
+ },
+ "C072": {
+  "predicted": "parameter_error",
+  "reason": "The request is missing a required field 'updateUser' and the value provided for 'Policy.AccessSchedules' could not be converted to the expected array type, indicating an input validation/format error.",
+  "missing_fields": "updateUser"
+ },
+ "C073": {
+  "predicted": "parameter_error",
+  "reason": "The 'Name' field in the request body contains an excessively long string that likely violates the maximum length constraints for a username, leading to a 400 Bad Request.",
+  "missing_fields": ""
+ },
+ "C074": {
+  "predicted": "unknown",
+  "reason": "The server returned a generic 400 Bad Request with the message 'Error processing request.' This response is too vague to determine if the failure was caused by invalid parameter constraints (parameter_error), such as an out-of-bounds index, or by the non-existence/mismatch of the provided playlistId or itemId (dependency_error).",
+  "missing_fields": ""
+ },
+ "C075": {
+  "predicted": "dependency_error",
+  "reason": "The API returned a 404 Not Found error for the specified groupId. Since the groupId provided (15328050-850e-4a0b-8795-37e4a933f2d8) follows a valid UUID format, the failure indicates that the resource does not exist in the current environment's state, representing a missing dependency that should have been created or identified by a previous operation.",
+  "missing_fields": "groupId"
+ },
+ "C076": {
+  "predicted": "parameter_error",
+  "reason": "The API returned a 400 validation error stating that the value 'Studio' for the path parameter 'imageType' is not valid, which indicates an input validation failure against allowed values or constraints.",
+  "missing_fields": ""
+ },
+ "C077": {
+  "predicted": "unknown",
+  "reason": "The server returned a 500 Internal Server Error with a generic 'Error processing request' message. While the userId and itemId are identical in the request, they are formatted correctly as strings. Without more specific error details from the server or logs, it is impossible to determine if the failure is due to a database dependency issue, a code bug, or a logic constraint violation.",
+  "missing_fields": ""
+ },
+ "C078": {
+  "predicted": "dependency_error",
+  "reason": "The server returned a 500 Internal Server Error when processing the request. This typically indicates that the provided userId ('92be43d24ae84e3cb4fa69244e5f2a2f') does not exist in the system's database or is in a state that the server cannot handle, representing a failure to satisfy a resource dependency.",
+  "missing_fields": ""
+ },
+ "C079": {
+  "predicted": "parameter_error",
+  "reason": "The request failed validation due to a missing required field 'newPolicy' and a type mismatch for 'AccessSchedules', which expected an array but received an object.",
+  "missing_fields": "newPolicy"
+ },
+ "C080": {
+  "predicted": "dependency_error",
+  "reason": "The 401 Unauthorized status indicates that the 'userId' in the path or the 'Token' provided in the 'X-Emby-Authorization' header is invalid, expired, or does not exist in the system. These identifiers are typically dependencies that must be created or retrieved from previous API calls (like user creation or login).",
+  "missing_fields": ""
+ },
+ "C081": {
+  "predicted": "dependency_error",
+  "reason": "The request provides syntactically valid path parameters (a 32-character hex userId, a standard imageType, and an integer index), yet the server returned a 500 Internal Server Error. This suggests the failure is likely due to the non-existence of the resource (the specific user or the image at that index) or a database-level state issue rather than an input validation failure.",
+  "missing_fields": ""
+ },
+ "C082": {
+  "predicted": "dependency_error",
+  "reason": "The DELETE request resulted in a 500 Internal Server Error despite the input parameters (userId and imageType) being in the correct format. This typically indicates a failure on the server side when trying to access or manipulate a specific resource that might not exist or is in an invalid state, which is a dependency on the existing data.",
+  "missing_fields": ""
+ },
+ "C083": {
+  "predicted": "unknown",
+  "reason": "The server returned a 500 Internal Server Error with a generic message 'Error processing request.' This status and message do not provide enough information to distinguish between a server-side logic error, a database connectivity issue, or a specific problem with the provided IDs.",
+  "missing_fields": ""
+ },
+ "C084": {
+  "predicted": "unknown",
+  "reason": "The API returned a generic 500 Internal Server Error without a specific error message. While the request includes a 'queryMap' parameter, the lack of detail in the response makes it impossible to determine if the failure was caused by the input format (parameter_error) or an internal backend service failure (dependency_error).",
+  "missing_fields": ""
+ },
+ "C085": {
+  "predicted": "dependency_error",
+  "reason": "The API returned a verification code error ('验证码错误！'). The 'velCode' parameter depends on a value typically generated by a previous captcha-related API call or server-side state which was not correctly synchronized or provided in this request.",
+  "missing_fields": ""
+ },
+ "C086": {
+  "predicted": "dependency_error",
+  "reason": "The API returned a functional failure (code 1, '操作失败') for a correctly formatted identifier (id: 1). This indicates that the identifier likely does not exist in the database or is in a state that prevents deletion, which constitutes a dependency on the system's data state.",
+  "missing_fields": ""
+ },
+ "C087": {
+  "predicted": "dependency_error",
+  "reason": "The server returned a 500 Internal Server Error (presented in an HTML response) when trying to batch remove content with IDs [1345, 2262]. This indicates that the provided identifiers, which are expected to be produced or managed by other APIs, either do not exist in the database or are causing an unhandled server-side exception due to invalid state dependencies.",
+  "missing_fields": ""
+ },
+ "C088": {
+  "predicted": "dependency_error",
+  "reason": "The deletion operation failed for the provided ID (662). This typically indicates that the resource identifier does not exist in the system or there is a database dependency preventing the removal.",
+  "missing_fields": ""
+ },
+ "C089": {
+  "predicted": "dependency_error",
+  "reason": "The API returned a 403 Forbidden error page (您没有访问权限！), indicating that the request failed due to insufficient permissions. In API testing, this often points to a dependency on a valid session with appropriate roles or a resource ID (927) that the current user is not authorized to access.",
+  "missing_fields": ""
+ },
+ "C090": {
+  "predicted": "dependency_error",
+  "reason": "The server returned a 500 Internal Server Error when attempting to generate code for the table 'sys_user'. This indicates that the API depends on the existence and proper configuration of the 'sys_user' table within the database or the generator's metadata, which appears to be missing or inaccessible.",
+  "missing_fields": ""
+ },
+ "C091": {
+  "predicted": "unknown",
+  "reason": "The API returned a 200 OK status code, but the response body contains a generic HTML error page for a '500 Internal Server Error'. The request payload contains an array of column metadata with an 'id' set to null and a 'tableName' of 'sys_user'. Without a specific error message, stack trace, or details in the response text, it is impossible to determine if the failure was caused by a parameter validation issue (e.g., missing 'tableId'), a dependency issue (e.g., table not found in generator context), or a general server-side crash.",
+  "missing_fields": ""
+ },
+ "C092": {
+  "predicted": "parameter_error",
+  "reason": "The request provides 'avatar_file' as a simple string in the body and 'files' is null, whereas an image upload API typically requires a multipart file object. This mismatch in parameter type/format likely caused the internal server error (500).",
+  "missing_fields": "avatar_file"
+ },
+ "C093": {
+  "predicted": "dependency_error",
+  "reason": "The API returned a 500 Internal Server Error for a correctly formatted integer ID (1). This typically indicates that the specified resource ID does not exist in the database or is associated with broken dependencies that the server failed to handle gracefully.",
+  "missing_fields": ""
+ },
+ "C094": {
+  "predicted": "dependency_error",
+  "reason": "The server returned a 500 internal error code in the response body when attempting to retrieve a record by a specific ID (2013), which suggests that the resource identifier may not exist in the database or has integrity issues.",
+  "missing_fields": ""
+ },
+ "C095": {
+  "predicted": "dependency_error",
+  "reason": "The request returned a server error (500) when attempting to access a resource by ID. This suggests that the identifier '1' may not exist in the database or is otherwise invalid for the current state of the system, causing a backend failure during lookup.",
+  "missing_fields": ""
+ },
+ "C096": {
+  "predicted": "dependency_error",
+  "reason": "The server returned a 500 error (服务器错误) when accessing the edit endpoint for category ID 1. This suggests that the category identifier provided does not exist in the database or has missing data dependencies required to load the edit view.",
+  "missing_fields": ""
+ },
+ "C097": {
+  "predicted": "dependency_error",
+  "reason": "The request provided a validly formatted integer ID, but the server returned a 500 error. This suggests the specific resource with ID '1' does not exist in the database, making it a dependency error on a pre-existing record.",
+  "missing_fields": ""
+ },
+ "C098": {
+  "predicted": "dependency_error",
+  "reason": "The GET request for id '74' resulted in a server error (500), which typically indicates that the resource identifier provided does not exist in the database or there is a failure in retrieving the specific entity dependency.",
+  "missing_fields": ""
+ },
+ "C099": {
+  "predicted": "dependency_error",
+  "reason": "The API returned a 500 Internal Server Error (via an HTML response) when trying to download a file with the provided filePath ('test.txt'). This indicates that the file resource, which is a dependency for this operation, likely does not exist on the server or was not previously created/uploaded by a related API.",
+  "missing_fields": ""
+ },
+ "C100": {
+  "predicted": "dependency_error",
+  "reason": "The API returned a 500 Internal Server Error when queried with parentId=0. This indicates a failure in retrieving or processing data associated with the provided parent identifier, which is an identifier that typically depends on existing database records or system state.",
+  "missing_fields": ""
+ }
+}

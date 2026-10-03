@@ -1,0 +1,5 @@
+application,endpoints,parameters,matched,missed,false_positive,recall,precision,type_compared,type_correct,type_accuracy,type_not_compared,location_accuracy
+Chat2DB 3.4.1,40,174,174,0,0,1.0000,1.0000,173,173,1.0000,1,1.0000
+Halo 1.6.1,40,96,96,0,0,1.0000,1.0000,96,96,1.0000,0,1.0000
+novel-plus 5.2.0,40,163,163,0,0,1.0000,1.0000,142,142,1.0000,21,1.0000
+TOTAL,120,433,433,0,0,1.0000,1.0000,411,411,1.0000,22,1.0000

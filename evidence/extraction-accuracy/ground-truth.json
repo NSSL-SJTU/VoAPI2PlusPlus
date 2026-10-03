@@ -1,0 +1,3132 @@
+{
+ "endpoints": [
+  {
+   "app": "chat2db-3.4.1",
+   "method": "POST",
+   "url": "/api/rdb/function/delete",
+   "handler": "chat2db-server/chat2db-server-web/chat2db-server-web-api/src/main/java/ai/chat2db/server/web/api/controller/rdb/FunctionController.java:46 delete",
+   "parameters": [
+    {
+     "name": "functionName",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "functionBody",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "dataSourceId",
+     "location": "body",
+     "type": "Long"
+    },
+    {
+     "name": "databaseName",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "schemaName",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "refresh",
+     "location": "body",
+     "type": "boolean"
+    }
+   ],
+   "notes": "Command object (@Valid FunctionUpdateRequest, no @RequestBody) expanded; POST so fields go to body. Superclass DataSourceBaseRequest contributes dataSourceId/databaseName/schemaName/refresh; it only implements the marker interface DataSourceBaseRequestInfo, which contributes no fields."
+  },
+  {
+   "app": "chat2db-3.4.1",
+   "method": "POST",
+   "url": "/api/admin/user/data_source/batch_create",
+   "handler": "chat2db-server/chat2db-server-web/chat2db-server-admin-api/src/main/java/ai/chat2db/server/admin/api/controller/user/UserDataSourceAdminController.java:68 create",
+   "parameters": [
+    {
+     "name": "userId",
+     "location": "body",
+     "type": "Long"
+    },
+    {
+     "name": "dataSourceIdList",
+     "location": "body",
+     "type": "List<Long>"
+    }
+   ],
+   "notes": "@RequestBody UserDataSourceBatchCreateRequest expanded; the class has no superclass in this project."
+  },
+  {
+   "app": "chat2db-3.4.1",
+   "method": "POST",
+   "url": "/api/rdb/database/create_database_sql",
+   "handler": "chat2db-server/chat2db-server-web/chat2db-server-web-api/src/main/java/ai/chat2db/server/web/api/controller/rdb/DatabaseController.java:102 createDatabase",
+   "parameters": [
+    {
+     "name": "name",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "comment",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "charset",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "collation",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "dataSourceId",
+     "location": "body",
+     "type": "Long"
+    },
+    {
+     "name": "databaseName",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "schemaName",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "refresh",
+     "location": "body",
+     "type": "boolean"
+    }
+   ],
+   "notes": "@RequestBody DatabaseCreateRequest expanded, plus superclass DataSourceBaseRequest fields."
+  },
+  {
+   "app": "chat2db-3.4.1",
+   "method": "POST",
+   "url": "/api/admin/data_source/access/batch_create",
+   "handler": "chat2db-server/chat2db-server-web/chat2db-server-admin-api/src/main/java/ai/chat2db/server/admin/api/controller/datasource/DataSourceAccessAdminController.java:64 batchCreate",
+   "parameters": [
+    {
+     "name": "dataSourceId",
+     "location": "body",
+     "type": "Long"
+    },
+    {
+     "name": "accessObjectList",
+     "location": "body",
+     "type": "List<DataSourceAccessObjectRequest>"
+    }
+   ],
+   "notes": "@RequestBody DataSourceAccessBatchCreateRequest expanded; no superclass in this project. accessObjectList is a List field of the request class, so it is listed as a single field and not recursively expanded."
+  },
+  {
+   "app": "chat2db-3.4.1",
+   "method": "POST",
+   "url": "/api/system/set_update_type",
+   "handler": "chat2db-server/chat2db-server-web/chat2db-server-web-api/src/main/java/ai/chat2db/server/web/api/controller/system/SystemController.java:117 setUpdateType",
+   "parameters": [
+    {
+     "name": "updateType",
+     "location": "body",
+     "type": "String"
+    }
+   ],
+   "notes": "The body parameter is declared @RequestBody String updateType. java.lang.String is not a project class and has no expandable declared fields, so by the no-fields-to-expand case the parameter itself is listed under its own name; the request body is a raw string, not a JSON object."
+  },
+  {
+   "app": "chat2db-3.4.1",
+   "method": "POST",
+   "url": "/api/rdb/view/delete",
+   "handler": "chat2db-server/chat2db-server-web/chat2db-server-web-api/src/main/java/ai/chat2db/server/web/api/controller/rdb/ViewController.java:67 delete",
+   "parameters": [
+    {
+     "name": "tableName",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "dataSourceId",
+     "location": "body",
+     "type": "Long"
+    },
+    {
+     "name": "databaseName",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "schemaName",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "refresh",
+     "location": "body",
+     "type": "boolean"
+    }
+   ],
+   "notes": "Command object (@Valid TableDeleteRequest, no @RequestBody) expanded; POST so fields go to body. Superclass DataSourceBaseRequest adds dataSourceId/databaseName/schemaName/refresh."
+  },
+  {
+   "app": "chat2db-3.4.1",
+   "method": "POST",
+   "url": "/api/ai/embedding/datasource",
+   "handler": "chat2db-server/chat2db-server-web/chat2db-server-web-api/src/main/java/ai/chat2db/server/web/api/controller/ai/EmbeddingController.java:89 embeddings",
+   "parameters": [
+    {
+     "name": "apikey",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "dataSourceId",
+     "location": "body",
+     "type": "Long"
+    },
+    {
+     "name": "databaseName",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "schemaName",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "searchKey",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "refresh",
+     "location": "body",
+     "type": "boolean"
+    },
+    {
+     "name": "pageNo",
+     "location": "body",
+     "type": "Integer"
+    },
+    {
+     "name": "pageSize",
+     "location": "body",
+     "type": "Integer"
+    }
+   ],
+   "notes": "Command object (@Valid TableMilvusQueryRequest, no @RequestBody) expanded; POST so fields go to body. Chain: TableMilvusQueryRequest -> TableBriefQueryRequest -> PageQueryRequest, all in this project. static serialVersionUID fields excluded. The handler overwrites pageNo/pageSize server-side, but they are still bindable request fields."
+  },
+  {
+   "app": "chat2db-3.4.1",
+   "method": "POST",
+   "url": "/api/connection/ssh/pre_connect",
+   "handler": "chat2db-server/chat2db-server-web/chat2db-server-web-api/src/main/java/ai/chat2db/server/web/api/controller/data/source/DataSourceController.java:101 sshConnect",
+   "parameters": [
+    {
+     "name": "use",
+     "location": "body",
+     "type": "boolean"
+    },
+    {
+     "name": "hostName",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "port",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "userName",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "localPort",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "authenticationType",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "password",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "keyFile",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "passphrase",
+     "location": "body",
+     "type": "String"
+    }
+   ],
+   "notes": "Method-level @RequestMapping(\"/ssh/pre_connect\") has no method= so it maps every HTTP method; treated as POST per the task line. @RequestBody SSHTestRequest expanded; no superclass in this project."
+  },
+  {
+   "app": "chat2db-3.4.1",
+   "method": "POST",
+   "url": "/api/pin/table/add",
+   "handler": "chat2db-server/chat2db-server-web/chat2db-server-web-api/src/main/java/ai/chat2db/server/web/api/controller/pin/PinController.java:27 add",
+   "parameters": [
+    {
+     "name": "dataSourceId",
+     "location": "body",
+     "type": "Long"
+    },
+    {
+     "name": "databaseName",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "schemaName",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "tableName",
+     "location": "body",
+     "type": "String"
+    }
+   ],
+   "notes": "@RequestBody PinTableRequest expanded; it declares all four fields itself and has no superclass (it imports DataSourceBaseRequest but does not extend it)."
+  },
+  {
+   "app": "chat2db-3.4.1",
+   "method": "POST",
+   "url": "/api/export/export_doc",
+   "handler": "chat2db-server/chat2db-server-web/chat2db-server-web-api/src/main/java/ai/chat2db/server/web/api/controller/task/ExportController.java:37 exportDoc",
+   "parameters": [
+    {
+     "name": "sql",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "originalSql",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "pageNo",
+     "location": "body",
+     "type": "Integer"
+    },
+    {
+     "name": "pageSize",
+     "location": "body",
+     "type": "Integer"
+    },
+    {
+     "name": "exportType",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "exportSize",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "dataSourceId",
+     "location": "body",
+     "type": "Long"
+    },
+    {
+     "name": "databaseName",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "schemaName",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "refresh",
+     "location": "body",
+     "type": "boolean"
+    }
+   ],
+   "notes": "@RequestBody DataExportRequest expanded, plus superclass DataSourceBaseRequest fields."
+  },
+  {
+   "app": "chat2db-3.4.1",
+   "method": "POST",
+   "url": "/api/rdb/database/export_data",
+   "handler": "chat2db-server/chat2db-server-web/chat2db-server-web-api/src/main/java/ai/chat2db/server/web/api/controller/rdb/DatabaseController.java:139 exportData",
+   "parameters": [
+    {
+     "name": "exportType",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "tableNames",
+     "location": "body",
+     "type": "List<String>"
+    },
+    {
+     "name": "sqyType",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "containsHeader",
+     "location": "body",
+     "type": "Boolean"
+    },
+    {
+     "name": "dataSourceId",
+     "location": "body",
+     "type": "Long"
+    },
+    {
+     "name": "databaseName",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "schemaName",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "refresh",
+     "location": "body",
+     "type": "boolean"
+    }
+   ],
+   "notes": "@Valid @RequestBody DatabaseExportDataRequest expanded; superclass DataSourceBaseRequest contributes dataSourceId/databaseName/schemaName/refresh. DataSourceBaseRequestInfo is an interface and contributes no fields."
+  },
+  {
+   "app": "chat2db-3.4.1",
+   "method": "POST",
+   "url": "/api/rdb/ddl/delete",
+   "handler": "chat2db-server/chat2db-server-web/chat2db-server-web-api/src/main/java/ai/chat2db/server/web/api/controller/rdb/RdbDdlController.java:235 delete",
+   "parameters": [
+    {
+     "name": "tableName",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "dataSourceId",
+     "location": "body",
+     "type": "Long"
+    },
+    {
+     "name": "databaseName",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "schemaName",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "refresh",
+     "location": "body",
+     "type": "boolean"
+    }
+   ],
+   "notes": "@Valid @RequestBody TableDeleteRequest expanded; superclass DataSourceBaseRequest adds the last four. Controller is annotated @Deprecated but still mapped."
+  },
+  {
+   "app": "chat2db-3.4.1",
+   "method": "POST",
+   "url": "/api/redis/key/create",
+   "handler": "chat2db-server/chat2db-server-web/chat2db-server-web-api/src/main/java/ai/chat2db/server/web/api/controller/redis/RedisKeyManageController.java:48 create",
+   "parameters": [
+    {
+     "name": "name",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "value",
+     "location": "body",
+     "type": "Object"
+    },
+    {
+     "name": "ttl",
+     "location": "body",
+     "type": "Long"
+    },
+    {
+     "name": "dataSourceId",
+     "location": "body",
+     "type": "Long"
+    },
+    {
+     "name": "databaseName",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "schemaName",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "refresh",
+     "location": "body",
+     "type": "boolean"
+    }
+   ],
+   "notes": "@RequestBody KeyCreateRequest expanded; superclass DataSourceBaseRequest adds the last four. Handler body returns null (unimplemented stub) but the mapping exists."
+  },
+  {
+   "app": "chat2db-3.4.1",
+   "method": "POST",
+   "url": "/api/chart/update",
+   "handler": "chat2db-server/chat2db-server-web/chat2db-server-web-api/src/main/java/ai/chat2db/server/web/api/controller/dashboard/ChartController.java:94 update",
+   "parameters": [
+    {
+     "name": "id",
+     "location": "body",
+     "type": "Long"
+    },
+    {
+     "name": "name",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "schema",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "dataSourceId",
+     "location": "body",
+     "type": "Long"
+    },
+    {
+     "name": "type",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "databaseName",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "schemaName",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "ddl",
+     "location": "body",
+     "type": "String"
+    }
+   ],
+   "notes": "@RequestMapping(value=\"/update\", method={POST,PUT}); @RequestBody ChartUpdateRequest expanded. No superclass."
+  },
+  {
+   "app": "chat2db-3.4.1",
+   "method": "POST",
+   "url": "/api/rdb/procedure/delete",
+   "handler": "chat2db-server/chat2db-server-web/chat2db-server-web-api/src/main/java/ai/chat2db/server/web/api/controller/rdb/ProcedureController.java:50 delete",
+   "parameters": [
+    {
+     "name": "procedureName",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "procedureBody",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "dataSourceId",
+     "location": "body",
+     "type": "Long"
+    },
+    {
+     "name": "databaseName",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "schemaName",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "refresh",
+     "location": "body",
+     "type": "boolean"
+    }
+   ],
+   "notes": "ProcedureUpdateRequest has NO @RequestBody - it is a command object, so under the rule its expanded fields are body because the method is POST. In practice Spring would bind these from form/query data, not JSON."
+  },
+  {
+   "app": "chat2db-3.4.1",
+   "method": "POST",
+   "url": "/api/rdb/dml/get_order_by_sql",
+   "handler": "chat2db-server/chat2db-server-web/chat2db-server-web-api/src/main/java/ai/chat2db/server/web/api/controller/rdb/RdbDmlController.java:139 getOrderBySql",
+   "parameters": [
+    {
+     "name": "originSql",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "orderByList",
+     "location": "body",
+     "type": "List<OrderBy>"
+    },
+    {
+     "name": "dataSourceId",
+     "location": "body",
+     "type": "Long"
+    },
+    {
+     "name": "databaseName",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "schemaName",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "refresh",
+     "location": "body",
+     "type": "boolean"
+    }
+   ],
+   "notes": "@RequestMapping(value=\"/get_order_by_sql\", method={POST,PUT}); @RequestBody OrderByRequest expanded; superclass DataSourceBaseRequest adds the last four. orderByList is a List so it is listed under its own name without expanding ai.chat2db.spi.model.OrderBy."
+  },
+  {
+   "app": "chat2db-3.4.1",
+   "method": "POST",
+   "url": "/api/rdb/schema/delete_schema",
+   "handler": "chat2db-server/chat2db-server-web/chat2db-server-web-api/src/main/java/ai/chat2db/server/web/api/controller/rdb/SchemaController.java:71 deleteSchema",
+   "parameters": [
+    {
+     "name": "dataSourceId",
+     "location": "body",
+     "type": "Long"
+    },
+    {
+     "name": "databaseName",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "schemaName",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "refresh",
+     "location": "body",
+     "type": "boolean"
+    }
+   ],
+   "notes": "@Valid @RequestBody DataSourceBaseRequest expanded directly; it implements the interface DataSourceBaseRequestInfo, which contributes no fields."
+  },
+  {
+   "app": "chat2db-3.4.1",
+   "method": "PUT",
+   "url": "/api/rdb/dml/execute_ddl",
+   "handler": "chat2db-server/chat2db-server-web/chat2db-server-web-api/src/main/java/ai/chat2db/server/web/api/controller/rdb/RdbDmlController.java:153 executeDDL",
+   "parameters": [
+    {
+     "name": "sql",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "consoleId",
+     "location": "body",
+     "type": "Long"
+    },
+    {
+     "name": "pageNo",
+     "location": "body",
+     "type": "Integer"
+    },
+    {
+     "name": "pageSize",
+     "location": "body",
+     "type": "Integer"
+    },
+    {
+     "name": "pageSizeAll",
+     "location": "body",
+     "type": "Boolean"
+    },
+    {
+     "name": "dataSourceId",
+     "location": "body",
+     "type": "Long"
+    },
+    {
+     "name": "databaseName",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "schemaName",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "refresh",
+     "location": "body",
+     "type": "boolean"
+    }
+   ],
+   "notes": "@RequestMapping(value=\"/execute_ddl\", method={POST,PUT}) so PUT is mapped; @RequestBody DmlRequest expanded; superclass DataSourceBaseRequest adds the last four. DataSourceConsoleRequestInfo is an interface and contributes no fields."
+  },
+  {
+   "app": "chat2db-3.4.1",
+   "method": "GET",
+   "url": "/",
+   "handler": "chat2db-server/chat2db-server-web-start/src/main/java/ai/chat2db/server/web/start/controller/thymeleaf/ThymeleafController.java:26 index",
+   "parameters": [],
+   "notes": "@GetMapping(value={\"/\", \"/web/\", \"/web/**\", \"/login\", \"/workspace\", \"/dashboard\", \"/connections\", \"/team\"}); handler takes no arguments. An identical ThymeleafController also exists under chat2db-server-start, but docker/Dockerfile ships chat2db-server-web-start.jar, so the web-start copy is the deployed one."
+  },
+  {
+   "app": "chat2db-3.4.1",
+   "method": "POST",
+   "url": "/api/oauth/logout_a",
+   "handler": "chat2db-server/chat2db-server-web-start/src/main/java/ai/chat2db/server/web/start/controller/oauth/OauthController.java:90 logout",
+   "parameters": [],
+   "notes": "Handler takes no arguments. A near-duplicate OauthController exists under chat2db-server-start; docker/Dockerfile ships chat2db-server-web-start.jar, so the web-start copy is the deployed one."
+  },
+  {
+   "app": "chat2db-3.4.1",
+   "method": "GET",
+   "url": "/api/ai/config/remaininguses",
+   "handler": "chat2db-server/chat2db-server-web/chat2db-server-web-api/src/main/java/ai/chat2db/server/web/api/controller/ai/AiConfigController.java:104 remaininguses",
+   "parameters": [],
+   "notes": "Class-level @RequestMapping(\"/api/ai/config\") + @GetMapping(\"/remaininguses\"). Handler takes no formal parameters; the API key is read from ConfigService, not from the request."
+  },
+  {
+   "app": "chat2db-3.4.1",
+   "method": "GET",
+   "url": "/connections",
+   "handler": "chat2db-server/chat2db-server-web-start/src/main/java/ai/chat2db/server/web/start/controller/thymeleaf/ThymeleafController.java:26 index",
+   "parameters": [],
+   "notes": "No class-level @RequestMapping; @GetMapping(value={\"/\",\"/web/\",\"/web/**\",\"/login\",\"/workspace\",\"/dashboard\",\"/connections\",\"/team\"}) so /connections is one of eight paths on index(). index() has no formal parameters. An identical ThymeleafController also exists at chat2db-server/chat2db-server-start/src/main/java/ai/chat2db/server/start/controller/thymeleaf/ThymeleafController.java:26; docker/Dockerfile ships chat2db-server-web-start.jar, so the web-start copy is the deployed one. Either way the parameter list is empty."
+  },
+  {
+   "app": "chat2db-3.4.1",
+   "method": "DELETE",
+   "url": "/api/admin/team/{id}",
+   "handler": "chat2db-server/chat2db-server-web/chat2db-server-admin-api/src/main/java/ai/chat2db/server/admin/api/controller/team/TeamAdminController.java:88 delete",
+   "parameters": [
+    {
+     "name": "id",
+     "location": "path",
+     "type": "Long"
+    }
+   ],
+   "notes": "@PathVariable carries no value=/name=, so the formal parameter name 'id' is used."
+  },
+  {
+   "app": "chat2db-3.4.1",
+   "method": "GET",
+   "url": "/api/rdb/database/export_data_status/{taskId}",
+   "handler": "chat2db-server/chat2db-server-web/chat2db-server-web-api/src/main/java/ai/chat2db/server/web/api/controller/rdb/DatabaseController.java:145 exportDataStatus",
+   "parameters": [
+    {
+     "name": "taskId",
+     "location": "path",
+     "type": "Long"
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "app": "chat2db-3.4.1",
+   "method": "DELETE",
+   "url": "/api/connection/datasource/{id}",
+   "handler": "chat2db-server/chat2db-server-web/chat2db-server-web-api/src/main/java/ai/chat2db/server/web/api/controller/data/source/DataSourceController.java:239 delete",
+   "parameters": [
+    {
+     "name": "id",
+     "location": "path",
+     "type": "Long"
+    }
+   ],
+   "notes": "Class-level @RequestMapping(\"/api/connection\") + @DeleteMapping(\"/datasource/{id}\"). @PathVariable has no value=, formal name 'id' used."
+  },
+  {
+   "app": "chat2db-3.4.1",
+   "method": "DELETE",
+   "url": "/api/dashboard/{id}",
+   "handler": "chat2db-server/chat2db-server-web/chat2db-server-web-api/src/main/java/ai/chat2db/server/web/api/controller/dashboard/DashboardController.java:108 delete",
+   "parameters": [
+    {
+     "name": "id",
+     "location": "path",
+     "type": "Long"
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "app": "chat2db-3.4.1",
+   "method": "GET",
+   "url": "/api/rdb/ddl/list",
+   "handler": "chat2db-server/chat2db-server-web/chat2db-server-web-api/src/main/java/ai/chat2db/server/web/api/controller/rdb/RdbDdlController.java:67 list",
+   "parameters": [
+    {
+     "name": "dataSourceId",
+     "location": "query",
+     "type": "Long"
+    },
+    {
+     "name": "databaseName",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "schemaName",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "searchKey",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "refresh",
+     "location": "query",
+     "type": "boolean"
+    },
+    {
+     "name": "pageNo",
+     "location": "query",
+     "type": "Integer"
+    },
+    {
+     "name": "pageSize",
+     "location": "query",
+     "type": "Integer"
+    }
+   ],
+   "notes": "Unannotated command object TableBriefQueryRequest expanded; GET so fields are query. Its own fields are dataSourceId/databaseName/schemaName/searchKey/refresh (static serialVersionUID excluded); superclass PageQueryRequest contributes pageNo/pageSize (its serialVersionUID is static and excluded). The implemented interface DataSourceBaseRequestInfo contributes no fields. Controller is @Deprecated but still mapped."
+  },
+  {
+   "app": "chat2db-3.4.1",
+   "method": "POST",
+   "url": "/api/converter/datagrip/upload",
+   "handler": "chat2db-server/chat2db-server-web/chat2db-server-web-api/src/main/java/ai/chat2db/server/web/api/controller/ncx/ConverterController.java:78 datagripUploadFile",
+   "parameters": [
+    {
+     "name": "text",
+     "location": "query",
+     "type": "String"
+    }
+   ],
+   "notes": "@RequestParam(\"text\") String text. Type is String, not MultipartFile, so location is query per rule 3 even though the route is named 'upload'."
+  },
+  {
+   "app": "chat2db-3.4.1",
+   "method": "GET",
+   "url": "/api/operation/saved/list",
+   "handler": "chat2db-server/chat2db-server-web/chat2db-server-web-api/src/main/java/ai/chat2db/server/web/api/controller/operation/saved/OperationSavedController.java:57 list",
+   "parameters": [
+    {
+     "name": "dataSourceId",
+     "location": "query",
+     "type": "Long"
+    },
+    {
+     "name": "databaseName",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "searchKey",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "tabOpened",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "status",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "orderByDesc",
+     "location": "query",
+     "type": "Boolean"
+    },
+    {
+     "name": "orderByCreateDesc",
+     "location": "query",
+     "type": "Boolean"
+    },
+    {
+     "name": "operationType",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "pageNo",
+     "location": "query",
+     "type": "Integer"
+    },
+    {
+     "name": "pageSize",
+     "location": "query",
+     "type": "Integer"
+    }
+   ],
+   "notes": "Unannotated command object OperationQueryRequest expanded; GET so fields are query. Superclass PageQueryRequest contributes pageNo/pageSize; static serialVersionUID excluded."
+  },
+  {
+   "app": "chat2db-3.4.1",
+   "method": "GET",
+   "url": "/api/rdb/table/index_list",
+   "handler": "chat2db-server/chat2db-server-web/chat2db-server-web-api/src/main/java/ai/chat2db/server/web/api/controller/rdb/TableController.java:128 indexList",
+   "parameters": [
+    {
+     "name": "tableName",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "dataSourceId",
+     "location": "query",
+     "type": "Long"
+    },
+    {
+     "name": "databaseName",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "schemaName",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "refresh",
+     "location": "query",
+     "type": "boolean"
+    }
+   ],
+   "notes": "Unannotated command object TableDetailQueryRequest expanded; GET so fields are query. Own field tableName; superclass DataSourceBaseRequest contributes dataSourceId/databaseName/schemaName/refresh. The identical route also exists on the @Deprecated RdbDdlController at /api/rdb/ddl/index_list, but the URL given here maps to TableController."
+  },
+  {
+   "app": "chat2db-3.4.1",
+   "method": "GET",
+   "url": "/api/connection/datasource/connect",
+   "handler": "chat2db-server/chat2db-server-web/chat2db-server-web-api/src/main/java/ai/chat2db/server/web/api/controller/data/source/DataSourceController.java:123 attach",
+   "parameters": [
+    {
+     "name": "id",
+     "location": "query",
+     "type": "Long"
+    }
+   ],
+   "notes": "Command object DataSourceAttachRequest (no annotation) expanded; GET so fields go to query. It implements DataSourceBaseRequestInfo, an interface, which contributes no fields."
+  },
+  {
+   "app": "chat2db-3.4.1",
+   "method": "GET",
+   "url": "/api/rdb/table/query",
+   "handler": "chat2db-server/chat2db-server-web/chat2db-server-web-api/src/main/java/ai/chat2db/server/web/api/controller/rdb/TableController.java:188 query",
+   "parameters": [
+    {
+     "name": "tableName",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "dataSourceId",
+     "location": "query",
+     "type": "Long"
+    },
+    {
+     "name": "databaseName",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "schemaName",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "refresh",
+     "location": "query",
+     "type": "boolean"
+    }
+   ],
+   "notes": "Command object TableDetailQueryRequest expanded; its superclass DataSourceBaseRequest contributes dataSourceId, databaseName, schemaName, refresh."
+  },
+  {
+   "app": "chat2db-3.4.1",
+   "method": "GET",
+   "url": "/api/redis/key/list",
+   "handler": "chat2db-server/chat2db-server-web/chat2db-server-web-api/src/main/java/ai/chat2db/server/web/api/controller/redis/RedisKeyManageController.java:37 list",
+   "parameters": [
+    {
+     "name": "keyName",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "searchKey",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "dataSourceId",
+     "location": "query",
+     "type": "Long"
+    },
+    {
+     "name": "databaseName",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "schemaName",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "refresh",
+     "location": "query",
+     "type": "boolean"
+    }
+   ],
+   "notes": "Command object KeyQueryRequest expanded; superclass DataSourceBaseRequest contributes dataSourceId, databaseName, schemaName, refresh. Handler body is a stub returning null, but the binding is still declared."
+  },
+  {
+   "app": "chat2db-3.4.1",
+   "method": "GET",
+   "url": "/api/rdb/ddl/index_list",
+   "handler": "chat2db-server/chat2db-server-web/chat2db-server-web-api/src/main/java/ai/chat2db/server/web/api/controller/rdb/RdbDdlController.java:144 indexList",
+   "parameters": [
+    {
+     "name": "tableName",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "dataSourceId",
+     "location": "query",
+     "type": "Long"
+    },
+    {
+     "name": "databaseName",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "schemaName",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "refresh",
+     "location": "query",
+     "type": "boolean"
+    }
+   ],
+   "notes": "Same command object TableDetailQueryRequest as /api/rdb/table/query."
+  },
+  {
+   "app": "chat2db-3.4.1",
+   "method": "GET",
+   "url": "/api/rdb/table/table_list",
+   "handler": "chat2db-server/chat2db-server-web/chat2db-server-web-api/src/main/java/ai/chat2db/server/web/api/controller/rdb/TableController.java:91 tableList",
+   "parameters": [
+    {
+     "name": "dataSourceId",
+     "location": "query",
+     "type": "Long"
+    },
+    {
+     "name": "databaseName",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "schemaName",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "searchKey",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "refresh",
+     "location": "query",
+     "type": "boolean"
+    },
+    {
+     "name": "pageNo",
+     "location": "query",
+     "type": "Integer"
+    },
+    {
+     "name": "pageSize",
+     "location": "query",
+     "type": "Integer"
+    }
+   ],
+   "notes": "Command object TableBriefQueryRequest expanded; superclass PageQueryRequest contributes pageNo and pageSize. serialVersionUID is static in both classes so it is excluded."
+  },
+  {
+   "app": "chat2db-3.4.1",
+   "method": "GET",
+   "url": "/api/rdb/view/list",
+   "handler": "chat2db-server/chat2db-server-web/chat2db-server-web-api/src/main/java/ai/chat2db/server/web/api/controller/rdb/ViewController.java:43 list",
+   "parameters": [
+    {
+     "name": "dataSourceId",
+     "location": "query",
+     "type": "Long"
+    },
+    {
+     "name": "databaseName",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "schemaName",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "searchKey",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "refresh",
+     "location": "query",
+     "type": "boolean"
+    },
+    {
+     "name": "pageNo",
+     "location": "query",
+     "type": "Integer"
+    },
+    {
+     "name": "pageSize",
+     "location": "query",
+     "type": "Integer"
+    }
+   ],
+   "notes": "Same command object TableBriefQueryRequest as /api/rdb/table/table_list."
+  },
+  {
+   "app": "chat2db-3.4.1",
+   "method": "GET",
+   "url": "/api/admin/common/user/list",
+   "handler": "chat2db-server/chat2db-server-web/chat2db-server-admin-api/src/main/java/ai/chat2db/server/admin/api/controller/common/CommonAdminController.java:76 userList",
+   "parameters": [
+    {
+     "name": "searchKey",
+     "location": "query",
+     "type": "String"
+    }
+   ],
+   "notes": "Command object CommonQueryRequest has a single declared field and no project superclass."
+  },
+  {
+   "app": "chat2db-3.4.1",
+   "method": "GET",
+   "url": "/api/rdb/table/create/example",
+   "handler": "chat2db-server/chat2db-server-web/chat2db-server-web-api/src/main/java/ai/chat2db/server/web/api/controller/rdb/TableController.java:166 createExample",
+   "parameters": [
+    {
+     "name": "dbType",
+     "location": "query",
+     "type": "String"
+    }
+   ],
+   "notes": "Command object TableCreateDdlQueryRequest has a single declared field dbType and no project superclass."
+  },
+  {
+   "app": "chat2db-3.4.1",
+   "method": "GET",
+   "url": "/api/rdb/function/detail",
+   "handler": "chat2db-server/chat2db-server-web/chat2db-server-web-api/src/main/java/ai/chat2db/server/web/api/controller/rdb/FunctionController.java:41 detail",
+   "parameters": [
+    {
+     "name": "dataSourceId",
+     "location": "query",
+     "type": "Long"
+    },
+    {
+     "name": "databaseName",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "schemaName",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "functionName",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "refresh",
+     "location": "query",
+     "type": "boolean"
+    }
+   ],
+   "notes": "Command object FunctionDetailRequest declares all five fields itself; it only implements the DataSourceBaseRequestInfo interface, which contributes no fields."
+  },
+  {
+   "app": "chat2db-3.4.1",
+   "method": "GET",
+   "url": "/api/ai/config/getLoginStatus",
+   "handler": "chat2db-server/chat2db-server-web/chat2db-server-web-api/src/main/java/ai/chat2db/server/web/api/controller/ai/AiConfigController.java:72 getLoginStatus",
+   "parameters": [
+    {
+     "name": "token",
+     "location": "query",
+     "type": "String"
+    }
+   ],
+   "notes": "@RequestParam(required = false) with no value/name, so the formal parameter name token is used."
+  },
+  {
+   "app": "halo-1.6.1",
+   "method": "POST",
+   "url": "/api/admin/links",
+   "handler": "src/main/java/run/halo/app/controller/admin/api/LinkController.java:57 createBy",
+   "parameters": [
+    {
+     "name": "id",
+     "location": "body",
+     "type": "Integer"
+    },
+    {
+     "name": "name",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "url",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "logo",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "description",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "team",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "priority",
+     "location": "body",
+     "type": "Integer"
+    }
+   ],
+   "notes": "@RequestBody LinkParam expanded. LinkParam implements InputConverter<Link> (interface, contributes no fields) and has no superclass in project."
+  },
+  {
+   "app": "halo-1.6.1",
+   "method": "PUT",
+   "url": "/api/admin/photos/{photoId}",
+   "handler": "src/main/java/run/halo/app/controller/admin/api/PhotoController.java:104 updateBy",
+   "parameters": [
+    {
+     "name": "photoId",
+     "location": "path",
+     "type": "Integer"
+    },
+    {
+     "name": "id",
+     "location": "body",
+     "type": "Integer"
+    },
+    {
+     "name": "name",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "description",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "takeTime",
+     "location": "body",
+     "type": "Date"
+    },
+    {
+     "name": "location",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "thumbnail",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "url",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "team",
+     "location": "body",
+     "type": "String"
+    }
+   ],
+   "notes": "Mapping is @PutMapping(\"{photoId:\\\\d+}\"); regex stripped. @RequestBody PhotoParam expanded; PhotoParam only implements InputConverter<Photo>."
+  },
+  {
+   "app": "halo-1.6.1",
+   "method": "POST",
+   "url": "/api/admin/sheets",
+   "handler": "src/main/java/run/halo/app/controller/admin/api/SheetController.java:91 createBy",
+   "parameters": [
+    {
+     "name": "metas",
+     "location": "body",
+     "type": "Set<SheetMetaParam>"
+    },
+    {
+     "name": "title",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "status",
+     "location": "body",
+     "type": "PostStatus"
+    },
+    {
+     "name": "slug",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "password",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "editorType",
+     "location": "body",
+     "type": "PostEditorType"
+    },
+    {
+     "name": "content",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "originalContent",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "summary",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "thumbnail",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "disallowComment",
+     "location": "body",
+     "type": "Boolean"
+    },
+    {
+     "name": "template",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "topPriority",
+     "location": "body",
+     "type": "Integer"
+    },
+    {
+     "name": "createTime",
+     "location": "body",
+     "type": "Date"
+    },
+    {
+     "name": "metaKeywords",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "metaDescription",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "keepRaw",
+     "location": "body",
+     "type": "Boolean"
+    },
+    {
+     "name": "autoSave",
+     "location": "query",
+     "type": "Boolean"
+    }
+   ],
+   "notes": "@RequestBody SheetParam expanded: SheetParam declares 'metas' and extends BasePostParam (abstract, in project) whose 16 protected instance fields are included. autoSave is @RequestParam(value=\"autoSave\", required=false, defaultValue=\"false\")."
+  },
+  {
+   "app": "halo-1.6.1",
+   "method": "PUT",
+   "url": "/api/admin/statics/files",
+   "handler": "src/main/java/run/halo/app/controller/admin/api/StaticStorageController.java:70 save",
+   "parameters": [
+    {
+     "name": "path",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "content",
+     "location": "body",
+     "type": "String"
+    }
+   ],
+   "notes": "@RequestBody StaticContentParam expanded; it has no superclass in project."
+  },
+  {
+   "app": "halo-1.6.1",
+   "method": "POST",
+   "url": "/api/admin/attachments/uploads",
+   "handler": "src/main/java/run/halo/app/controller/admin/api/AttachmentController.java:89 uploadAttachments",
+   "parameters": [
+    {
+     "name": "files",
+     "location": "body",
+     "type": "MultipartFile[]"
+    }
+   ],
+   "notes": "The single formal parameter is annotated @RequestPart(\"files\"), which the labeling rule does not enumerate. Treated like the rule's MultipartFile[] case -> body, named by the annotation value 'files'. Mapping also declares consumes=multipart/form-data."
+  },
+  {
+   "app": "halo-1.6.1",
+   "method": "POST",
+   "url": "/api/admin/options",
+   "handler": "src/main/java/run/halo/app/controller/admin/api/OptionController.java:88 createBy",
+   "parameters": [
+    {
+     "name": "key",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "value",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "type",
+     "location": "body",
+     "type": "OptionType"
+    }
+   ],
+   "notes": "Bare @PostMapping on the class-level path. @RequestBody OptionParam expanded; it only implements InputConverter<Option>. Note a sibling POST \"saving\" takes List<OptionParam>, but that is a different URL."
+  },
+  {
+   "app": "halo-1.6.1",
+   "method": "POST",
+   "url": "/api/content/posts/comments",
+   "handler": "src/main/java/run/halo/app/controller/content/api/PostController.java:245 comment",
+   "parameters": [
+    {
+     "name": "author",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "email",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "authorUrl",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "content",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "postId",
+     "location": "body",
+     "type": "Integer"
+    },
+    {
+     "name": "parentId",
+     "location": "body",
+     "type": "Long"
+    },
+    {
+     "name": "allowNotification",
+     "location": "body",
+     "type": "Boolean"
+    }
+   ],
+   "notes": "@RequestBody PostCommentParam: declares no fields of its own; all fields come from superclass BaseCommentParam<PostComment> (abstract, in project). Its parameterizedType() is a method, not a field."
+  },
+  {
+   "app": "halo-1.6.1",
+   "method": "POST",
+   "url": "/api/admin/mails/test",
+   "handler": "src/main/java/run/halo/app/controller/admin/api/MailController.java:33 testMail",
+   "parameters": [
+    {
+     "name": "to",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "subject",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "content",
+     "location": "body",
+     "type": "String"
+    }
+   ],
+   "notes": "@RequestBody MailParam expanded; no superclass in project."
+  },
+  {
+   "app": "halo-1.6.1",
+   "method": "POST",
+   "url": "/api/admin/login",
+   "handler": "src/main/java/run/halo/app/controller/admin/api/AdminController.java:69 auth",
+   "parameters": [
+    {
+     "name": "username",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "password",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "authcode",
+     "location": "body",
+     "type": "String"
+    }
+   ],
+   "notes": "@RequestBody LoginParam expanded; no superclass in project. A separate handler exists for /api/admin/login/precheck."
+  },
+  {
+   "app": "halo-1.6.1",
+   "method": "PUT",
+   "url": "/api/admin/posts/comments/status/{status}",
+   "handler": "src/main/java/run/halo/app/controller/admin/api/PostCommentController.java:118 updateStatusInBatch",
+   "parameters": [
+    {
+     "name": "status",
+     "location": "path",
+     "type": "CommentStatus"
+    },
+    {
+     "name": "ids",
+     "location": "body",
+     "type": "List<Long>"
+    }
+   ],
+   "notes": "@PathVariable(name=\"status\"). The @RequestBody is List<Long>, a Collection with no declared fields of its own, so per rule 4 the parameter itself is listed under its formal name 'ids'."
+  },
+  {
+   "app": "halo-1.6.1",
+   "method": "GET",
+   "url": "/api/admin/links/teams",
+   "handler": "src/main/java/run/halo/app/controller/admin/api/LinkController.java:78 teams",
+   "parameters": [],
+   "notes": "Class @RequestMapping(\"/api/admin/links\") + @GetMapping(\"teams\"). Handler takes no formal parameters."
+  },
+  {
+   "app": "halo-1.6.1",
+   "method": "GET",
+   "url": "/${halo.admin-path}",
+   "handler": "src/main/java/run/halo/app/controller/content/MainController.java:53 admin",
+   "parameters": [],
+   "notes": "@GetMapping(\"${halo.admin-path:admin}\") on a @Controller with no class-level @RequestMapping; the path is a property placeholder defaulting to \"admin\". Handler takes no formal parameters."
+  },
+  {
+   "app": "halo-1.6.1",
+   "method": "GET",
+   "url": "/robots.txt",
+   "handler": "src/main/java/run/halo/app/controller/content/ContentFeedController.java:224 robots",
+   "parameters": [],
+   "notes": "@GetMapping(value = \"robots.txt\", produces = TEXT_PLAIN_VALUE) on a @Controller with no class-level @RequestMapping. The only formal parameter is org.springframework.ui.Model, which is container-supplied and therefore not a request parameter."
+  },
+  {
+   "app": "halo-1.6.1",
+   "method": "GET",
+   "url": "/api/content/options/list_view",
+   "handler": "src/main/java/run/halo/app/controller/content/api/OptionController.java:39 listAll",
+   "parameters": [],
+   "notes": "Class @RequestMapping(\"/api/content/options\") + @GetMapping(\"list_view\"). Handler takes no formal parameters."
+  },
+  {
+   "app": "halo-1.6.1",
+   "method": "GET",
+   "url": "/api/admin/test/disableOnCondition/yes",
+   "handler": "src/test/java/run/halo/app/controller/DisableOnConditionController.java:26 ableAccess",
+   "parameters": [],
+   "notes": "Test-source-only controller (src/test/java), class @RequestMapping(\"/api/admin/test/disableOnCondition\") + @GetMapping(\"/yes\"). Handler takes no formal parameters."
+  },
+  {
+   "app": "halo-1.6.1",
+   "method": "GET",
+   "url": "/api/content/options/comment",
+   "handler": "src/main/java/run/halo/app/controller/content/api/OptionController.java:74 comment",
+   "parameters": [],
+   "notes": "Class @RequestMapping(\"/api/content/options\") + @GetMapping(\"comment\"); method is @Deprecated. Handler takes no formal parameters."
+  },
+  {
+   "app": "halo-1.6.1",
+   "method": "GET",
+   "url": "/api/admin/backups/work-dir",
+   "handler": "src/main/java/run/halo/app/controller/admin/api/BackupController.java:109 listBackups",
+   "parameters": [],
+   "notes": "Class @RequestMapping(\"/api/admin/backups\") + @GetMapping(\"work-dir\"). Handler takes no formal parameters. Note the same \"work-dir\" path also has POST (backupHalo) and DELETE (deleteBackup) handlers, which are different methods and not labeled here."
+  },
+  {
+   "app": "halo-1.6.1",
+   "method": "GET",
+   "url": "/install",
+   "handler": "src/main/java/run/halo/app/controller/content/MainController.java:65 installation",
+   "parameters": [],
+   "notes": "@GetMapping(\"install\") on a @Controller with no class-level @RequestMapping. Handler takes no formal parameters."
+  },
+  {
+   "app": "halo-1.6.1",
+   "method": "DELETE",
+   "url": "/api/admin/categories/{categoryId}",
+   "handler": "src/main/java/run/halo/app/controller/admin/api/CategoryController.java:109 deletePermanently",
+   "parameters": [
+    {
+     "name": "categoryId",
+     "location": "path",
+     "type": "Integer"
+    }
+   ],
+   "notes": "Class @RequestMapping(\"/api/admin/categories\") + @DeleteMapping(\"{categoryId:\\\\d+}\"); the digits-only regex is stripped from the variable name."
+  },
+  {
+   "app": "halo-1.6.1",
+   "method": "GET",
+   "url": "/api/admin/themes/{themeId}/settings",
+   "handler": "src/main/java/run/halo/app/controller/admin/api/ThemeController.java:165 listSettingsBy",
+   "parameters": [
+    {
+     "name": "themeId",
+     "location": "path",
+     "type": "String"
+    }
+   ],
+   "notes": "Class @RequestMapping(\"/api/admin/themes\") + @GetMapping(\"{themeId:.+}/settings\"); the \".+\" regex is stripped from the variable name. ThemeController declares three overloads named listSettingsBy; this is the single-@PathVariable one at line 165."
+  },
+  {
+   "app": "halo-1.6.1",
+   "method": "GET",
+   "url": "/api/admin/backups/markdown/export/{fileName}",
+   "handler": "src/main/java/run/halo/app/controller/admin/api/BackupController.java:237 downloadMarkdown",
+   "parameters": [
+    {
+     "name": "fileName",
+     "location": "path",
+     "type": "String"
+    }
+   ],
+   "notes": "Mapping is @GetMapping(\"markdown/export/{fileName:.+}\") under class @RequestMapping(\"/api/admin/backups\"); the regex suffix is not part of the variable name. HttpServletRequest is container-supplied and excluded."
+  },
+  {
+   "app": "halo-1.6.1",
+   "method": "PUT",
+   "url": "/api/admin/sheets/{sheetId}/{status}",
+   "handler": "src/main/java/run/halo/app/controller/admin/api/SheetController.java:117 updateStatusBy",
+   "parameters": [
+    {
+     "name": "sheetId",
+     "location": "path",
+     "type": "Integer"
+    },
+    {
+     "name": "status",
+     "location": "path",
+     "type": "PostStatus"
+    }
+   ],
+   "notes": "@PutMapping(\"{sheetId:\\\\d+}/{status}\"); status is the enum run.halo.app.model.enums.PostStatus."
+  },
+  {
+   "app": "halo-1.6.1",
+   "method": "GET",
+   "url": "/api/admin/attachments/{id}",
+   "handler": "src/main/java/run/halo/app/controller/admin/api/AttachmentController.java:55 getBy",
+   "parameters": [
+    {
+     "name": "id",
+     "location": "path",
+     "type": "Integer"
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "app": "halo-1.6.1",
+   "method": "GET",
+   "url": "/api/content/posts/{postId}/next",
+   "handler": "src/main/java/run/halo/app/controller/content/api/PostController.java:184 getNextPostBy",
+   "parameters": [
+    {
+     "name": "postId",
+     "location": "path",
+     "type": "Integer"
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "app": "halo-1.6.1",
+   "method": "POST",
+   "url": "/api/admin/themes/{themeId}/activation",
+   "handler": "src/main/java/run/halo/app/controller/admin/api/ThemeController.java:122 active",
+   "parameters": [
+    {
+     "name": "themeId",
+     "location": "path",
+     "type": "String"
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "app": "halo-1.6.1",
+   "method": "GET",
+   "url": "/api/content/themes/{themeId}",
+   "handler": "src/main/java/run/halo/app/controller/content/api/ThemeController.java:40 getBy",
+   "parameters": [
+    {
+     "name": "themeId",
+     "location": "path",
+     "type": "String"
+    }
+   ],
+   "notes": "Overloaded with getBy() at line 34 mapped to \"activation\"; the {themeId:.+} variant is the one matching this URL."
+  },
+  {
+   "app": "halo-1.6.1",
+   "method": "GET",
+   "url": "/api/admin/sheets/comments/{commentId}",
+   "handler": "src/main/java/run/halo/app/controller/admin/api/SheetCommentController.java:138 getBy",
+   "parameters": [
+    {
+     "name": "commentId",
+     "location": "path",
+     "type": "Long"
+    }
+   ],
+   "notes": "Class mapping is /api/admin/sheets/comments (SheetCommentController), not the /api/admin/sheets SheetController."
+  },
+  {
+   "app": "halo-1.6.1",
+   "method": "GET",
+   "url": "/api/content/links/team_view",
+   "handler": "src/main/java/run/halo/app/controller/content/api/LinkController.java:41 listTeamVos",
+   "parameters": [
+    {
+     "name": "sort",
+     "location": "query",
+     "type": "String"
+    }
+   ],
+   "notes": "Unannotated org.springframework.data.domain.Sort resolver parameter; it binds the query parameter named 'sort' (String on the wire), not the formal name."
+  },
+  {
+   "app": "halo-1.6.1",
+   "method": "GET",
+   "url": "/",
+   "handler": "src/main/java/run/halo/app/controller/content/ContentIndexController.java:50 index",
+   "parameters": [
+    {
+     "name": "p",
+     "location": "query",
+     "type": "Integer"
+    },
+    {
+     "name": "token",
+     "location": "query",
+     "type": "String"
+    }
+   ],
+   "notes": "Class-level @RequestMapping with no path plus method-level @GetMapping with no path maps the root. Model is container-supplied and excluded. Both query parameters are unannotated basic types."
+  },
+  {
+   "app": "halo-1.6.1",
+   "method": "GET",
+   "url": "/api/content/categories/{slug}/posts",
+   "handler": "src/main/java/run/halo/app/controller/content/api/CategoryController.java:79 listPostsBy",
+   "parameters": [
+    {
+     "name": "slug",
+     "location": "path",
+     "type": "String"
+    },
+    {
+     "name": "password",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "page",
+     "location": "query",
+     "type": "Integer"
+    },
+    {
+     "name": "size",
+     "location": "query",
+     "type": "Integer"
+    },
+    {
+     "name": "sort",
+     "location": "query",
+     "type": "String"
+    }
+   ],
+   "notes": "Pageable (with @PageableDefault) expands to page/size/sort query parameters."
+  },
+  {
+   "app": "halo-1.6.1",
+   "method": "GET",
+   "url": "/api/content/menus/tree_view",
+   "handler": "src/main/java/run/halo/app/controller/content/api/MenuController.java:41 listMenusTree",
+   "parameters": [
+    {
+     "name": "sort",
+     "location": "query",
+     "type": "String"
+    }
+   ],
+   "notes": "Formal parameter is org.springframework.data.domain.Sort annotated @SortDefault; per rule 2 it binds a single query parameter named sort."
+  },
+  {
+   "app": "halo-1.6.1",
+   "method": "GET",
+   "url": "/api/admin/journals/latest",
+   "handler": "src/main/java/run/halo/app/controller/admin/api/JournalController.java:55 pageLatest",
+   "parameters": [
+    {
+     "name": "top",
+     "location": "query",
+     "type": "int"
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "app": "halo-1.6.1",
+   "method": "GET",
+   "url": "/api/admin/themes/{themeId}/files/content",
+   "handler": "src/main/java/run/halo/app/controller/admin/api/ThemeController.java:85 getContentBy",
+   "parameters": [
+    {
+     "name": "themeId",
+     "location": "path",
+     "type": "String"
+    },
+    {
+     "name": "path",
+     "location": "query",
+     "type": "String"
+    }
+   ],
+   "notes": "Mapping is @GetMapping(\"{themeId:.+}/files/content\"); the regex suffix is not part of the variable name. An overload at line 78 maps \"files/content\" without themeId and is not this endpoint."
+  },
+  {
+   "app": "halo-1.6.1",
+   "method": "GET",
+   "url": "/{year}/{month}/{slug}",
+   "handler": "src/main/java/run/halo/app/controller/content/ContentContentController.java:226 content",
+   "parameters": [
+    {
+     "name": "year",
+     "location": "path",
+     "type": "Integer"
+    },
+    {
+     "name": "month",
+     "location": "path",
+     "type": "Integer"
+    },
+    {
+     "name": "slug",
+     "location": "path",
+     "type": "String"
+    },
+    {
+     "name": "token",
+     "location": "query",
+     "type": "String"
+    }
+   ],
+   "notes": "Class-level @RequestMapping has no path. Mapping is \"{year:\\\\d+}/{month:\\\\d+}/{slug}\". The Model parameter is container-supplied and excluded."
+  },
+  {
+   "app": "halo-1.6.1",
+   "method": "GET",
+   "url": "/api/admin/backups/work-dir/fetch",
+   "handler": "src/main/java/run/halo/app/controller/admin/api/BackupController.java:66 getWorkDirBackup",
+   "parameters": [
+    {
+     "name": "filename",
+     "location": "query",
+     "type": "String"
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "app": "halo-1.6.1",
+   "method": "GET",
+   "url": "/api/admin/attachments",
+   "handler": "src/main/java/run/halo/app/controller/admin/api/AttachmentController.java:47 pageBy",
+   "parameters": [
+    {
+     "name": "page",
+     "location": "query",
+     "type": "Integer"
+    },
+    {
+     "name": "size",
+     "location": "query",
+     "type": "Integer"
+    },
+    {
+     "name": "sort",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "keyword",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "mediaType",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "attachmentType",
+     "location": "query",
+     "type": "AttachmentType"
+    }
+   ],
+   "notes": "Pageable expanded to page/size/sort per rule 2. AttachmentQuery is an unannotated command object with no superclass in the project; its three declared instance fields are expanded to query because the method is GET."
+  },
+  {
+   "app": "halo-1.6.1",
+   "method": "GET",
+   "url": "/api/content/journals/{journalId}/comments/list_view",
+   "handler": "src/main/java/run/halo/app/controller/content/api/JournalController.java:119 listComments",
+   "parameters": [
+    {
+     "name": "journalId",
+     "location": "path",
+     "type": "Integer"
+    },
+    {
+     "name": "page",
+     "location": "query",
+     "type": "int"
+    },
+    {
+     "name": "sort",
+     "location": "query",
+     "type": "String"
+    }
+   ],
+   "notes": "Mapping is \"{journalId:\\\\d+}/comments/list_view\". The Sort parameter binds the query parameter sort per rule 2."
+  },
+  {
+   "app": "halo-1.6.1",
+   "method": "GET",
+   "url": "/api/admin/backups/data/fetch",
+   "handler": "src/main/java/run/halo/app/controller/admin/api/BackupController.java:74 getDataBackup",
+   "parameters": [
+    {
+     "name": "filename",
+     "location": "query",
+     "type": "String"
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "app": "halo-1.6.1",
+   "method": "GET",
+   "url": "/api/admin/sheets/comments/{sheetId}/list_view",
+   "handler": "src/main/java/run/halo/app/controller/admin/api/SheetCommentController.java:90 listComments",
+   "parameters": [
+    {
+     "name": "sheetId",
+     "location": "path",
+     "type": "Integer"
+    },
+    {
+     "name": "page",
+     "location": "query",
+     "type": "int"
+    },
+    {
+     "name": "sort",
+     "location": "query",
+     "type": "String"
+    }
+   ],
+   "notes": "Class-level @RequestMapping is \"/api/admin/sheets/comments\" and the method mapping is \"{sheetId:\\\\d+}/list_view\". The Sort parameter binds the query parameter sort per rule 2."
+  },
+  {
+   "app": "halo-1.6.1",
+   "method": "GET",
+   "url": "/api/admin/menus/tree_view",
+   "handler": "src/main/java/run/halo/app/controller/admin/api/MenuController.java:54 listAsTree",
+   "parameters": [
+    {
+     "name": "sort",
+     "location": "query",
+     "type": "String"
+    }
+   ],
+   "notes": "Formal parameter is org.springframework.data.domain.Sort annotated @SortDefault; per rule 2 it binds a single query parameter named sort."
+  },
+  {
+   "app": "novel-plus-5.2.0",
+   "method": "POST",
+   "url": "/novel/bookComment/save",
+   "handler": "novel-admin/src/main/java/com/java2nb/novel/controller/BookCommentController.java:90 save",
+   "parameters": [
+    {
+     "name": "id",
+     "location": "body",
+     "type": "Long"
+    },
+    {
+     "name": "bookId",
+     "location": "body",
+     "type": "Long"
+    },
+    {
+     "name": "commentContent",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "replyCount",
+     "location": "body",
+     "type": "Integer"
+    },
+    {
+     "name": "auditStatus",
+     "location": "body",
+     "type": "Integer"
+    },
+    {
+     "name": "createTime",
+     "location": "body",
+     "type": "Date"
+    },
+    {
+     "name": "createUserId",
+     "location": "body",
+     "type": "Long"
+    },
+    {
+     "name": "bookName",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "userName",
+     "location": "body",
+     "type": "String"
+    }
+   ],
+   "notes": "Unannotated command object BookCommentDO (novel-admin/src/main/java/com/java2nb/novel/domain/BookCommentDO.java) expanded; POST so fields go to body. static serialVersionUID excluded. It only implements Serializable, so no superclass fields. @JsonSerialize(LongToStringSerializer) does not rename fields."
+  },
+  {
+   "app": "novel-plus-5.2.0",
+   "method": "POST",
+   "url": "/novel/bookSetting/save",
+   "handler": "novel-admin/src/main/java/com/java2nb/novel/controller/BookSettingController.java:88 save",
+   "parameters": [
+    {
+     "name": "id",
+     "location": "body",
+     "type": "Long"
+    },
+    {
+     "name": "bookId",
+     "location": "body",
+     "type": "Long"
+    },
+    {
+     "name": "sort",
+     "location": "body",
+     "type": "Integer"
+    },
+    {
+     "name": "type",
+     "location": "body",
+     "type": "Integer"
+    },
+    {
+     "name": "createTime",
+     "location": "body",
+     "type": "Date"
+    },
+    {
+     "name": "createUserId",
+     "location": "body",
+     "type": "Long"
+    },
+    {
+     "name": "updateTime",
+     "location": "body",
+     "type": "Date"
+    },
+    {
+     "name": "updateUserId",
+     "location": "body",
+     "type": "Long"
+    },
+    {
+     "name": "bookName",
+     "location": "body",
+     "type": "String"
+    }
+   ],
+   "notes": "Unannotated command object BookSettingDO (novel-admin/src/main/java/com/java2nb/novel/domain/BookSettingDO.java) expanded; POST so fields go to body. static serialVersionUID excluded."
+  },
+  {
+   "app": "novel-plus-5.2.0",
+   "method": "POST",
+   "url": "/sys/user/updatePeronal",
+   "handler": "novel-admin/src/main/java/com/java2nb/system/controller/SysUserController.java:117 updatePeronal",
+   "parameters": [
+    {
+     "name": "userId",
+     "location": "body",
+     "type": "Long"
+    },
+    {
+     "name": "username",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "name",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "password",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "deptId",
+     "location": "body",
+     "type": "Long"
+    },
+    {
+     "name": "supDeptIds",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "deptName",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "email",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "mobile",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "status",
+     "location": "body",
+     "type": "Integer"
+    },
+    {
+     "name": "userIdCreate",
+     "location": "body",
+     "type": "Long"
+    },
+    {
+     "name": "gmtCreate",
+     "location": "body",
+     "type": "Date"
+    },
+    {
+     "name": "gmtModified",
+     "location": "body",
+     "type": "Date"
+    },
+    {
+     "name": "roleIds",
+     "location": "body",
+     "type": "List<Long>"
+    },
+    {
+     "name": "dataPerms",
+     "location": "body",
+     "type": "Map<String,List<DataPermDO>>"
+    },
+    {
+     "name": "sex",
+     "location": "body",
+     "type": "Long"
+    },
+    {
+     "name": "birth",
+     "location": "body",
+     "type": "Date"
+    },
+    {
+     "name": "picId",
+     "location": "body",
+     "type": "Long"
+    },
+    {
+     "name": "liveAddress",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "hobby",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "province",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "city",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "district",
+     "location": "body",
+     "type": "String"
+    }
+   ],
+   "notes": "Unannotated command object; SysUserController imports com.java2nb.system.domain.UserDO (novel-admin/src/main/java/com/java2nb/system/domain/UserDO.java), NOT the same-named com.java2nb.novel.domain.UserDO. POST so fields go to body. static serialVersionUID excluded. roleIds/dataPerms are collection-typed fields of the command object, so they are listed as fields (rule 4's collection clause applies to the handler parameter's own declared type, not to fields)."
+  },
+  {
+   "app": "novel-plus-5.2.0",
+   "method": "POST",
+   "url": "/crawl/addCrawlSingleTask",
+   "handler": "novel-crawl/src/main/java/com/java2nb/novel/controller/CrawlController.java:129 addCrawlSingleTask",
+   "parameters": [
+    {
+     "name": "id",
+     "location": "body",
+     "type": "Long"
+    },
+    {
+     "name": "sourceId",
+     "location": "body",
+     "type": "Integer"
+    },
+    {
+     "name": "sourceName",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "sourceBookId",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "catId",
+     "location": "body",
+     "type": "Integer"
+    },
+    {
+     "name": "bookName",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "authorName",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "taskStatus",
+     "location": "body",
+     "type": "Byte"
+    },
+    {
+     "name": "excCount",
+     "location": "body",
+     "type": "Byte"
+    },
+    {
+     "name": "crawlChapters",
+     "location": "body",
+     "type": "Integer"
+    },
+    {
+     "name": "createTime",
+     "location": "body",
+     "type": "Date"
+    }
+   ],
+   "notes": "Class-level @RequestMapping(\"crawl\") + @PostMapping(\"addCrawlSingleTask\"). Unannotated command object CrawlSingleTask (novel-common/src/main/java/com/java2nb/novel/entity/CrawlSingleTask.java) expanded; POST so fields go to body. No superclass. @Generated annotations do not rename fields."
+  },
+  {
+   "app": "novel-plus-5.2.0",
+   "method": "POST",
+   "url": "/novel/friendLink/save",
+   "handler": "novel-admin/src/main/java/com/java2nb/novel/controller/FriendLinkController.java:87 save",
+   "parameters": [
+    {
+     "name": "id",
+     "location": "body",
+     "type": "Integer"
+    },
+    {
+     "name": "linkName",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "linkUrl",
+     "location": "body",
+     "type": "String"
+    },
+    {
+     "name": "sort",
+     "location": "body",
+     "type": "Integer"
+    },
+    {
+     "name": "isOpen",
+     "location": "body",
+     "type": "Integer"
+    },
+    {
+     "name": "createUserId",
+     "location": "body",
+     "type": "Long"
+    },
+    {
+     "name": "createTime",
+     "location": "body",
+     "type": "Date"
+    },
+    {
+     "name": "updateUserId",
+     "location": "body",
+     "type": "Long"
+    },
+    {
+     "name": "updateTime",
+     "location": "body",
+     "type": "Date"
+    }
+   ],
+   "notes": "Parameter carries only @Validated, which is not a binding-source annotation, so FriendLinkDO (novel-admin/src/main/java/com/java2nb/novel/domain/FriendLinkDO.java) is still a command object; POST so fields go to body. static serialVersionUID excluded."
+  },
+  {
+   "app": "novel-plus-5.2.0",
+   "method": "GET",
+   "url": "/sys/role",
+   "handler": "novel-admin/src/main/java/com/java2nb/system/controller/RoleController.java:26 role",
+   "parameters": [],
+   "notes": "Class-level @RequestMapping(\"/sys/role\") + method-level @GetMapping() with empty path. role() takes no formal parameters."
+  },
+  {
+   "app": "novel-plus-5.2.0",
+   "method": "GET",
+   "url": "/novel/authorCode/add",
+   "handler": "novel-admin/src/main/java/com/java2nb/novel/controller/AuthorCodeController.java:61 add",
+   "parameters": [],
+   "notes": "View-returning handler with no formal parameters."
+  },
+  {
+   "app": "novel-plus-5.2.0",
+   "method": "GET",
+   "url": "/novel/book/add",
+   "handler": "novel-admin/src/main/java/com/java2nb/novel/controller/BookController.java:61 add",
+   "parameters": [],
+   "notes": "View-returning handler with no formal parameters."
+  },
+  {
+   "app": "novel-plus-5.2.0",
+   "method": "GET",
+   "url": "/common/dict/add",
+   "handler": "novel-admin/src/main/java/com/java2nb/common/controller/DictController.java:52 add",
+   "parameters": [],
+   "notes": "View-returning handler with no formal parameters. A separate @GetMapping(\"/add/{type}/{description}\") addD handler exists at line 133 but does not match the bare /common/dict/add path."
+  },
+  {
+   "app": "novel-plus-5.2.0",
+   "method": "GET",
+   "url": "/sys/online/list",
+   "handler": "novel-admin/src/main/java/com/java2nb/system/controller/SessionController.java:33 list",
+   "parameters": [],
+   "notes": "Method-level @RequestMapping(\"/list\") with no method= attribute, so it maps GET as well. list() takes no formal parameters."
+  },
+  {
+   "app": "novel-plus-5.2.0",
+   "method": "GET",
+   "url": "/file/getVerify",
+   "handler": "novel-front/src/main/java/com/java2nb/novel/controller/FileController.java:47 getVerify",
+   "parameters": [],
+   "notes": "Class @RequestMapping(\"file\") + @GetMapping(value=\"getVerify\"). Both formal parameters (HttpServletRequest, HttpServletResponse) are container-supplied, so there are no request parameters. The only other getVerify in the project is novel-admin LoginController, mapped at /getVerify, not /file/getVerify."
+  },
+  {
+   "app": "novel-plus-5.2.0",
+   "method": "GET",
+   "url": "/system/sysDept/list",
+   "handler": "novel-admin/src/main/java/com/java2nb/system/controller/DeptController.java:45 list",
+   "parameters": [],
+   "notes": "Class @RequestMapping(\"/system/sysDept\") + @GetMapping(\"/list\"); handler takes no formal parameters (the query Map is built in the method body)."
+  },
+  {
+   "app": "novel-plus-5.2.0",
+   "method": "GET",
+   "url": "/index",
+   "handler": "novel-front/src/main/java/com/java2nb/novel/controller/page/PageController.java:83 index",
+   "parameters": [],
+   "notes": "Ambiguous across modules: /index is mapped three times in this project -- novel-front page/PageController.java:83 index(Model), novel-admin system/LoginController.java:43 index(Model) (@GetMapping({\"\",\"/\",\"/index\"})) and novel-crawl page/PageController.java:38 index() (@RequestMapping(path={\"/\",\"/index\",\"/index.html\"})). All three take no request parameters (Model is container-supplied), so the parameter list is [] whichever module is meant. Reported the novel-front handler."
+  },
+  {
+   "app": "novel-plus-5.2.0",
+   "method": "GET",
+   "url": "/novel/stat/countSta",
+   "handler": "novel-admin/src/main/java/com/java2nb/novel/controller/StatController.java:48 countUser",
+   "parameters": [],
+   "notes": "Class @RequestMapping(\"/novel/stat\") + @GetMapping(\"/countSta\"); method name is countUser and it declares no formal parameters."
+  },
+  {
+   "app": "novel-plus-5.2.0",
+   "method": "GET",
+   "url": "/",
+   "handler": "novel-front/src/main/java/com/java2nb/novel/controller/page/PageController.java:83 index",
+   "parameters": [],
+   "notes": "Same ambiguity as /index: \"/\" is mapped by novel-front page/PageController.java:83 index(Model), novel-admin system/LoginController.java:43 index(Model) and novel-crawl page/PageController.java:38 index(). None declares a request parameter, so [] in every case. Reported the novel-front handler."
+  },
+  {
+   "app": "novel-plus-5.2.0",
+   "method": "GET",
+   "url": "/novel/author/edit/{id}",
+   "handler": "novel-admin/src/main/java/com/java2nb/novel/controller/AuthorController.java:68 edit",
+   "parameters": [
+    {
+     "name": "id",
+     "location": "path",
+     "type": "Long"
+    }
+   ],
+   "notes": "Class @RequestMapping(\"/novel/author\") + @GetMapping(\"/edit/{id}\"); Model is container-supplied."
+  },
+  {
+   "app": "novel-plus-5.2.0",
+   "method": "GET",
+   "url": "/novel/authorCode/edit/{id}",
+   "handler": "novel-admin/src/main/java/com/java2nb/novel/controller/AuthorCodeController.java:68 edit",
+   "parameters": [
+    {
+     "name": "id",
+     "location": "path",
+     "type": "Long"
+    }
+   ],
+   "notes": "Class @RequestMapping(\"/novel/authorCode\") + @GetMapping(\"/edit/{id}\"); Model is container-supplied."
+  },
+  {
+   "app": "novel-plus-5.2.0",
+   "method": "GET",
+   "url": "/author/queryIndexContent/{indexId}",
+   "handler": "novel-front/src/main/java/com/java2nb/novel/controller/AuthorController.java:148 queryIndexContent",
+   "parameters": [
+    {
+     "name": "indexId",
+     "location": "path",
+     "type": "Long"
+    }
+   ],
+   "notes": "Class @RequestMapping(\"author\") on a @RestController + @GetMapping(\"queryIndexContent/{indexId}\"); HttpServletRequest is container-supplied."
+  },
+  {
+   "app": "novel-plus-5.2.0",
+   "method": "GET",
+   "url": "/system/sysDept/add/{pId}",
+   "handler": "novel-admin/src/main/java/com/java2nb/system/controller/DeptController.java:53 add",
+   "parameters": [
+    {
+     "name": "pId",
+     "location": "path",
+     "type": "Long"
+    }
+   ],
+   "notes": "Class @RequestMapping(\"/system/sysDept\") + @GetMapping(\"/add/{pId}\"); Model is container-supplied."
+  },
+  {
+   "app": "novel-plus-5.2.0",
+   "method": "GET",
+   "url": "/common/dict/list/{type}",
+   "handler": "novel-admin/src/main/java/com/java2nb/common/controller/DictController.java:141 listByType",
+   "parameters": [
+    {
+     "name": "type",
+     "location": "path",
+     "type": "String"
+    }
+   ],
+   "notes": "Class @RequestMapping(\"/common/dict\") + @GetMapping(\"/list/{type}\"); distinct from /common/dict/list (line 41), which takes @RequestParam Map<String,Object> params."
+  },
+  {
+   "app": "novel-plus-5.2.0",
+   "method": "GET",
+   "url": "/novel/bookContent/edit/{id}",
+   "handler": "novel-admin/src/main/java/com/java2nb/novel/controller/BookContentController.java:68 edit",
+   "parameters": [
+    {
+     "name": "id",
+     "location": "path",
+     "type": "Long"
+    }
+   ],
+   "notes": "Model parameter is container-supplied and excluded."
+  },
+  {
+   "app": "novel-plus-5.2.0",
+   "method": "GET",
+   "url": "/common/dict/edit/{id}",
+   "handler": "novel-admin/src/main/java/com/java2nb/common/controller/DictController.java:58 edit",
+   "parameters": [
+    {
+     "name": "id",
+     "location": "path",
+     "type": "Long"
+    }
+   ],
+   "notes": "Model parameter is container-supplied and excluded."
+  },
+  {
+   "app": "novel-plus-5.2.0",
+   "method": "DELETE",
+   "url": "/user/removeFromBookShelf/{bookId}",
+   "handler": "novel-front/src/main/java/com/java2nb/novel/controller/UserController.java:133 removeFromBookShelf",
+   "parameters": [
+    {
+     "name": "bookId",
+     "location": "path",
+     "type": "Long"
+    }
+   ],
+   "notes": "novel-front app; class @RequestMapping(\"user\"). HttpServletRequest is container-supplied and excluded."
+  },
+  {
+   "app": "novel-plus-5.2.0",
+   "method": "GET",
+   "url": "/book/queryBookIndexAbout",
+   "handler": "novel-front/src/main/java/com/java2nb/novel/controller/BookController.java:121 queryBookIndexAbout",
+   "parameters": [
+    {
+     "name": "bookId",
+     "location": "query",
+     "type": "Long"
+    },
+    {
+     "name": "lastBookIndexId",
+     "location": "query",
+     "type": "Long"
+    }
+   ],
+   "notes": "novel-front app; class @RequestMapping(\"book\"). Both params unannotated basic types -> query."
+  },
+  {
+   "app": "novel-plus-5.2.0",
+   "method": "POST",
+   "url": "/system/sysDept/batchRemove",
+   "handler": "novel-admin/src/main/java/com/java2nb/system/controller/DeptController.java:140 remove",
+   "parameters": [
+    {
+     "name": "ids[]",
+     "location": "query",
+     "type": "Long[]"
+    }
+   ],
+   "notes": "@RequestParam(\"ids[]\") renames the formal parameter deptIds."
+  },
+  {
+   "app": "novel-plus-5.2.0",
+   "method": "GET",
+   "url": "/system/sysDept/update",
+   "handler": "novel-admin/src/main/java/com/java2nb/system/controller/DeptController.java:99 update",
+   "parameters": [
+    {
+     "name": "deptId",
+     "location": "query",
+     "type": "Long"
+    },
+    {
+     "name": "parentId",
+     "location": "query",
+     "type": "Long"
+    },
+    {
+     "name": "name",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "orderNum",
+     "location": "query",
+     "type": "Integer"
+    },
+    {
+     "name": "delFlag",
+     "location": "query",
+     "type": "Integer"
+    }
+   ],
+   "notes": "Method-level @RequestMapping(\"/update\") has no method= so it maps every HTTP method; treated as GET per the task line. DeptDO is an unannotated command object, expanded; GET -> query. DeptDO implements only Serializable (no project superclass); static serialVersionUID excluded."
+  },
+  {
+   "app": "novel-plus-5.2.0",
+   "method": "GET",
+   "url": "/common/generator/batchDownload",
+   "handler": "novel-admin/src/main/java/com/java2nb/common/controller/GeneratorController.java:74 batchDownload",
+   "parameters": [
+    {
+     "name": "tables",
+     "location": "query",
+     "type": "String"
+    }
+   ],
+   "notes": "Method-level @RequestMapping(\"/batchDownload\") has no method=; treated as GET. HttpServletRequest and HttpServletResponse are container-supplied and excluded."
+  },
+  {
+   "app": "novel-plus-5.2.0",
+   "method": "POST",
+   "url": "/novel/friendLink/remove",
+   "handler": "novel-admin/src/main/java/com/java2nb/novel/controller/FriendLinkController.java:115 remove",
+   "parameters": [
+    {
+     "name": "id",
+     "location": "query",
+     "type": "Integer"
+    }
+   ],
+   "notes": "Unannotated basic type -> query."
+  },
+  {
+   "app": "novel-plus-5.2.0",
+   "method": "POST",
+   "url": "/novel/bookIndex/batchRemove",
+   "handler": "novel-admin/src/main/java/com/java2nb/novel/controller/BookIndexController.java:130 remove",
+   "parameters": [
+    {
+     "name": "ids[]",
+     "location": "query",
+     "type": "Long[]"
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "app": "novel-plus-5.2.0",
+   "method": "GET",
+   "url": "/book/listCommentReplyByPage",
+   "handler": "novel-front/src/main/java/com/java2nb/novel/controller/BookController.java:157 listCommentReplyByPage",
+   "parameters": [
+    {
+     "name": "commentId",
+     "location": "query",
+     "type": "Long"
+    },
+    {
+     "name": "curr",
+     "location": "query",
+     "type": "int"
+    },
+    {
+     "name": "limit",
+     "location": "query",
+     "type": "int"
+    }
+   ],
+   "notes": "novel-front app. @RequestParam value= renames page->curr and pageSize->limit."
+  },
+  {
+   "app": "novel-plus-5.2.0",
+   "method": "GET",
+   "url": "/novel/authorCode/list",
+   "handler": "novel-admin/src/main/java/com/java2nb/novel/controller/AuthorCodeController.java:49 list",
+   "parameters": [
+    {
+     "name": "params",
+     "location": "query",
+     "type": "Map<String, Object>"
+    }
+   ],
+   "notes": "@GetMapping(\"/list\") on class @RequestMapping(\"/novel/authorCode\"). Sole parameter is @RequestParam Map<String, Object> params: a Map with no declared fields of its own, so it is listed under its own name rather than expanded."
+  },
+  {
+   "app": "novel-plus-5.2.0",
+   "method": "GET",
+   "url": "/novel/bookSetting/update",
+   "handler": "novel-admin/src/main/java/com/java2nb/novel/controller/BookSettingController.java:102 update",
+   "parameters": [
+    {
+     "name": "id",
+     "location": "query",
+     "type": "Long"
+    },
+    {
+     "name": "bookId",
+     "location": "query",
+     "type": "Long"
+    },
+    {
+     "name": "sort",
+     "location": "query",
+     "type": "Integer"
+    },
+    {
+     "name": "type",
+     "location": "query",
+     "type": "Integer"
+    },
+    {
+     "name": "createTime",
+     "location": "query",
+     "type": "Date"
+    },
+    {
+     "name": "createUserId",
+     "location": "query",
+     "type": "Long"
+    },
+    {
+     "name": "updateTime",
+     "location": "query",
+     "type": "Date"
+    },
+    {
+     "name": "updateUserId",
+     "location": "query",
+     "type": "Long"
+    },
+    {
+     "name": "bookName",
+     "location": "query",
+     "type": "String"
+    }
+   ],
+   "notes": "Method-level @RequestMapping(\"/update\") has no method=, so it maps every HTTP method; labeled as GET per the task line. BookSettingDO is an unannotated command object, expanded to its declared instance fields; location is query because the request method is GET. BookSettingDO only implements Serializable (no project superclass); the static serialVersionUID field is excluded. @JsonSerialize(using=LongToStringSerializer.class) on the Long fields does not rename them."
+  },
+  {
+   "app": "novel-plus-5.2.0",
+   "method": "GET",
+   "url": "/system/dataPerm/update",
+   "handler": "novel-admin/src/main/java/com/java2nb/system/controller/DataPermController.java:107 update",
+   "parameters": [
+    {
+     "name": "id",
+     "location": "query",
+     "type": "Long"
+    },
+    {
+     "name": "name",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "tableName",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "moduleName",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "crlAttrName",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "crlColumnName",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "permCode",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "orderNum",
+     "location": "query",
+     "type": "Integer"
+    },
+    {
+     "name": "gmtCreate",
+     "location": "query",
+     "type": "Date"
+    },
+    {
+     "name": "gmtModified",
+     "location": "query",
+     "type": "Date"
+    }
+   ],
+   "notes": "Method-level @RequestMapping(\"/update\") has no method=, so it maps every HTTP method; labeled as GET per the task line. DataPermDO is an unannotated command object, expanded to its declared instance fields; location is query because the request method is GET. DataPermDO only implements Serializable; the static serialVersionUID field is excluded."
+  },
+  {
+   "app": "novel-plus-5.2.0",
+   "method": "GET",
+   "url": "/novel/bookComment/update",
+   "handler": "novel-admin/src/main/java/com/java2nb/novel/controller/BookCommentController.java:104 update",
+   "parameters": [
+    {
+     "name": "id",
+     "location": "query",
+     "type": "Long"
+    },
+    {
+     "name": "bookId",
+     "location": "query",
+     "type": "Long"
+    },
+    {
+     "name": "commentContent",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "replyCount",
+     "location": "query",
+     "type": "Integer"
+    },
+    {
+     "name": "auditStatus",
+     "location": "query",
+     "type": "Integer"
+    },
+    {
+     "name": "createTime",
+     "location": "query",
+     "type": "Date"
+    },
+    {
+     "name": "createUserId",
+     "location": "query",
+     "type": "Long"
+    },
+    {
+     "name": "bookName",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "userName",
+     "location": "query",
+     "type": "String"
+    }
+   ],
+   "notes": "Method-level @RequestMapping(\"/update\") has no method=, so it maps every HTTP method; labeled as GET per the task line. BookCommentDO is an unannotated command object, expanded to its declared instance fields; location is query because the request method is GET. BookCommentDO only implements Serializable; the static serialVersionUID field is excluded."
+  },
+  {
+   "app": "novel-plus-5.2.0",
+   "method": "GET",
+   "url": "/novel/bookComment/list",
+   "handler": "novel-admin/src/main/java/com/java2nb/novel/controller/BookCommentController.java:49 list",
+   "parameters": [
+    {
+     "name": "params",
+     "location": "query",
+     "type": "Map<String, Object>"
+    }
+   ],
+   "notes": "Sole parameter is @RequestParam Map<String, Object> params: a Map with no declared fields of its own, so it is listed under its own name rather than expanded."
+  },
+  {
+   "app": "novel-plus-5.2.0",
+   "method": "GET",
+   "url": "/novel/book/update",
+   "handler": "novel-admin/src/main/java/com/java2nb/novel/controller/BookController.java:104 update",
+   "parameters": [
+    {
+     "name": "id",
+     "location": "query",
+     "type": "Long"
+    },
+    {
+     "name": "workDirection",
+     "location": "query",
+     "type": "Integer"
+    },
+    {
+     "name": "catId",
+     "location": "query",
+     "type": "Integer"
+    },
+    {
+     "name": "catName",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "picUrl",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "bookName",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "authorId",
+     "location": "query",
+     "type": "Long"
+    },
+    {
+     "name": "authorName",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "bookDesc",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "score",
+     "location": "query",
+     "type": "Float"
+    },
+    {
+     "name": "bookStatus",
+     "location": "query",
+     "type": "Integer"
+    },
+    {
+     "name": "visitCount",
+     "location": "query",
+     "type": "Long"
+    },
+    {
+     "name": "wordCount",
+     "location": "query",
+     "type": "Integer"
+    },
+    {
+     "name": "commentCount",
+     "location": "query",
+     "type": "Integer"
+    },
+    {
+     "name": "yesterdayBuy",
+     "location": "query",
+     "type": "Integer"
+    },
+    {
+     "name": "lastIndexId",
+     "location": "query",
+     "type": "Long"
+    },
+    {
+     "name": "lastIndexName",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "lastIndexUpdateTime",
+     "location": "query",
+     "type": "Date"
+    },
+    {
+     "name": "isVip",
+     "location": "query",
+     "type": "Integer"
+    },
+    {
+     "name": "status",
+     "location": "query",
+     "type": "Integer"
+    },
+    {
+     "name": "updateTime",
+     "location": "query",
+     "type": "Date"
+    },
+    {
+     "name": "createTime",
+     "location": "query",
+     "type": "Date"
+    },
+    {
+     "name": "crawlSourceId",
+     "location": "query",
+     "type": "Integer"
+    },
+    {
+     "name": "crawlBookId",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "crawlLastTime",
+     "location": "query",
+     "type": "Date"
+    },
+    {
+     "name": "crawlIsStop",
+     "location": "query",
+     "type": "Integer"
+    }
+   ],
+   "notes": "Method-level @RequestMapping(\"/update\") has no method=, so it maps every HTTP method; labeled as GET per the task line. BookDO is an unannotated command object, expanded to its declared instance fields; location is query because the request method is GET. BookDO only implements Serializable; the static serialVersionUID field is excluded. @DateTimeFormat on the Date fields and @JsonSerialize on the Long fields do not rename anything."
+  },
+  {
+   "app": "novel-plus-5.2.0",
+   "method": "GET",
+   "url": "/common/generator/genColumns",
+   "handler": "novel-admin/src/main/java/com/java2nb/common/controller/GeneratorController.java:128 genColumns",
+   "parameters": [
+    {
+     "name": "tableName",
+     "location": "query",
+     "type": "String"
+    }
+   ],
+   "notes": "@GetMapping(\"/genColumns\"). The Model parameter is container-supplied and is not a request parameter. tableName is unannotated and of a basic type, so it binds as a query parameter."
+  },
+  {
+   "app": "novel-plus-5.2.0",
+   "method": "POST",
+   "url": "/common/dict/remove",
+   "handler": "novel-admin/src/main/java/com/java2nb/common/controller/DictController.java:100 remove",
+   "parameters": [
+    {
+     "name": "id",
+     "location": "query",
+     "type": "Long"
+    }
+   ],
+   "notes": "@PostMapping(\"/remove\"). id is unannotated and of a basic type (Long), so per the rule it is a query parameter, even though in practice the form posts it in the body."
+  },
+  {
+   "app": "novel-plus-5.2.0",
+   "method": "POST",
+   "url": "/system/roleDataPerm/remove",
+   "handler": "novel-admin/src/main/java/com/java2nb/system/controller/RoleDataPermController.java:116 remove",
+   "parameters": [
+    {
+     "name": "id",
+     "location": "query",
+     "type": "Long"
+    }
+   ],
+   "notes": "@PostMapping(\"/remove\"). id is unannotated and of a basic type (Long), so per the rule it is a query parameter, even though in practice the form posts it in the body."
+  },
+  {
+   "app": "novel-plus-5.2.0",
+   "method": "POST",
+   "url": "/author/ai/continue",
+   "handler": "novel-front/src/main/java/com/java2nb/novel/controller/AuthorController.java:277 continueText",
+   "parameters": [
+    {
+     "name": "text",
+     "location": "query",
+     "type": "String"
+    },
+    {
+     "name": "length",
+     "location": "query",
+     "type": "Integer"
+    }
+   ],
+   "notes": "Handler is in the novel-front module (@RestController with class-level @RequestMapping(\"author\") plus @PostMapping(\"ai/continue\")). Both parameters are @RequestParam of basic types, so both are query parameters."
+  }
+ ]
+}
